@@ -4,10 +4,17 @@
 .tooltip-container {
     reset-context();
 
+    display: inline-block;
+
     .tooltip {
         display: none;
+
         &.show {
             display: inline-block;
         }
+    }
+
+    .tooltip-target-container {
+        display: inline-block;
     }
 }

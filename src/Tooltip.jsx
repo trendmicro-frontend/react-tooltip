@@ -54,11 +54,10 @@ class Tooltip extends PureComponent {
 
     actions = {
         toggle: (toState = null) => {
-            const isShow = toState === null ? !this.state.isShow : toState;
             this.setState((prevState, props) => {
                 return {
                     ...prevState,
-                    isShow
+                    isShow: (toState === null) ? !prevState.isShow : !!toState
                 };
             });
         },
@@ -203,27 +202,34 @@ class Tooltip extends PureComponent {
 
     render() {
         const {
-            children
+            className,
+            children,
+            ...props
         } = this.props;
 
         return (
-            <span
+            <div
+                {...props}
                 ref={node => {
                     this.tooltipContainer = node;
                 }}
-                className={styles['tooltip-container']}
-                onMouseOut={this.actions.handleOnMouseOut}
+                className={classNames(
+                    styles['tooltip-container'],
+                    className
+                )}
             >
                 {this.renders.renderTooltip()}
-                <span
+                <div
                     ref={node => {
                         this.tooltipTarget = node;
                     }}
+                    className={styles['tooltip-target-container']}
                     onMouseOver={this.actions.handleOnMouseOver}
+                    onMouseOut={this.actions.handleOnMouseOut}
                 >
                     {children}
-                </span>
-            </span>
+                </div>
+            </div>
         );
     }
 }
