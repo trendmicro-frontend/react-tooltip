@@ -52,8 +52,6 @@ class Tooltip extends PureComponent {
         this.actions.adjustPlace();
     }
 
-    state = {
-    };
     actions = {
         toggle: (toState = null) => {
             const isShow = toState === null ? !this.state.isShow : toState;
