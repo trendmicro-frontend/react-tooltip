@@ -136,6 +136,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 20px;
+  display: inline-block;
 }
 .tooltip---tooltip-container---1rxLf *,
 .tooltip---tooltip-container---1rxLf *:before,
@@ -148,6 +149,9 @@
   display: none;
 }
 .tooltip---tooltip-container---1rxLf .tooltip---tooltip---3QEFk.tooltip---show---1vZOn {
+  display: inline-block;
+}
+.tooltip---tooltip-container---1rxLf .tooltip---tooltip-target-container---2n0rx {
   display: inline-block;
 }
 

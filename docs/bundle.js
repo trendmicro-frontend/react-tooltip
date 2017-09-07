@@ -1426,7 +1426,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".tooltip---3ySuX {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---3ySuX.in---3rbq2 {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---3ySuX.top---1UBsa {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.right---3UdvW {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---3ySuX.bottom---3Sb5B {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.left---t59tj {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---20T2m {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---c682C {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---3ySuX.top---1UBsa .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-left---1cdZq .tooltip-arrow---c682C {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-right---1rsH7 .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.right---3UdvW .tooltip-arrow---c682C {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---3ySuX.left---t59tj .tooltip-arrow---c682C {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---3ySuX.bottom---3Sb5B .tooltip-arrow---c682C {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-left---r953G .tooltip-arrow---c682C {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-right---1u7Og .tooltip-arrow---c682C {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---3FQNj {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n.tooltip-container---2QxsV {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n}\n.tooltip-container---2QxsV *,\n.tooltip-container---2QxsV *:before,\n.tooltip-container---2QxsV *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX {\n  display: none;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX.show---2slU5 {\n  display: inline-block;\n}\n", ""]);
+exports.push([module.i, ".tooltip---3ySuX {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---3ySuX.in---3rbq2 {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---3ySuX.top---1UBsa {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.right---3UdvW {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---3ySuX.bottom---3Sb5B {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.left---t59tj {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---20T2m {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---c682C {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---3ySuX.top---1UBsa .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-left---1cdZq .tooltip-arrow---c682C {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-right---1rsH7 .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.right---3UdvW .tooltip-arrow---c682C {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---3ySuX.left---t59tj .tooltip-arrow---c682C {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---3ySuX.bottom---3Sb5B .tooltip-arrow---c682C {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-left---r953G .tooltip-arrow---c682C {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-right---1u7Og .tooltip-arrow---c682C {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---3FQNj {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n.tooltip-container---2QxsV {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n  display: inline-block;\n}\n.tooltip-container---2QxsV *,\n.tooltip-container---2QxsV *:before,\n.tooltip-container---2QxsV *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX {\n  display: none;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX.show---2slU5 {\n  display: inline-block;\n}\n.tooltip-container---2QxsV .tooltip-target-container---1cjuu {\n  display: inline-block;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1452,7 +1452,9 @@ exports.locals = {
 	"tooltipInnerLight": "tooltip-inner-light---3FQNj",
 	"tooltip-container": "tooltip-container---2QxsV",
 	"tooltipContainer": "tooltip-container---2QxsV",
-	"show": "show---2slU5"
+	"show": "show---2slU5",
+	"tooltip-target-container": "tooltip-target-container---1cjuu",
+	"tooltipTargetContainer": "tooltip-target-container---1cjuu"
 };
 
 /***/ }),
@@ -23909,6 +23911,8 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23929,15 +23933,13 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
             show: null,
             hide: null
         };
-        _this.state = {};
         _this.actions = {
             toggle: function toggle() {
                 var toState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-                var isShow = toState === null ? !_this.state.isShow : toState;
                 _this.setState(function (prevState, props) {
                     return _extends({}, prevState, {
-                        isShow: isShow
+                        isShow: toState === null ? !prevState.isShow : !!toState
                     });
                 });
             },
@@ -24099,26 +24101,29 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
         value: function render() {
             var _this2 = this;
 
-            var children = this.props.children;
-
+            var _props = this.props,
+                className = _props.className,
+                children = _props.children,
+                props = _objectWithoutProperties(_props, ['className', 'children']);
 
             return _react2.default.createElement(
-                'span',
-                {
+                'div',
+                _extends({}, props, {
                     ref: function ref(node) {
                         _this2.tooltipContainer = node;
                     },
-                    className: _index2.default['tooltip-container'],
-                    onMouseOut: this.actions.handleOnMouseOut
-                },
+                    className: (0, _classnames2.default)(_index2.default['tooltip-container'], className)
+                }),
                 this.renders.renderTooltip(),
                 _react2.default.createElement(
-                    'span',
+                    'div',
                     {
                         ref: function ref(node) {
                             _this2.tooltipTarget = node;
                         },
-                        onMouseOver: this.actions.handleOnMouseOver
+                        className: _index2.default['tooltip-target-container'],
+                        onMouseOver: this.actions.handleOnMouseOver,
+                        onMouseOut: this.actions.handleOnMouseOut
                     },
                     children
                 )
@@ -24823,4 +24828,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?d9045c40084ce3f44816
+//# sourceMappingURL=bundle.js.map?ffd2e1fe33f70322ffb5
