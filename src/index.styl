@@ -1,0 +1,13 @@
+@import "reset-context";
+@import "style-portal";
+
+.tooltip-container {
+    reset-context();
+
+    .tooltip {
+        display: none;
+        &.show {
+            display: inline-block;
+        }
+    }
+}

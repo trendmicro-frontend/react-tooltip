@@ -1,0 +1,62 @@
+.tooltip-example {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+}
+
+.tooltip-example.top,
+.tooltip-example.right,
+.tooltip-example.bottom,
+.tooltip-example.left {
+    margin: 10px 15px 10px 25px;
+}
+
+.example {
+    position: relative;
+    padding: 45px 0 15px;
+    margin-bottom: 20px;
+
+    &:after {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        font-size: 14px;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        content: "Example";
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tooltip-standard-example-container {
+    margin-top: 35px;
+}
+.tooltip-standard-example-container, 
+.tooltip-light-example-container {
+    width: 130px;
+    text-align: center;
+}
+
+form .icon-info-sign {
+    vertical-align: top;
+    margin-left: 12px;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.icon-info-sign {
+    background-image: url(./images/icon/info.svg);
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
