@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-tooltip",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Tooltip",
   "main": "lib/index.js",
   "files": [
@@ -47,8 +47,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "lodash": "~4.17.4"
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "@trendmicro/react-buttons": "~1.0.4",

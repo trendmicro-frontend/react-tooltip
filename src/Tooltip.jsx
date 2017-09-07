@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import _ from 'lodash';
 import classNames from 'classnames';
 import styles from './index.styl';
 
@@ -165,7 +164,7 @@ class Tooltip extends PureComponent {
                         styles.tooltip,
                         { [styles.show]: isShow },
                         { [styles.in]: isShow },
-                        _.get(styles, place, '')
+                        styles[place] || ''
                     )}
                 >
                     {this.renders.renderArrow()}
