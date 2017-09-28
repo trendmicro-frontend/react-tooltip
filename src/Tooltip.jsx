@@ -9,23 +9,23 @@ class Tooltip extends PureComponent {
             'tooltip',
             'infotip'
         ]),
-        preferPlace: PropTypes.oneOf([
+        placement: PropTypes.oneOf([
             'top',
             'right',
             'bottom',
             'left'
         ]),
-        showDelay: PropTypes.number, // The approximate number of milliseconds before popups appear.
-        hideDelay: PropTypes.number, // The approximate number of milliseconds between the mouse leaving the target and tooltip disappearance.
+        enterDelay: PropTypes.number, // The delay length (in ms) before popups appear.
+        leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
         spacing: PropTypes.number, // The spacing between target and tooltip
         // contents
         content: PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.string]).isRequired
     };
     static defaultProps = {
         type: 'tooltip',
-        preferPlace: 'top',
-        showDelay: 0, // milliseconds
-        hideDelay: 100, // milliseconds
+        placement: 'top',
+        enterDelay: 0, // milliseconds
+        leaveDelay: 100, // milliseconds
         spacing: 0 // in px
     };
 
@@ -34,119 +34,35 @@ class Tooltip extends PureComponent {
         hide: null
     };
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            target: props.children,
-            isShow: false,
-            place: props.preferPlace,
-            offset: {
-                top: 0,
-                left: 0
-            }
-        };
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        this.actions.adjustPlace();
-    }
-
+    state = this.getInitialState();
     actions = {
-        toggle: (toState = null) => {
-            this.setState((prevState, props) => {
-                return {
-                    ...prevState,
-                    isShow: (toState === null) ? !prevState.isShow : !!toState
-                };
-            });
-        },
         handleOnMouseOver: (e) => {
             clearTimeout(this.timeoutID.show);
             clearTimeout(this.timeoutID.hide);
 
             this.timeoutID.show = setTimeout(() => {
-                this.actions.toggle(true);
-            }, this.props.showDelay);
+                this.setState(state => ({
+                    ...state,
+                    show: true
+                }));
+            }, this.props.enterDelay);
         },
         handleOnMouseOut: (e) => {
             clearTimeout(this.timeoutID.show);
             clearTimeout(this.timeoutID.hide);
 
             this.timeoutID.hide = setTimeout(() => {
-                this.actions.toggle(false);
-            }, this.props.hideDelay);
-        },
-        adjustPlace: () => {
-            const { place, offset } = this.state;
-            const {
-                preferPlace: newPlace,
-                spacing
-            } = this.props;
-            const target = this.tooltipTarget;
-            const tooltip = this.tooltip;
-
-            let newOffset = {
-                top: 0,
-                left: 0
-            };
-
-            if (newPlace === 'top') {
-                newOffset = {
-                    top: Math.floor(target.offsetTop - tooltip.offsetHeight - spacing),
-                    left: Math.floor(target.offsetLeft + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2))
-                };
-            }
-
-            if (newPlace === 'right') {
-                newOffset = {
-                    top: Math.floor(target.offsetTop + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2)),
-                    left: Math.floor(target.offsetLeft + target.offsetWidth + spacing)
-                };
-            }
-
-            if (newPlace === 'bottom') {
-                newOffset = {
-                    top: Math.floor(target.offsetTop + target.offsetHeight + spacing),
-                    left: Math.floor(target.offsetLeft + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2))
-                };
-            }
-
-            if (newPlace === 'left') {
-                newOffset = {
-                    top: Math.floor(target.offsetTop + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2)),
-                    left: Math.floor(target.offsetLeft - tooltip.offsetWidth - spacing)
-                };
-            }
-
-            if (place !== newPlace || offset.top !== newOffset.top || offset.left !== newOffset.left) {
-                this.setState((prevState, props) => {
-                    return {
-                        ...prevState,
-                        place: newPlace,
-                        offset: newOffset
-                    };
-                });
-            }
-        },
-        // https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
-        isElementInView: (element, fullyInView) => {
-            const pageTop = document.body.scrollTop;
-            const pageBottom = pageTop + document.body.offsetHeight;
-            const elementTop = element.offsetTop;
-            const elementBottom = elementTop + element.offsetHeight;
-
-            if (fullyInView === true) {
-                return ((pageTop < elementTop) && (pageBottom > elementBottom));
-            } else {
-                return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
-            }
+                this.setState(state => ({
+                    ...state,
+                    show: false
+                }));
+            }, this.props.leaveDelay);
         }
     };
 
     renders = {
         renderTooltip: () => {
-            const { isShow, place, offset } = this.state;
+            const { show, placement, offset } = this.state;
 
             return (
                 <div
@@ -159,9 +75,9 @@ class Tooltip extends PureComponent {
                     }}
                     className={classNames(
                         styles.tooltip,
-                        { [styles.show]: isShow },
-                        { [styles.in]: isShow },
-                        styles[place] || ''
+                        { [styles.show]: show },
+                        { [styles.in]: show },
+                        styles[placement]
                     )}
                 >
                     {this.renders.renderArrow()}
@@ -176,7 +92,7 @@ class Tooltip extends PureComponent {
                 return null;
             }
 
-            return (<div className={styles['tooltip-arrow']} />);
+            return (<div className={styles.tooltipArrow} />);
         },
         renderContent: () => {
             const { type, content } = this.props;
@@ -185,8 +101,8 @@ class Tooltip extends PureComponent {
             return (
                 <div
                     className={classNames(
-                        styles['tooltip-inner'],
-                        { [styles['tooltip-inner-light']]: type === 'infotip' }
+                        styles.tooltipInner,
+                        { [styles.tooltipInnerLight]: type === 'infotip' }
                     )}
                 >
                     {isFunction &&
@@ -200,6 +116,67 @@ class Tooltip extends PureComponent {
         }
     };
 
+    adjustPlacement = () => {
+        const {
+            placement: prevPlacement,
+            offset: prevOffset
+        } = this.state;
+        const {
+            placement: nextPlacement,
+            spacing
+        } = this.props;
+        const target = this.tooltipTarget;
+        const tooltip = this.tooltip;
+
+        const nextOffset = {
+            top: 0,
+            left: 0
+        };
+
+        if (nextPlacement === 'top') {
+            nextOffset.top = Math.floor(target.offsetTop - tooltip.offsetHeight - spacing);
+            nextOffset.left = Math.floor(target.offsetLeft + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
+        }
+
+        if (nextPlacement === 'right') {
+            nextOffset.top = Math.floor(target.offsetTop + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
+            nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth + spacing);
+        }
+
+        if (nextPlacement === 'bottom') {
+            nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight + spacing);
+            nextOffset.left = Math.floor(target.offsetLeft + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
+        }
+
+        if (nextPlacement === 'left') {
+            nextOffset.top = Math.floor(target.offsetTop + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
+            nextOffset.left = Math.floor(target.offsetLeft - tooltip.offsetWidth - spacing);
+        }
+
+        if ((prevPlacement !== nextPlacement) || (prevOffset.top !== nextOffset.top) || (prevOffset.left !== nextOffset.left)) {
+            this.setState((prevState, props) => {
+                return {
+                    ...prevState,
+                    placement: nextPlacement,
+                    offset: nextOffset
+                };
+            });
+        }
+    };
+
+    getInitialState() {
+        return {
+            placement: this.props.placement,
+            show: false,
+            offset: {
+                top: 0,
+                left: 0
+            }
+        };
+    }
+    componentDidUpdate(prevProps, prevState) {
+        this.adjustPlacement();
+    }
     render() {
         const {
             className,
@@ -214,7 +191,7 @@ class Tooltip extends PureComponent {
                     this.tooltipContainer = node;
                 }}
                 className={classNames(
-                    styles['tooltip-container'],
+                    styles.tooltipContainer,
                     className
                 )}
             >
@@ -223,7 +200,7 @@ class Tooltip extends PureComponent {
                     ref={node => {
                         this.tooltipTarget = node;
                     }}
-                    className={styles['tooltip-target-container']}
+                    className={styles.tooltipTargetContainer}
                     onMouseOver={this.actions.handleOnMouseOver}
                     onMouseOut={this.actions.handleOnMouseOut}
                 >

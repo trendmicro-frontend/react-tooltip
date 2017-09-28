@@ -37,7 +37,7 @@ class App extends React.Component {
                                             )}
                                         >
                                             <Tooltip
-                                                preferPlace="top"
+                                                placement="top"
                                                 content="Top tooltip"
                                             >
                                                 Hover on me (Top tooltip)
@@ -52,7 +52,7 @@ class App extends React.Component {
                                         >
 
                                             <Tooltip
-                                                preferPlace="right"
+                                                placement="right"
                                                 content={() => {
                                                     return (<span style={{ whiteSpace: 'nowrap' }}>{'Right tooltip'}</span>);
                                                 }}
@@ -68,7 +68,7 @@ class App extends React.Component {
                                             )}
                                         >
                                             <Tooltip
-                                                preferPlace="bottom"
+                                                placement="bottom"
                                                 content="Bottom tooltip"
                                             >
                                                 Hover on me (Bottom tooltip)
@@ -82,7 +82,7 @@ class App extends React.Component {
                                             )}
                                         >
                                             <Tooltip
-                                                preferPlace="left"
+                                                placement="left"
                                                 content="Left tooltip"
                                             >
                                                 Hover on me (Left tooltip)
@@ -91,7 +91,7 @@ class App extends React.Component {
                                     </div>
                                     <div className={styles['tooltip-standard-example-container']}>
                                         <Tooltip
-                                            preferPlace="top"
+                                            placement="top"
                                             content="Settings"
                                         >
                                             <button
@@ -133,7 +133,7 @@ class App extends React.Component {
                                         <form>
                                             <Tooltip
                                                 type="infotip"
-                                                preferPlace="right"
+                                                placement="right"
                                                 content="Users with this role have read-only access to all management console features."
                                             >
                                                 <span
@@ -155,7 +155,7 @@ class App extends React.Component {
                                     >
                                         <Tooltip
                                             type="infotip"
-                                            preferPlace="top"
+                                            placement="top"
                                             content="Top tooltip"
                                         >
                                             Hover on me (Top tooltip)
@@ -170,7 +170,7 @@ class App extends React.Component {
                                     >
                                         <Tooltip
                                             type="infotip"
-                                            preferPlace="right"
+                                            placement="right"
                                             content={<span style={{ whiteSpace: 'nowrap' }}>{'Right tooltip'}</span>}
                                         >
                                             Hover on me (Right tooltip)
@@ -185,7 +185,7 @@ class App extends React.Component {
                                     >
                                         <Tooltip
                                             type="infotip"
-                                            preferPlace="bottom"
+                                            placement="bottom"
                                             content="Bottom tooltip"
                                         >
                                             Hover on me (Bottom tooltip)
@@ -200,7 +200,7 @@ class App extends React.Component {
                                     >
                                         <Tooltip
                                             type="infotip"
-                                            preferPlace="left"
+                                            placement="left"
                                             content="Left tooltip"
                                         >
                                             Hover on me (Left tooltip)
