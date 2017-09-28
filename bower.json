@@ -2,7 +2,11 @@
   "name": "@trendmicro/react-tooltip",
   "description": "React Tooltip",
   "authors": [
-    "Mark Lin <mark_lin@trend.com.tw>"
+    {
+      "name": "Mark Lin",
+      "email": "mark_lin@trend.com.tw",
+      "homepage": "https://github.com/trendmicro-frontend"
+    }
   ],
   "homepage": "https://github.com/trendmicro-frontend/react-tooltip",
   "snapshots": [],

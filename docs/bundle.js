@@ -33,9 +33,6 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -76,8 +73,13 @@
 // load the styles
 var content = __webpack_require__("../node_modules/css-loader/index.js!../node_modules/@trendmicro/react-buttons/dist/react-buttons.css");
 if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__("../node_modules/style-loader/addStyles.js")(content, {});
+var update = __webpack_require__("../node_modules/style-loader/lib/addStyles.js")(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -98,7 +100,7 @@ if(false) {
 /***/ "../node_modules/@trendmicro/react-buttons/lib/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! react-buttons v1.0.4 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v1.2.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -165,7 +167,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -173,7 +175,7 @@ module.exports =
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"btn":"buttons---btn---2jZHN","active":"buttons---active---2-a32","focus":"buttons---focus---1kVJZ","hover":"buttons---hover---42FF2","disabled":"buttons---disabled---eCY9b","btn-icon-only":"buttons---btn-icon-only---NYhkW","btnIconOnly":"buttons---btn-icon-only---NYhkW","btn-default":"buttons---btn-default---1wWXD","btnDefault":"buttons---btn-default---1wWXD","btn-primary":"buttons---btn-primary---Wp1wb","btnPrimary":"buttons---btn-primary---Wp1wb","btn-danger":"buttons---btn-danger---1UUqU","btnDanger":"buttons---btn-danger---1UUqU","btn-border":"buttons---btn-border---1O58b","btnBorder":"buttons---btn-border---1O58b","open":"buttons---open---1ju75","dropdown-toggle":"buttons---dropdown-toggle---vMtjL","dropdownToggle":"buttons---dropdown-toggle---vMtjL","btn-link":"buttons---btn-link---1xwS4","btnLink":"buttons---btn-link---1xwS4","btn-lg":"buttons---btn-lg---2xtUV","btnLg":"buttons---btn-lg---2xtUV","btn-group-lg":"buttons---btn-group-lg---3C8An","btnGroupLg":"buttons---btn-group-lg---3C8An","btn-md":"buttons---btn-md---HRR_F","btnMd":"buttons---btn-md---HRR_F","btn-group-md":"buttons---btn-group-md---3FQVP","btnGroupMd":"buttons---btn-group-md---3FQVP","btn-sm":"buttons---btn-sm---3cNnY","btnSm":"buttons---btn-sm---3cNnY","btn-group-sm":"buttons---btn-group-sm---3_QLf","btnGroupSm":"buttons---btn-group-sm---3_QLf","btn-xs":"buttons---btn-xs---2eEDQ","btnXs":"buttons---btn-xs---2eEDQ","btn-group-xs":"buttons---btn-group-xs---1c4pb","btnGroupXs":"buttons---btn-group-xs---1c4pb","btn-block":"buttons---btn-block---1nSNV","btnBlock":"buttons---btn-block---1nSNV","btn-group":"buttons---btn-group---1jaDo","btnGroup":"buttons---btn-group---1jaDo","btn-group-vertical":"buttons---btn-group-vertical---3Lm1e","btnGroupVertical":"buttons---btn-group-vertical---3Lm1e","btn-toolbar":"buttons---btn-toolbar---2-GfJ","btnToolbar":"buttons---btn-toolbar---2-GfJ","input-group":"buttons---input-group---1T18I","inputGroup":"buttons---input-group---1T18I","btn-group-justified":"buttons---btn-group-justified---3qB9u","btnGroupJustified":"buttons---btn-group-justified---3qB9u","dropdown-menu":"buttons---dropdown-menu---1fkH0","dropdownMenu":"buttons---dropdown-menu---1fkH0"};
+module.exports = {"btn":"buttons---btn---2jZHN","active":"buttons---active---2-a32","focus":"buttons---focus---1kVJZ","hover":"buttons---hover---42FF2","disabled":"buttons---disabled---eCY9b","btn-default":"buttons---btn-default---1wWXD","btnDefault":"buttons---btn-default---1wWXD","btn-primary":"buttons---btn-primary---Wp1wb","btnPrimary":"buttons---btn-primary---Wp1wb","btn-danger":"buttons---btn-danger---1UUqU","btnDanger":"buttons---btn-danger---1UUqU","btn-border":"buttons---btn-border---1O58b","btnBorder":"buttons---btn-border---1O58b","open":"buttons---open---1ju75","dropdown-toggle":"buttons---dropdown-toggle---vMtjL","dropdownToggle":"buttons---dropdown-toggle---vMtjL","btn-link":"buttons---btn-link---1xwS4","btnLink":"buttons---btn-link---1xwS4","btn-lg":"buttons---btn-lg---2xtUV","btnLg":"buttons---btn-lg---2xtUV","btn-group-lg":"buttons---btn-group-lg---3C8An","btnGroupLg":"buttons---btn-group-lg---3C8An","btn-compact":"buttons---btn-compact---mXDAU","btnCompact":"buttons---btn-compact---mXDAU","btn-md":"buttons---btn-md---HRR_F","btnMd":"buttons---btn-md---HRR_F","btn-group-md":"buttons---btn-group-md---3FQVP","btnGroupMd":"buttons---btn-group-md---3FQVP","btn-sm":"buttons---btn-sm---3cNnY","btnSm":"buttons---btn-sm---3cNnY","btn-group-sm":"buttons---btn-group-sm---3_QLf","btnGroupSm":"buttons---btn-group-sm---3_QLf","btn-xs":"buttons---btn-xs---2eEDQ","btnXs":"buttons---btn-xs---2eEDQ","btn-group-xs":"buttons---btn-group-xs---1c4pb","btnGroupXs":"buttons---btn-group-xs---1c4pb","btn-block":"buttons---btn-block---1nSNV","btnBlock":"buttons---btn-block---1nSNV","btn-group":"buttons---btn-group---1jaDo","btnGroup":"buttons---btn-group---1jaDo","btn-group-vertical":"buttons---btn-group-vertical---3Lm1e","btnGroupVertical":"buttons---btn-group-vertical---3Lm1e","btn-toolbar":"buttons---btn-toolbar---2-GfJ","btnToolbar":"buttons---btn-toolbar---2-GfJ","input-group":"buttons---input-group---1T18I","inputGroup":"buttons---input-group---1T18I","btn-group-justified":"buttons---btn-group-justified---3qB9u","btnGroupJustified":"buttons---btn-group-justified---3qB9u","dropdown-menu":"buttons---dropdown-menu---1fkH0","dropdownMenu":"buttons---dropdown-menu---1fkH0"};
 
 /***/ }),
 /* 1 */
@@ -189,12 +191,6 @@ module.exports = __webpack_require__("../node_modules/react/react.js");
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
-
-module.exports = __webpack_require__("../node_modules/prop-types/index.js");
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -214,13 +210,15 @@ var _classnames = __webpack_require__(1);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _propTypes = __webpack_require__(3);
+var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _constants = __webpack_require__(4);
 
 var _index = __webpack_require__(0);
 
@@ -263,11 +261,12 @@ var Button = (_temp = _class = function (_PureComponent) {
                 focus = _props.focus,
                 disabled = _props.disabled,
                 block = _props.block,
+                compact = _props.compact,
                 iconOnly = _props.iconOnly,
                 dropdownToggle = _props.dropdownToggle,
-                props = _objectWithoutProperties(_props, ['className', 'componentClass', 'type', 'btnSize', 'btnStyle', 'active', 'hover', 'focus', 'disabled', 'block', 'iconOnly', 'dropdownToggle']);
+                props = _objectWithoutProperties(_props, ['className', 'componentClass', 'type', 'btnSize', 'btnStyle', 'active', 'hover', 'focus', 'disabled', 'block', 'compact', 'iconOnly', 'dropdownToggle']);
 
-            var classes = (_classes = {}, _defineProperty(_classes, _index2.default.btn, true), _defineProperty(_classes, _index2.default.btnLg, btnSize === 'large' || btnSize === 'lg'), _defineProperty(_classes, _index2.default.btnMd, btnSize === 'medium' || btnSize === 'md'), _defineProperty(_classes, _index2.default.btnSm, btnSize === 'small' || btnSize === 'sm'), _defineProperty(_classes, _index2.default.btnXs, btnSize === 'extra-small' || btnSize === 'xs'), _defineProperty(_classes, _index2.default.btnDefault, btnStyle === 'default'), _defineProperty(_classes, _index2.default.btnPrimary, btnStyle === 'primary'), _defineProperty(_classes, _index2.default.btnDanger, btnStyle === 'danger' || btnStyle === 'emphasis'), _defineProperty(_classes, _index2.default.btnBorder, btnStyle === 'border' || btnStyle === 'flat'), _defineProperty(_classes, _index2.default.btnLink, btnStyle === 'link'), _defineProperty(_classes, _index2.default.btnBlock, block), _defineProperty(_classes, _index2.default.btnIconOnly, iconOnly), _defineProperty(_classes, _index2.default.hover, hover), _defineProperty(_classes, _index2.default.active, active), _defineProperty(_classes, _index2.default.focus, focus), _defineProperty(_classes, _index2.default.dropdownToggle, dropdownToggle), _classes);
+            var classes = (_classes = {}, _defineProperty(_classes, _index2.default.btn, true), _defineProperty(_classes, _index2.default.btnLg, btnSize === 'large' || btnSize === 'lg'), _defineProperty(_classes, _index2.default.btnMd, btnSize === 'medium' || btnSize === 'md'), _defineProperty(_classes, _index2.default.btnSm, btnSize === 'small' || btnSize === 'sm'), _defineProperty(_classes, _index2.default.btnXs, btnSize === 'extra-small' || btnSize === 'xs'), _defineProperty(_classes, _index2.default.btnDefault, btnStyle === 'default'), _defineProperty(_classes, _index2.default.btnPrimary, btnStyle === 'primary'), _defineProperty(_classes, _index2.default.btnDanger, btnStyle === 'danger' || btnStyle === 'emphasis'), _defineProperty(_classes, _index2.default.btnBorder, btnStyle === 'border' || btnStyle === 'flat'), _defineProperty(_classes, _index2.default.btnLink, btnStyle === 'link'), _defineProperty(_classes, _index2.default.btnBlock, block), _defineProperty(_classes, _index2.default.btnCompact, compact || iconOnly), _defineProperty(_classes, _index2.default.hover, hover), _defineProperty(_classes, _index2.default.active, active), _defineProperty(_classes, _index2.default.focus, focus), _defineProperty(_classes, _index2.default.dropdownToggle, dropdownToggle), _classes);
 
             return _react2.default.createElement(Component, _extends({}, props, {
                 type: type,
@@ -281,16 +280,15 @@ var Button = (_temp = _class = function (_PureComponent) {
 }(_react.PureComponent), _class.propTypes = {
     componentClass: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
     type: _propTypes2.default.oneOf(['button', 'reset', 'submit']),
-    btnSize: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs', 'large', 'medium', 'small', 'extra-small']),
-    btnStyle: _propTypes2.default.oneOf(['default', 'primary', 'danger', 'emphasis', // alias of "danger"
-    'border', 'flat', // alias of "border"
-    'link']),
+    btnSize: _propTypes2.default.oneOf(_constants.btnSizes),
+    btnStyle: _propTypes2.default.oneOf(_constants.btnStyles),
     active: _propTypes2.default.bool,
     hover: _propTypes2.default.bool,
     focus: _propTypes2.default.bool,
     disabled: _propTypes2.default.bool,
     block: _propTypes2.default.bool,
-    iconOnly: _propTypes2.default.bool,
+    compact: _propTypes2.default.bool,
+    iconOnly: _propTypes2.default.bool, // alias of compact
 
     // Apply styles for use in a Dropdown.
     // This prop will be set automatically when the Button is used inside a Dropdown.
@@ -305,13 +303,36 @@ var Button = (_temp = _class = function (_PureComponent) {
     focus: false,
     disabled: false,
     block: false,
-    iconOnly: false,
+    compact: false,
+    iconOnly: false, // alias of compact
     dropdownToggle: false
 }, _temp);
 exports.default = Button;
 
 /***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var btnSizes = exports.btnSizes = ['lg', 'md', 'sm', 'xs', 'large', 'medium', 'small', 'extra-small'];
+
+var btnStyles = exports.btnStyles = ['default', 'primary', 'danger', 'emphasis', // alias of "danger"
+'border', 'flat', // alias of "border"
+'link'];
+
+/***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = __webpack_require__("../node_modules/prop-types/index.js");
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -327,13 +348,19 @@ var _classnames = __webpack_require__(1);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _propTypes = __webpack_require__(3);
+var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _Button = __webpack_require__(3);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _constants = __webpack_require__(4);
 
 var _index = __webpack_require__(0);
 
@@ -348,20 +375,41 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var ButtonGroup = function ButtonGroup(_ref) {
     var _classes;
 
-    var className = _ref.className,
-        btnSize = _ref.btnSize,
+    var btnSize = _ref.btnSize,
+        btnStyle = _ref.btnStyle,
         vertical = _ref.vertical,
         dropdownOpen = _ref.dropdownOpen,
-        props = _objectWithoutProperties(_ref, ['className', 'btnSize', 'vertical', 'dropdownOpen']);
+        children = _ref.children,
+        className = _ref.className,
+        props = _objectWithoutProperties(_ref, ['btnSize', 'btnStyle', 'vertical', 'dropdownOpen', 'children', 'className']);
 
     var classes = (_classes = {}, _defineProperty(_classes, _index2.default.btnGroup, true), _defineProperty(_classes, _index2.default.btnGroupLg, btnSize === 'large' || btnSize === 'lg'), _defineProperty(_classes, _index2.default.btnGroupMd, btnSize === 'medium' || btnSize === 'md'), _defineProperty(_classes, _index2.default.btnGroupSm, btnSize === 'small' || btnSize === 'sm'), _defineProperty(_classes, _index2.default.btnGroupXs, btnSize === 'extra-small' || btnSize === 'xs'), _defineProperty(_classes, _index2.default.btnGroupVertical, vertical), _defineProperty(_classes, _index2.default.open, dropdownOpen), _classes);
-    return _react2.default.createElement('div', _extends({}, props, {
-        className: (0, _classnames2.default)(className, classes)
-    }));
+
+    return _react2.default.createElement(
+        'div',
+        _extends({}, props, {
+            className: (0, _classnames2.default)(className, classes)
+        }),
+        _react2.default.Children.map(children, function (child) {
+            if (_react2.default.isValidElement(child) && child.type === _Button2.default) {
+                var childProps = {};
+                if (_constants.btnSizes.indexOf(btnSize) >= 0) {
+                    childProps.btnSize = btnSize;
+                }
+                if (_constants.btnStyles.indexOf(btnStyle) >= 0) {
+                    childProps.btnStyle = btnStyle;
+                }
+                return (0, _react.cloneElement)(child, childProps);
+            }
+
+            return child;
+        })
+    );
 };
 
 ButtonGroup.propTypes = {
-    btnSize: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs', 'large', 'medium', 'small', 'extra-small']),
+    btnSize: _propTypes2.default.oneOf(_constants.btnSizes),
+    btnStyle: _propTypes2.default.oneOf(_constants.btnStyles),
     vertical: _propTypes2.default.bool,
 
     // Apply styles for use in a Dropdown.
@@ -369,6 +417,7 @@ ButtonGroup.propTypes = {
     dropdownOpen: _propTypes2.default.bool
 };
 ButtonGroup.defaultProps = {
+    btnSize: 'md',
     vertical: false,
     dropdownOpen: false
 };
@@ -376,7 +425,7 @@ ButtonGroup.defaultProps = {
 exports.default = ButtonGroup;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -416,7 +465,7 @@ var ButtonToolbar = function ButtonToolbar(_ref) {
 exports.default = ButtonToolbar;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -427,15 +476,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ButtonToolbar = exports.ButtonGroup = exports.Button = undefined;
 
-var _Button2 = __webpack_require__(4);
+var _Button2 = __webpack_require__(3);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _ButtonGroup2 = __webpack_require__(5);
+var _ButtonGroup2 = __webpack_require__(6);
 
 var _ButtonGroup3 = _interopRequireDefault(_ButtonGroup2);
 
-var _ButtonToolbar2 = __webpack_require__(6);
+var _ButtonToolbar2 = __webpack_require__(7);
 
 var _ButtonToolbar3 = _interopRequireDefault(_ButtonToolbar2);
 
@@ -512,12 +561,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -1396,7 +1443,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, "/*! react-buttons v1.0.4 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */\n.buttons---btn---2jZHN {\n  display: inline-block;\n  min-width: 80px;\n  padding: 5px 12px;\n  margin-bottom: 0;\n  font-size: 13px;\n  font-weight: normal;\n  line-height: 20px;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.buttons---btn---2jZHN:focus,\n.buttons---btn---2jZHN:active:focus,\n.buttons---btn---2jZHN.buttons---active---2-a32:focus,\n.buttons---btn---2jZHN.buttons---focus---1kVJZ,\n.buttons---btn---2jZHN:active.buttons---focus---1kVJZ,\n.buttons---btn---2jZHN.buttons---active---2-a32.buttons---focus---1kVJZ {\n  outline: none;\n}\n.buttons---btn---2jZHN:hover,\n.buttons---btn---2jZHN.buttons---hover---42FF2,\n.buttons---btn---2jZHN:focus,\n.buttons---btn---2jZHN.buttons---focus---1kVJZ {\n  color: #222;\n  text-decoration: none;\n}\n.buttons---btn---2jZHN:active,\n.buttons---btn---2jZHN.buttons---active---2-a32 {\n  outline: none;\n  background-image: none;\n  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn---2jZHN.buttons---disabled---eCY9b,\n.buttons---btn---2jZHN[disabled],\nfieldset[disabled] .buttons---btn---2jZHN {\n  cursor: not-allowed;\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\na .buttons---btn---2jZHN.buttons---disabled---eCY9b,\nfieldset[disabled] a .buttons---btn---2jZHN {\n  pointer-events: none;\n}\n.buttons---btn---2jZHN + .buttons---btn---2jZHN {\n  margin-left: 8px;\n}\n.buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {\n  min-width: 0;\n  padding-left: 0;\n  padding-right: 0;\n  width: 42px;\n}\n.buttons---btn---2jZHN > [class*=\"loader-container\"] {\n  display: inline-block;\n}\n.buttons---btn---2jZHN > [class*=\"loader-container\"] > [class*=\"loader\"] {\n  margin-top: 2px;\n  margin-right: 8px;\n}\n.buttons---btn-default---1wWXD {\n  color: #222;\n  background-color: #fbfbfb;\n  background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -moz-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -o-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -ms-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: linear-gradient(to bottom, #fbfbfb 0%, #ececec 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n}\n.buttons---btn-default---1wWXD:active,\n.buttons---btn-default---1wWXD.buttons---active---2-a32 {\n  color: #222;\n  background-color: #eee;\n  background-image: none;\n  border-color: #bbb;\n  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn-default---1wWXD:focus,\n.buttons---btn-default---1wWXD.buttons---focus---1kVJZ {\n  color: #222;\n  border-color: #0096cc;\n}\n.buttons---btn-default---1wWXD:hover,\n.buttons---btn-default---1wWXD.buttons---hover---42FF2 {\n  color: #222;\n  background-color: #fff;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: -moz-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: -o-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: -ms-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: linear-gradient(to bottom, #fff 0%, #f5f5f5 100%);\n  background-repeat: repeat-x;\n  border-color: #999;\n}\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b:hover,\n.buttons---btn-default---1wWXD[disabled]:hover,\nfieldset[disabled] .buttons---btn-default---1wWXD:hover,\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-default---1wWXD[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-default---1wWXD.buttons---hover---42FF2,\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b:focus,\n.buttons---btn-default---1wWXD[disabled]:focus,\nfieldset[disabled] .buttons---btn-default---1wWXD:focus,\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-default---1wWXD[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-default---1wWXD.buttons---focus---1kVJZ {\n  background-color: #fbfbfb;\n  background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -moz-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -o-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -ms-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: linear-gradient(to bottom, #fbfbfb 0%, #ececec 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n}\n.buttons---btn-primary---Wp1wb {\n  color: #fff;\n  background-color: #0096cc;\n  background-image: -webkit-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -moz-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -o-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -ms-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: linear-gradient(to bottom, #00a7e6 0%, #0096cc 100%);\n  background-repeat: repeat-x;\n  border-color: #0095ce;\n}\n.buttons---btn-primary---Wp1wb > [class*=\"loader-container\"] > [class*=\"loader\"] {\n  border-color: rgba(255,255,255,0.4);\n  border-left-color: #fff;\n}\n.buttons---btn-primary---Wp1wb:active,\n.buttons---btn-primary---Wp1wb.buttons---active---2-a32 {\n  color: #fff;\n  background-color: #009ed8;\n  background-image: none;\n  border-color: #00759f;\n  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n  box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n}\n.buttons---btn-primary---Wp1wb:focus,\n.buttons---btn-primary---Wp1wb.buttons---focus---1kVJZ {\n  color: #fff;\n  border-color: #444;\n  -webkit-box-shadow: 0 0 1px #fff inset;\n  box-shadow: 0 0 1px #fff inset;\n}\n.buttons---btn-primary---Wp1wb:hover,\n.buttons---btn-primary---Wp1wb.buttons---hover---42FF2 {\n  color: #fff;\n  background-color: #1daee5;\n  background-image: -webkit-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: -moz-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: -o-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: -ms-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: linear-gradient(to bottom, #1daee5 0%, #00a3df 100%);\n  background-repeat: repeat-x;\n  border-color: #00759f;\n}\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b:hover,\n.buttons---btn-primary---Wp1wb[disabled]:hover,\nfieldset[disabled] .buttons---btn-primary---Wp1wb:hover,\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-primary---Wp1wb[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-primary---Wp1wb.buttons---hover---42FF2,\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b:focus,\n.buttons---btn-primary---Wp1wb[disabled]:focus,\nfieldset[disabled] .buttons---btn-primary---Wp1wb:focus,\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-primary---Wp1wb[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-primary---Wp1wb.buttons---focus---1kVJZ {\n  background-color: #0096cc;\n  background-image: -webkit-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -moz-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -o-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -ms-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: linear-gradient(to bottom, #00a7e6 0%, #0096cc 100%);\n  background-repeat: repeat-x;\n  border-color: #0095ce;\n}\n.buttons---btn-danger---1UUqU {\n  color: #fff;\n  background-color: #db3d44;\n  background-image: -webkit-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -moz-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -o-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -ms-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);\n  background-repeat: repeat-x;\n  border-color: #d8262b;\n}\n.buttons---btn-danger---1UUqU:active,\n.buttons---btn-danger---1UUqU.buttons---active---2-a32 {\n  color: #fff;\n  background-color: #e15054;\n  background-image: none;\n  border-color: #c22327;\n  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n  box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n}\n.buttons---btn-danger---1UUqU:focus,\n.buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {\n  color: #fff;\n  border-color: #444;\n  -webkit-box-shadow: 0 0 1px #fff inset;\n  box-shadow: 0 0 1px #fff inset;\n}\n.buttons---btn-danger---1UUqU:hover,\n.buttons---btn-danger---1UUqU.buttons---hover---42FF2 {\n  color: #fff;\n  background-color: #e15f5f;\n  background-image: -webkit-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: -moz-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: -o-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: -ms-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: linear-gradient(to bottom, #e15f5f 0%, #e15054 100%);\n  background-repeat: repeat-x;\n  border-color: #c22327;\n}\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b:hover,\n.buttons---btn-danger---1UUqU[disabled]:hover,\nfieldset[disabled] .buttons---btn-danger---1UUqU:hover,\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-danger---1UUqU[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-danger---1UUqU.buttons---hover---42FF2,\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b:focus,\n.buttons---btn-danger---1UUqU[disabled]:focus,\nfieldset[disabled] .buttons---btn-danger---1UUqU:focus,\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-danger---1UUqU[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {\n  background-color: #db3d44;\n  background-image: -webkit-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -moz-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -o-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -ms-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);\n  background-repeat: repeat-x;\n  border-color: #d8262b;\n}\n.buttons---btn-border---1O58b {\n  color: #222;\n  background-color: #fff;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -moz-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -o-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -ms-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);\n  background-image: none false;\n  background-repeat: repeat-x;\n  border-color: #ccc;\n  -webkit-transition: all 0.2s linear 0s;\n  -moz-transition: all 0.2s linear 0s;\n  -o-transition: all 0.2s linear 0s;\n  -ms-transition: all 0.2s linear 0s;\n  transition: all 0.2s linear 0s;\n}\n.buttons---btn-border---1O58b:hover,\n.buttons---btn-border---1O58b.buttons---hover---42FF2 {\n  color: #222;\n  background-color: #f4f4f4;\n  background-image: -webkit-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: -moz-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: -o-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: -ms-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: linear-gradient(to bottom, #f4f4f4 0%, #f4f4f4 100%);\n  background-repeat: repeat-x;\n  border-color: #999;\n}\n.buttons---btn-border---1O58b:focus,\n.buttons---btn-border---1O58b.buttons---focus---1kVJZ {\n  color: #222;\n  border-color: #0096cc;\n}\n.buttons---btn-border---1O58b:active,\n.buttons---btn-border---1O58b.buttons---active---2-a32,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b {\n  color: #222;\n  background-color: #eee;\n  background-image: none;\n  border-color: #bbb;\n  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;\n  box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn-border---1O58b:active:hover,\n.buttons---btn-border---1O58b.buttons---active---2-a32:hover,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b:hover,\n.buttons---btn-border---1O58b:active.buttons---hover---42FF2,\n.buttons---btn-border---1O58b.buttons---active---2-a32.buttons---hover---42FF2,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b.buttons---hover---42FF2,\n.buttons---btn-border---1O58b:active:focus,\n.buttons---btn-border---1O58b.buttons---active---2-a32:focus,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b:focus,\n.buttons---btn-border---1O58b:active.buttons---focus---1kVJZ,\n.buttons---btn-border---1O58b.buttons---active---2-a32.buttons---focus---1kVJZ,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b.buttons---focus---1kVJZ {\n  color: #222;\n  border-color: #bbb;\n  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;\n  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b,\n.buttons---btn-border---1O58b[disabled],\nfieldset[disabled] .buttons---btn-border---1O58b {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b:hover,\n.buttons---btn-border---1O58b[disabled]:hover,\nfieldset[disabled] .buttons---btn-border---1O58b:hover,\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-border---1O58b[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-border---1O58b.buttons---hover---42FF2,\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b:focus,\n.buttons---btn-border---1O58b[disabled]:focus,\nfieldset[disabled] .buttons---btn-border---1O58b:focus,\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-border---1O58b[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-border---1O58b.buttons---focus---1kVJZ {\n  background-color: #fff;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -moz-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -o-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -ms-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n}\n.buttons---btn-link---1xwS4 {\n  padding-right: 0;\n  padding-left: 0;\n  font-weight: normal;\n  color: #0096cc;\n  border-radius: 0;\n}\n.buttons---btn-link---1xwS4,\n.buttons---btn-link---1xwS4:active,\n.buttons---btn-link---1xwS4.buttons---active---2-a32,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b,\n.buttons---btn-link---1xwS4[disabled],\nfieldset[disabled] .buttons---btn-link---1xwS4 {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.buttons---btn-link---1xwS4,\n.buttons---btn-link---1xwS4:hover,\n.buttons---btn-link---1xwS4.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4:focus,\n.buttons---btn-link---1xwS4:active {\n  border-color: transparent;\n}\n.buttons---btn-link---1xwS4:hover,\n.buttons---btn-link---1xwS4.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4:focus {\n  color: #db3d44;\n  text-decoration: underline;\n  background-color: transparent;\n}\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b:hover,\n.buttons---btn-link---1xwS4[disabled]:hover,\nfieldset[disabled] .buttons---btn-link---1xwS4:hover,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-link---1xwS4.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b:focus,\n.buttons---btn-link---1xwS4[disabled]:focus,\nfieldset[disabled] .buttons---btn-link---1xwS4:focus,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-link---1xwS4[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {\n  color: #e6e6e6;\n  text-decoration: none;\n}\n.buttons---btn-lg---2xtUV,\n.buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN {\n  padding: 9px 12px;\n  font-size: 16px;\n  line-height: 24px;\n  border-radius: 3px;\n}\n.buttons---btn-lg---2xtUV.buttons---btn-icon-only---NYhkW,\n.buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {\n  width: 58px;\n}\n.buttons---btn-md---HRR_F,\n.buttons---btn-group-md---3FQVP > .buttons---btn---2jZHN {\n  padding: 5px 12px;\n  font-size: 13px;\n  line-height: 20px;\n  border-radius: 3px;\n}\n.buttons---btn-sm---3cNnY,\n.buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN {\n  padding: 4px 12px;\n  font-size: 12px;\n  line-height: 18px;\n  border-radius: 3px;\n}\n.buttons---btn-sm---3cNnY.buttons---btn-icon-only---NYhkW,\n.buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {\n  width: 36px;\n}\n.buttons---btn-xs---2eEDQ,\n.buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN {\n  padding: 1px 12px;\n  font-size: 12px;\n  line-height: 18px;\n  border-radius: 3px;\n}\n.buttons---btn-xs---2eEDQ.buttons---btn-icon-only---NYhkW,\n.buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {\n  width: 28px;\n}\n.buttons---btn-block---1nSNV {\n  display: block;\n  width: 100%;\n}\n.buttons---btn-block---1nSNV.buttons---btn---2jZHN + .buttons---btn-block---1nSNV.buttons---btn---2jZHN,\n.buttons---btn-block---1nSNV + .buttons---btn-block---1nSNV {\n  margin-left: 0;\n  margin-top: 8px;\n}\ninput[type=\"submit\"].buttons---btn-block---1nSNV,\ninput[type=\"reset\"].buttons---btn-block---1nSNV,\ninput[type=\"button\"].buttons---btn-block---1nSNV {\n  width: 100%;\n}\n.buttons---btn-group---1jaDo,\n.buttons---btn-group-vertical---3Lm1e {\n  position: relative;\n  display: inline-block;\n  vertical-align: top;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN {\n  position: relative;\n  float: left;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:hover,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:hover,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN.buttons---hover---42FF2,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN.buttons---hover---42FF2,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:active,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:active,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN.buttons---active---2-a32,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN.buttons---active---2-a32 {\n  z-index: 2;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:focus,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:focus,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN.buttons---focus---1kVJZ,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN.buttons---focus---1kVJZ {\n  z-index: 3;\n}\n.buttons---btn-group---1jaDo .buttons---btn---2jZHN + .buttons---btn---2jZHN,\n.buttons---btn-group---1jaDo .buttons---btn---2jZHN + .buttons---btn-group---1jaDo,\n.buttons---btn-group---1jaDo .buttons---btn-group---1jaDo + .buttons---btn---2jZHN,\n.buttons---btn-group---1jaDo .buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {\n  margin-left: -1px;\n}\n.buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {\n  margin-left: 8px;\n}\n.buttons---btn-toolbar---2-GfJ {\n  margin-left: -5px;\n  zoom: 1;\n}\n.buttons---btn-toolbar---2-GfJ:before,\n.buttons---btn-toolbar---2-GfJ:after {\n  content: \"\";\n  display: table;\n}\n.buttons---btn-toolbar---2-GfJ:after {\n  clear: both;\n}\n.buttons---btn-toolbar---2-GfJ .buttons---btn---2jZHN,\n.buttons---btn-toolbar---2-GfJ .buttons---btn-group---1jaDo,\n.buttons---btn-toolbar---2-GfJ .buttons---input-group---1T18I {\n  float: left;\n}\n.buttons---btn-toolbar---2-GfJ > .buttons---btn---2jZHN,\n.buttons---btn-toolbar---2-GfJ > .buttons---btn-group---1jaDo,\n.buttons---btn-toolbar---2-GfJ > .buttons---input-group---1T18I {\n  margin-left: 5px;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:not(:first-child):not(:last-child):not(.buttons---dropdown-toggle---vMtjL) {\n  border-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:first-child {\n  margin-left: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:first-child:not(:last-child):not(.buttons---dropdown-toggle---vMtjL) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:last-child:not(:first-child),\n.buttons---btn-group---1jaDo > .buttons---dropdown-toggle---vMtjL:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo {\n  float: left;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:not(:first-child):not(:last-child) > .buttons---btn---2jZHN {\n  border-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---btn---2jZHN:last-child,\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---dropdown-toggle---vMtjL {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:last-child:not(:first-child) > .buttons---btn---2jZHN:first-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.buttons---btn-group---1jaDo .buttons---dropdown-toggle---vMtjL:active,\n.buttons---btn-group---1jaDo.buttons---open---1ju75 .buttons---dropdown-toggle---vMtjL {\n  outline: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo {\n  zoom: 1;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:before,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:after {\n  content: \"\";\n  display: table;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:after {\n  clear: both;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN {\n  float: none;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN + .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN + .buttons---btn-group---1jaDo,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo + .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {\n  margin-top: -1px;\n  margin-left: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:first-child:not(:last-child) {\n  border-top-radius: 3px;\n  border-bottom-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:last-child:not(:first-child) {\n  border-top-radius: 0;\n  border-bottom-radius: 3px;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:not(:first-child):not(:last-child) > .buttons---btn---2jZHN {\n  border-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---btn---2jZHN:last-child,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---dropdown-toggle---vMtjL {\n  border-bottom-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:last-child:not(:first-child) > .buttons---btn---2jZHN:first-child {\n  border-top-radius: 0;\n}\n.buttons---btn-group-justified---3qB9u {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: separate;\n}\n.buttons---btn-group-justified---3qB9u > .buttons---btn---2jZHN,\n.buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo {\n  float: none;\n  display: table-cell;\n  width: 1%;\n}\n.buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo .buttons---btn---2jZHN {\n  width: 100%;\n}\n.buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo .buttons---dropdown-menu---1fkH0 {\n  left: auto;\n}\n.buttons---dropdown-toggle---vMtjL {\n  min-width: 0;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn---2jZHN {\n  text-align: left;\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn-icon-only---NYhkW {\n  text-align: center;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4 {\n  color: #222;\n  padding-left: 0;\n  padding-right: 0;\n  text-decoration: none;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover,\n.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover > * {\n  color: #0096cc;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN + .buttons---dropdown-toggle---vMtjL {\n  padding-left: 8px;\n  padding-right: 8px;\n  min-width: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-lg---2xtUV + .buttons---dropdown-toggle---vMtjL {\n  padding-left: 12px;\n  padding-right: 12px;\n}\n[data-toggle=\"buttons\"] > .buttons---btn---2jZHN input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .buttons---btn---2jZHN input[type=\"checkbox\"],\n[data-toggle=\"buttons\"] > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none;\n}\n.buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW .fa {\n  margin-right: 0;\n}\n.buttons---btn---2jZHN .fa {\n  font-size: 14px;\n  margin-right: 8px;\n}\n.buttons---btn---2jZHN i.fa,\n.buttons---btn---2jZHN span.fa {\n  font-size: 14px;\n  color: #666;\n}\n.buttons---btn-primary---Wp1wb i.fa,\n.buttons---btn-danger---1UUqU i.fa,\n.buttons---btn-primary---Wp1wb span.fa,\n.buttons---btn-danger---1UUqU span.fa {\n  color: inherit;\n}\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN i.fa,\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN i.fa,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN i.fa,\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN span.fa,\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN span.fa,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN span.fa {\n  font-size: inherit;\n}\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN i.svg,\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN span.svg {\n  width: 24px;\n  height: 24px;\n}\n.buttons---btn---2jZHN i.svg,\n.buttons---btn---2jZHN span.svg {\n  width: 16px;\n  height: 16px;\n}\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN i.svg,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN i.svg,\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN span.svg,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN span.svg {\n  width: 12px;\n  height: 12px;\n}", ""]);
+exports.push([module.i, "/*! react-buttons v1.2.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */\n.buttons---btn---2jZHN {\n  display: inline-block;\n  min-width: 80px;\n  padding: 5px 12px;\n  margin-bottom: 0;\n  font-size: 13px;\n  font-weight: normal;\n  line-height: 20px;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.buttons---btn---2jZHN:focus,\n.buttons---btn---2jZHN:active:focus,\n.buttons---btn---2jZHN.buttons---active---2-a32:focus,\n.buttons---btn---2jZHN.buttons---focus---1kVJZ,\n.buttons---btn---2jZHN:active.buttons---focus---1kVJZ,\n.buttons---btn---2jZHN.buttons---active---2-a32.buttons---focus---1kVJZ {\n  outline: none;\n}\n.buttons---btn---2jZHN:hover,\n.buttons---btn---2jZHN.buttons---hover---42FF2,\n.buttons---btn---2jZHN:focus,\n.buttons---btn---2jZHN.buttons---focus---1kVJZ {\n  color: #222;\n  text-decoration: none;\n}\n.buttons---btn---2jZHN:active,\n.buttons---btn---2jZHN.buttons---active---2-a32 {\n  outline: none;\n  background-image: none;\n  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn---2jZHN.buttons---disabled---eCY9b,\n.buttons---btn---2jZHN[disabled],\nfieldset[disabled] .buttons---btn---2jZHN {\n  cursor: not-allowed;\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n}\na .buttons---btn---2jZHN.buttons---disabled---eCY9b,\nfieldset[disabled] a .buttons---btn---2jZHN {\n  pointer-events: none;\n}\n.buttons---btn---2jZHN + .buttons---btn---2jZHN {\n  margin-left: 8px;\n}\n.buttons---btn---2jZHN > [class*=\"loader-container\"] {\n  display: inline-block;\n}\n.buttons---btn---2jZHN > [class*=\"loader-container\"] > [class*=\"loader\"] {\n  margin-top: 2px;\n  margin-right: 8px;\n}\n.buttons---btn-default---1wWXD {\n  color: #222;\n  background-color: #fbfbfb;\n  background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -moz-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -o-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -ms-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: linear-gradient(to bottom, #fbfbfb 0%, #ececec 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n}\n.buttons---btn-default---1wWXD:active,\n.buttons---btn-default---1wWXD.buttons---active---2-a32 {\n  color: #222;\n  background-color: #eee;\n  background-image: none;\n  border-color: #bbb;\n  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn-default---1wWXD:focus,\n.buttons---btn-default---1wWXD.buttons---focus---1kVJZ {\n  color: #222;\n  border-color: #0096cc;\n}\n.buttons---btn-default---1wWXD:hover,\n.buttons---btn-default---1wWXD.buttons---hover---42FF2 {\n  color: #222;\n  background-color: #fff;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: -moz-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: -o-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: -ms-linear-gradient(top, #fff 0%, #f5f5f5 100%);\n  background-image: linear-gradient(to bottom, #fff 0%, #f5f5f5 100%);\n  background-repeat: repeat-x;\n  border-color: #999;\n}\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b:hover,\n.buttons---btn-default---1wWXD[disabled]:hover,\nfieldset[disabled] .buttons---btn-default---1wWXD:hover,\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-default---1wWXD[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-default---1wWXD.buttons---hover---42FF2,\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b:focus,\n.buttons---btn-default---1wWXD[disabled]:focus,\nfieldset[disabled] .buttons---btn-default---1wWXD:focus,\n.buttons---btn-default---1wWXD.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-default---1wWXD[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-default---1wWXD.buttons---focus---1kVJZ {\n  background-color: #fbfbfb;\n  background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -moz-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -o-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: -ms-linear-gradient(top, #fbfbfb 0%, #ececec 100%);\n  background-image: linear-gradient(to bottom, #fbfbfb 0%, #ececec 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n}\n.buttons---btn-primary---Wp1wb {\n  color: #fff;\n  background-color: #0096cc;\n  background-image: -webkit-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -moz-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -o-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -ms-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: linear-gradient(to bottom, #00a7e6 0%, #0096cc 100%);\n  background-repeat: repeat-x;\n  border-color: #0095ce;\n}\n.buttons---btn-primary---Wp1wb > [class*=\"loader-container\"] > [class*=\"loader\"] {\n  border-color: rgba(255,255,255,0.4);\n  border-left-color: #fff;\n}\n.buttons---btn-primary---Wp1wb:active,\n.buttons---btn-primary---Wp1wb.buttons---active---2-a32 {\n  color: #fff;\n  background-color: #009ed8;\n  background-image: none;\n  border-color: #00759f;\n  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n  box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n}\n.buttons---btn-primary---Wp1wb:focus,\n.buttons---btn-primary---Wp1wb.buttons---focus---1kVJZ {\n  color: #fff;\n  border-color: #444;\n  -webkit-box-shadow: 0 0 1px #fff inset;\n  box-shadow: 0 0 1px #fff inset;\n}\n.buttons---btn-primary---Wp1wb:hover,\n.buttons---btn-primary---Wp1wb.buttons---hover---42FF2 {\n  color: #fff;\n  background-color: #1daee5;\n  background-image: -webkit-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: -moz-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: -o-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: -ms-linear-gradient(top, #1daee5 0%, #00a3df 100%);\n  background-image: linear-gradient(to bottom, #1daee5 0%, #00a3df 100%);\n  background-repeat: repeat-x;\n  border-color: #00759f;\n}\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b:hover,\n.buttons---btn-primary---Wp1wb[disabled]:hover,\nfieldset[disabled] .buttons---btn-primary---Wp1wb:hover,\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-primary---Wp1wb[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-primary---Wp1wb.buttons---hover---42FF2,\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b:focus,\n.buttons---btn-primary---Wp1wb[disabled]:focus,\nfieldset[disabled] .buttons---btn-primary---Wp1wb:focus,\n.buttons---btn-primary---Wp1wb.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-primary---Wp1wb[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-primary---Wp1wb.buttons---focus---1kVJZ {\n  background-color: #0096cc;\n  background-image: -webkit-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -moz-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -o-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: -ms-linear-gradient(top, #00a7e6 0%, #0096cc 100%);\n  background-image: linear-gradient(to bottom, #00a7e6 0%, #0096cc 100%);\n  background-repeat: repeat-x;\n  border-color: #0095ce;\n}\n.buttons---btn-danger---1UUqU {\n  color: #fff;\n  background-color: #db3d44;\n  background-image: -webkit-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -moz-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -o-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -ms-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);\n  background-repeat: repeat-x;\n  border-color: #d8262b;\n}\n.buttons---btn-danger---1UUqU:active,\n.buttons---btn-danger---1UUqU.buttons---active---2-a32 {\n  color: #fff;\n  background-color: #e15054;\n  background-image: none;\n  border-color: #c22327;\n  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n  box-shadow: 0 1px 6px rgba(0,0,0,0.15) inset;\n}\n.buttons---btn-danger---1UUqU:focus,\n.buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {\n  color: #fff;\n  border-color: #444;\n  -webkit-box-shadow: 0 0 1px #fff inset;\n  box-shadow: 0 0 1px #fff inset;\n}\n.buttons---btn-danger---1UUqU:hover,\n.buttons---btn-danger---1UUqU.buttons---hover---42FF2 {\n  color: #fff;\n  background-color: #e15f5f;\n  background-image: -webkit-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: -moz-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: -o-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: -ms-linear-gradient(top, #e15f5f 0%, #e15054 100%);\n  background-image: linear-gradient(to bottom, #e15f5f 0%, #e15054 100%);\n  background-repeat: repeat-x;\n  border-color: #c22327;\n}\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b:hover,\n.buttons---btn-danger---1UUqU[disabled]:hover,\nfieldset[disabled] .buttons---btn-danger---1UUqU:hover,\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-danger---1UUqU[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-danger---1UUqU.buttons---hover---42FF2,\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b:focus,\n.buttons---btn-danger---1UUqU[disabled]:focus,\nfieldset[disabled] .buttons---btn-danger---1UUqU:focus,\n.buttons---btn-danger---1UUqU.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-danger---1UUqU[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {\n  background-color: #db3d44;\n  background-image: -webkit-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -moz-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -o-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: -ms-linear-gradient(top, #e15054 0%, #db3d44 100%);\n  background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);\n  background-repeat: repeat-x;\n  border-color: #d8262b;\n}\n.buttons---btn-border---1O58b {\n  color: #222;\n  background-color: #fff;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -moz-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -o-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -ms-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n  -webkit-transition: all 0.2s linear 0s;\n  -moz-transition: all 0.2s linear 0s;\n  -o-transition: all 0.2s linear 0s;\n  -ms-transition: all 0.2s linear 0s;\n  transition: all 0.2s linear 0s;\n}\n.buttons---btn-border---1O58b:hover,\n.buttons---btn-border---1O58b.buttons---hover---42FF2 {\n  color: #222;\n  background-color: #f4f4f4;\n  background-image: -webkit-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: -moz-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: -o-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: -ms-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);\n  background-image: linear-gradient(to bottom, #f4f4f4 0%, #f4f4f4 100%);\n  background-repeat: repeat-x;\n  border-color: #999;\n}\n.buttons---btn-border---1O58b:focus,\n.buttons---btn-border---1O58b.buttons---focus---1kVJZ {\n  color: #222;\n  border-color: #0096cc;\n}\n.buttons---btn-border---1O58b:active,\n.buttons---btn-border---1O58b.buttons---active---2-a32,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b {\n  color: #222;\n  background-color: #eee;\n  background-image: none;\n  border-color: #bbb;\n  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;\n  box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn-border---1O58b:active:hover,\n.buttons---btn-border---1O58b.buttons---active---2-a32:hover,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b:hover,\n.buttons---btn-border---1O58b:active.buttons---hover---42FF2,\n.buttons---btn-border---1O58b.buttons---active---2-a32.buttons---hover---42FF2,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b.buttons---hover---42FF2,\n.buttons---btn-border---1O58b:active:focus,\n.buttons---btn-border---1O58b.buttons---active---2-a32:focus,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b:focus,\n.buttons---btn-border---1O58b:active.buttons---focus---1kVJZ,\n.buttons---btn-border---1O58b.buttons---active---2-a32.buttons---focus---1kVJZ,\n.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b.buttons---focus---1kVJZ {\n  color: #222;\n  border-color: #bbb;\n  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;\n  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;\n}\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b,\n.buttons---btn-border---1O58b[disabled],\nfieldset[disabled] .buttons---btn-border---1O58b {\n  opacity: 0.4;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)\";\n  filter: alpha(opacity=40);\n  cursor: not-allowed;\n}\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b:hover,\n.buttons---btn-border---1O58b[disabled]:hover,\nfieldset[disabled] .buttons---btn-border---1O58b:hover,\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-border---1O58b[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-border---1O58b.buttons---hover---42FF2,\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b:focus,\n.buttons---btn-border---1O58b[disabled]:focus,\nfieldset[disabled] .buttons---btn-border---1O58b:focus,\n.buttons---btn-border---1O58b.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-border---1O58b[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-border---1O58b.buttons---focus---1kVJZ {\n  background-color: #fff;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -moz-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -o-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: -ms-linear-gradient(top, #fff 0%, #fff 100%);\n  background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);\n  background-repeat: repeat-x;\n  border-color: #ccc;\n}\n.buttons---btn-link---1xwS4 {\n  padding-right: 0;\n  padding-left: 0;\n  font-weight: normal;\n  color: #0096cc;\n  border-radius: 0;\n}\n.buttons---btn-link---1xwS4,\n.buttons---btn-link---1xwS4:active,\n.buttons---btn-link---1xwS4.buttons---active---2-a32,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b,\n.buttons---btn-link---1xwS4[disabled],\nfieldset[disabled] .buttons---btn-link---1xwS4 {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.buttons---btn-link---1xwS4,\n.buttons---btn-link---1xwS4:hover,\n.buttons---btn-link---1xwS4.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4:focus,\n.buttons---btn-link---1xwS4:active {\n  border-color: transparent;\n}\n.buttons---btn-link---1xwS4:hover,\n.buttons---btn-link---1xwS4.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4:focus {\n  color: #db3d44;\n  text-decoration: underline;\n  background-color: transparent;\n}\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b:hover,\n.buttons---btn-link---1xwS4[disabled]:hover,\nfieldset[disabled] .buttons---btn-link---1xwS4:hover,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4[disabled].buttons---hover---42FF2,\nfieldset[disabled] .buttons---btn-link---1xwS4.buttons---hover---42FF2,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b:focus,\n.buttons---btn-link---1xwS4[disabled]:focus,\nfieldset[disabled] .buttons---btn-link---1xwS4:focus,\n.buttons---btn-link---1xwS4.buttons---disabled---eCY9b.buttons---focus---1kVJZ,\n.buttons---btn-link---1xwS4[disabled].buttons---focus---1kVJZ,\nfieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {\n  color: #e6e6e6;\n  text-decoration: none;\n}\n.buttons---btn-lg---2xtUV,\n.buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN {\n  padding: 9px 12px;\n  font-size: 16px;\n  line-height: 24px;\n  border-radius: 3px;\n}\n.buttons---btn-lg---2xtUV.buttons---btn-compact---mXDAU,\n.buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {\n  padding-left: 0;\n  padding-right: 0;\n  min-width: 58px;\n}\n.buttons---btn-md---HRR_F,\n.buttons---btn-group-md---3FQVP > .buttons---btn---2jZHN {\n  padding: 5px 12px;\n  font-size: 13px;\n  line-height: 20px;\n  border-radius: 3px;\n}\n.buttons---btn-md---HRR_F.buttons---btn-compact---mXDAU,\n.buttons---btn-group-md---3FQVP > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {\n  padding-left: 0;\n  padding-right: 0;\n  min-width: 42px;\n}\n.buttons---btn-sm---3cNnY,\n.buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN {\n  padding: 4px 12px;\n  font-size: 12px;\n  line-height: 18px;\n  border-radius: 3px;\n}\n.buttons---btn-sm---3cNnY.buttons---btn-compact---mXDAU,\n.buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {\n  padding-left: 0;\n  padding-right: 0;\n  min-width: 36px;\n}\n.buttons---btn-xs---2eEDQ,\n.buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN {\n  padding: 1px 12px;\n  font-size: 12px;\n  line-height: 18px;\n  border-radius: 3px;\n}\n.buttons---btn-xs---2eEDQ.buttons---btn-compact---mXDAU,\n.buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {\n  padding-left: 0;\n  padding-right: 0;\n  min-width: 28px;\n}\n.buttons---btn-block---1nSNV {\n  display: block;\n  width: 100%;\n}\n.buttons---btn-block---1nSNV.buttons---btn---2jZHN + .buttons---btn-block---1nSNV.buttons---btn---2jZHN,\n.buttons---btn-block---1nSNV + .buttons---btn-block---1nSNV {\n  margin-left: 0;\n  margin-top: 8px;\n}\ninput[type=\"submit\"].buttons---btn-block---1nSNV,\ninput[type=\"reset\"].buttons---btn-block---1nSNV,\ninput[type=\"button\"].buttons---btn-block---1nSNV {\n  width: 100%;\n}\n.buttons---btn-group---1jaDo,\n.buttons---btn-group-vertical---3Lm1e {\n  position: relative;\n  display: inline-block;\n  vertical-align: top;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN {\n  position: relative;\n  float: left;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:hover,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:hover,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN.buttons---hover---42FF2,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN.buttons---hover---42FF2,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:active,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:active,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN.buttons---active---2-a32,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN.buttons---active---2-a32 {\n  z-index: 2;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:focus,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:focus,\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN.buttons---focus---1kVJZ,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN.buttons---focus---1kVJZ {\n  z-index: 3;\n}\n.buttons---btn-group---1jaDo .buttons---btn---2jZHN + .buttons---btn---2jZHN,\n.buttons---btn-group---1jaDo .buttons---btn---2jZHN + .buttons---btn-group---1jaDo,\n.buttons---btn-group---1jaDo .buttons---btn-group---1jaDo + .buttons---btn---2jZHN,\n.buttons---btn-group---1jaDo .buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {\n  margin-left: -1px;\n}\n.buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {\n  margin-left: 8px;\n}\n.buttons---btn-toolbar---2-GfJ {\n  margin-left: -5px;\n  zoom: 1;\n}\n.buttons---btn-toolbar---2-GfJ:before,\n.buttons---btn-toolbar---2-GfJ:after {\n  content: \"\";\n  display: table;\n}\n.buttons---btn-toolbar---2-GfJ:after {\n  clear: both;\n}\n.buttons---btn-toolbar---2-GfJ .buttons---btn---2jZHN,\n.buttons---btn-toolbar---2-GfJ .buttons---btn-group---1jaDo,\n.buttons---btn-toolbar---2-GfJ .buttons---input-group---1T18I {\n  float: left;\n}\n.buttons---btn-toolbar---2-GfJ > .buttons---btn---2jZHN,\n.buttons---btn-toolbar---2-GfJ > .buttons---btn-group---1jaDo,\n.buttons---btn-toolbar---2-GfJ > .buttons---input-group---1T18I {\n  margin-left: 5px;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:not(:first-child):not(:last-child):not(.buttons---dropdown-toggle---vMtjL) {\n  border-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:first-child {\n  margin-left: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:first-child:not(:last-child):not(.buttons---dropdown-toggle---vMtjL) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN:last-child:not(:first-child),\n.buttons---btn-group---1jaDo > .buttons---dropdown-toggle---vMtjL:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo {\n  float: left;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:not(:first-child):not(:last-child) > .buttons---btn---2jZHN {\n  border-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---btn---2jZHN:last-child,\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---dropdown-toggle---vMtjL {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-group---1jaDo:last-child:not(:first-child) > .buttons---btn---2jZHN:first-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.buttons---btn-group---1jaDo .buttons---dropdown-toggle---vMtjL:active,\n.buttons---btn-group---1jaDo.buttons---open---1ju75 .buttons---dropdown-toggle---vMtjL {\n  outline: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo {\n  zoom: 1;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:before,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:after {\n  content: \"\";\n  display: table;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:after {\n  clear: both;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN {\n  float: none;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN + .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN + .buttons---btn-group---1jaDo,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo + .buttons---btn---2jZHN,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {\n  margin-top: -1px;\n  margin-left: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:first-child:not(:last-child) {\n  border-top-radius: 3px;\n  border-bottom-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn---2jZHN:last-child:not(:first-child) {\n  border-top-radius: 0;\n  border-bottom-radius: 3px;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:not(:first-child):not(:last-child) > .buttons---btn---2jZHN {\n  border-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---btn---2jZHN:last-child,\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:first-child:not(:last-child) > .buttons---dropdown-toggle---vMtjL {\n  border-bottom-radius: 0;\n}\n.buttons---btn-group-vertical---3Lm1e > .buttons---btn-group---1jaDo:last-child:not(:first-child) > .buttons---btn---2jZHN:first-child {\n  border-top-radius: 0;\n}\n.buttons---btn-group-justified---3qB9u {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: separate;\n}\n.buttons---btn-group-justified---3qB9u > .buttons---btn---2jZHN,\n.buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo {\n  float: none;\n  display: table-cell;\n  width: 1%;\n}\n.buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo .buttons---btn---2jZHN {\n  width: 100%;\n}\n.buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo .buttons---dropdown-menu---1fkH0 {\n  left: auto;\n}\n.buttons---dropdown-toggle---vMtjL {\n  min-width: 0;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn---2jZHN {\n  text-align: left;\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn-compact---mXDAU {\n  text-align: center;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4 {\n  color: #222;\n  padding-left: 0;\n  padding-right: 0;\n  text-decoration: none;\n}\n.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover,\n.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover > * {\n  color: #0096cc;\n}\n.buttons---btn-group---1jaDo > .buttons---btn---2jZHN + .buttons---dropdown-toggle---vMtjL {\n  padding-left: 8px;\n  padding-right: 8px;\n  min-width: 0;\n}\n.buttons---btn-group---1jaDo > .buttons---btn-lg---2xtUV + .buttons---dropdown-toggle---vMtjL {\n  padding-left: 12px;\n  padding-right: 12px;\n}\n[data-toggle=\"buttons\"] > .buttons---btn---2jZHN input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .buttons---btn---2jZHN input[type=\"checkbox\"],\n[data-toggle=\"buttons\"] > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none;\n}\n.buttons---btn---2jZHN.buttons---btn-compact---mXDAU .fa {\n  margin-right: 0;\n}\n.buttons---btn---2jZHN .fa {\n  font-size: 14px;\n  margin-right: 8px;\n}\n.buttons---btn---2jZHN i.fa,\n.buttons---btn---2jZHN span.fa {\n  font-size: 14px;\n  color: #666;\n}\n.buttons---btn-primary---Wp1wb i.fa,\n.buttons---btn-danger---1UUqU i.fa,\n.buttons---btn-primary---Wp1wb span.fa,\n.buttons---btn-danger---1UUqU span.fa {\n  color: inherit;\n}\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN i.fa,\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN i.fa,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN i.fa,\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN span.fa,\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN span.fa,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN span.fa {\n  font-size: inherit;\n}\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN i.svg,\n.buttons---btn-lg---2xtUV.buttons---btn---2jZHN span.svg {\n  width: 24px;\n  height: 24px;\n}\n.buttons---btn---2jZHN i.svg,\n.buttons---btn---2jZHN span.svg {\n  width: 16px;\n  height: 16px;\n}\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN i.svg,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN i.svg,\n.buttons---btn-sm---3cNnY.buttons---btn---2jZHN span.svg,\n.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN span.svg {\n  width: 12px;\n  height: 12px;\n}", ""]);
 
 // exports
 
@@ -1471,80 +1518,80 @@ exports.push([module.i, ".container-fluid---2Brsk {\n  padding-right: 15px;\n  p
 
 // exports
 exports.locals = {
-	"dropdown-menu": "dropdown-menu---1e_zi",
-	"dropdownMenu": "dropdown-menu---1e_zi",
-	"navbar-fixed-top": "navbar-fixed-top---1gjqn",
-	"navbarFixedTop": "navbar-fixed-top---1gjqn",
-	"icon-bar": "icon-bar---3seAt",
-	"iconBar": "icon-bar---3seAt",
-	"has-feedback": "has-feedback---_1-sR",
-	"hasFeedback": "has-feedback---_1-sR",
-	"navbar-nav": "navbar-nav---1bmvb",
-	"navbarNav": "navbar-nav---1bmvb",
-	"input-group": "input-group---2fmg-",
-	"inputGroup": "input-group---2fmg-",
-	"navbar-form": "navbar-form---1sg2L",
-	"navbarForm": "navbar-form---1sg2L",
-	"input-group-btn": "input-group-btn---8c2e1",
-	"inputGroupBtn": "input-group-btn---8c2e1",
-	"navbar": "navbar---3CgcW",
-	"navbar-link": "navbar-link---3Hly8",
-	"navbarLink": "navbar-link---3Hly8",
-	"container": "container---2j6jX",
 	"container-fluid": "container-fluid---2Brsk",
 	"containerFluid": "container-fluid---2Brsk",
+	"sr-only": "sr-only---2yAEF",
+	"srOnly": "sr-only---2yAEF",
+	"collapse": "collapse---20hv3",
 	"in": "in---ZKaSV",
-	"navbar-toggle": "navbar-toggle---2VPJp",
-	"navbarToggle": "navbar-toggle---2VPJp",
-	"navbar-static-top": "navbar-static-top---1XJMz",
-	"navbarStaticTop": "navbar-static-top---1XJMz",
 	"nav": "nav---DwEvZ",
-	"navbar-brand": "navbar-brand---1HEM4",
-	"navbarBrand": "navbar-brand---1HEM4",
-	"navbar-btn": "navbar-btn---29Q8O",
-	"navbarBtn": "navbar-btn---29Q8O",
-	"input-group-addon": "input-group-addon---fOpQR",
-	"inputGroupAddon": "input-group-addon---fOpQR",
-	"dropdown-header": "dropdown-header---1ghdi",
-	"dropdownHeader": "dropdown-header---1ghdi",
-	"btn-sm": "btn-sm---2ZnkM",
-	"btnSm": "btn-sm---2ZnkM",
-	"btn-link": "btn-link---2eykm",
-	"btnLink": "btn-link---2eykm",
-	"form-group": "form-group---377uy",
-	"formGroup": "form-group---377uy",
-	"navbar-right": "navbar-right---3KZRg",
-	"navbarRight": "navbar-right---3KZRg",
-	"navbar-fixed-bottom": "navbar-fixed-bottom---2eN_k",
-	"navbarFixedBottom": "navbar-fixed-bottom---2eN_k",
-	"disabled": "disabled---1KUsN",
-	"checkbox": "checkbox---JEaqS",
-	"form-control-static": "form-control-static---6Jy2E",
-	"formControlStatic": "form-control-static---6Jy2E",
-	"form-control-feedback": "form-control-feedback---SMwWY",
-	"formControlFeedback": "form-control-feedback---SMwWY",
-	"btn-xs": "btn-xs---1Kfje",
-	"btnXs": "btn-xs---1Kfje",
-	"active": "active---292aa",
+	"navbar": "navbar---3CgcW",
 	"navbar-header": "navbar-header---13JWC",
 	"navbarHeader": "navbar-header---13JWC",
 	"navbar-collapse": "navbar-collapse---3PeuQ",
 	"navbarCollapse": "navbar-collapse---3PeuQ",
+	"navbar-fixed-top": "navbar-fixed-top---1gjqn",
+	"navbarFixedTop": "navbar-fixed-top---1gjqn",
+	"navbar-static-top": "navbar-static-top---1XJMz",
+	"navbarStaticTop": "navbar-static-top---1XJMz",
+	"navbar-fixed-bottom": "navbar-fixed-bottom---2eN_k",
+	"navbarFixedBottom": "navbar-fixed-bottom---2eN_k",
+	"container": "container---2j6jX",
+	"navbar-brand": "navbar-brand---1HEM4",
+	"navbarBrand": "navbar-brand---1HEM4",
+	"navbar-toggle": "navbar-toggle---2VPJp",
+	"navbarToggle": "navbar-toggle---2VPJp",
+	"icon-bar": "icon-bar---3seAt",
+	"iconBar": "icon-bar---3seAt",
+	"navbar-nav": "navbar-nav---1bmvb",
+	"navbarNav": "navbar-nav---1bmvb",
+	"open": "open---3Nl4h",
+	"dropdown-menu": "dropdown-menu---1e_zi",
+	"dropdownMenu": "dropdown-menu---1e_zi",
+	"dropdown-header": "dropdown-header---1ghdi",
+	"dropdownHeader": "dropdown-header---1ghdi",
+	"navbar-form": "navbar-form---1sg2L",
+	"navbarForm": "navbar-form---1sg2L",
+	"form-group": "form-group---377uy",
+	"formGroup": "form-group---377uy",
+	"form-control": "form-control---17agB",
+	"formControl": "form-control---17agB",
+	"form-control-static": "form-control-static---6Jy2E",
+	"formControlStatic": "form-control-static---6Jy2E",
+	"input-group": "input-group---2fmg-",
+	"inputGroup": "input-group---2fmg-",
+	"input-group-addon": "input-group-addon---fOpQR",
+	"inputGroupAddon": "input-group-addon---fOpQR",
+	"input-group-btn": "input-group-btn---8c2e1",
+	"inputGroupBtn": "input-group-btn---8c2e1",
+	"control-label": "control-label---2PlSB",
+	"controlLabel": "control-label---2PlSB",
+	"radio": "radio---16q6i",
+	"checkbox": "checkbox---JEaqS",
+	"has-feedback": "has-feedback---_1-sR",
+	"hasFeedback": "has-feedback---_1-sR",
+	"form-control-feedback": "form-control-feedback---SMwWY",
+	"formControlFeedback": "form-control-feedback---SMwWY",
+	"navbar-btn": "navbar-btn---29Q8O",
+	"navbarBtn": "navbar-btn---29Q8O",
+	"btn-sm": "btn-sm---2ZnkM",
+	"btnSm": "btn-sm---2ZnkM",
+	"btn-xs": "btn-xs---1Kfje",
+	"btnXs": "btn-xs---1Kfje",
 	"navbar-text": "navbar-text---2gvDM",
 	"navbarText": "navbar-text---2gvDM",
 	"navbar-left": "navbar-left---_8Mhm",
 	"navbarLeft": "navbar-left---_8Mhm",
-	"control-label": "control-label---2PlSB",
-	"controlLabel": "control-label---2PlSB",
-	"radio": "radio---16q6i",
-	"collapse": "collapse---20hv3",
+	"navbar-right": "navbar-right---3KZRg",
+	"navbarRight": "navbar-right---3KZRg",
 	"navbar-default": "navbar-default---1yc1S",
 	"navbarDefault": "navbar-default---1yc1S",
-	"sr-only": "sr-only---2yAEF",
-	"srOnly": "sr-only---2yAEF",
-	"form-control": "form-control---17agB",
-	"formControl": "form-control---17agB",
-	"open": "open---3Nl4h"
+	"active": "active---292aa",
+	"disabled": "disabled---1KUsN",
+	"navbar-link": "navbar-link---3Hly8",
+	"navbarLink": "navbar-link---3Hly8",
+	"btn-link": "btn-link---2eykm",
+	"btnLink": "btn-link---2eykm"
 };
 
 /***/ }),
@@ -1689,11 +1736,9 @@ function toComment(sourceMap) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -1771,11 +1816,9 @@ module.exports = EventListener;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -1815,11 +1858,9 @@ module.exports = ExecutionEnvironment;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -1851,11 +1892,9 @@ module.exports = camelize;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -1899,11 +1938,9 @@ module.exports = camelizeStyleName;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -1945,11 +1982,9 @@ module.exports = containsNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2079,11 +2114,9 @@ module.exports = createArrayFromMixed;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2170,11 +2203,9 @@ module.exports = createNodesFromMarkup;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -2213,11 +2244,9 @@ module.exports = emptyFunction;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2240,11 +2269,9 @@ module.exports = emptyObject;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2275,11 +2302,9 @@ module.exports = focusNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2320,11 +2345,9 @@ module.exports = getActiveElement;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2420,11 +2443,9 @@ module.exports = getMarkupWrap;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2467,11 +2488,9 @@ module.exports = getUnboundedScrollPosition;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2504,11 +2523,9 @@ module.exports = hyphenate;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2549,11 +2566,9 @@ module.exports = hyphenateStyleName;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -2614,11 +2629,9 @@ module.exports = invariant;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2645,11 +2658,9 @@ module.exports = isNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2674,11 +2685,9 @@ module.exports = isTextNode;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  * @typechecks static-only
@@ -2710,11 +2719,9 @@ module.exports = memoizeStringOnly;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2741,11 +2748,9 @@ module.exports = performance || {};
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -2779,11 +2784,9 @@ module.exports = performanceNow;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  * 
@@ -2852,12 +2855,10 @@ module.exports = shallowEqual;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -3213,12 +3214,10 @@ process.umask = function() { return 0; };
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
@@ -3252,7 +3251,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
         try {
           // This is intentionally an invariant that gets caught. It's the same
           // behavior as without this statement except with a better message.
-          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
+          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
           error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
         } catch (ex) {
           error = ex;
@@ -3283,12 +3282,10 @@ module.exports = checkPropTypes;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
@@ -3312,12 +3309,10 @@ module.exports = function(isValidElement) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
@@ -3362,7 +3357,8 @@ module.exports = function() {
     objectOf: getShim,
     oneOf: getShim,
     oneOfType: getShim,
-    shape: getShim
+    shape: getShim,
+    exact: getShim
   };
 
   ReactPropTypes.checkPropTypes = emptyFunction;
@@ -3379,12 +3375,10 @@ module.exports = function() {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
@@ -3392,6 +3386,7 @@ module.exports = function() {
 var emptyFunction = __webpack_require__("../node_modules/fbjs/lib/emptyFunction.js");
 var invariant = __webpack_require__("../node_modules/fbjs/lib/invariant.js");
 var warning = __webpack_require__("../node_modules/fbjs/lib/warning.js");
+var assign = __webpack_require__("../node_modules/object-assign/index.js");
 
 var ReactPropTypesSecret = __webpack_require__("../node_modules/prop-types/lib/ReactPropTypesSecret.js");
 var checkPropTypes = __webpack_require__("../node_modules/prop-types/checkPropTypes.js");
@@ -3490,7 +3485,8 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     objectOf: createObjectOfTypeChecker,
     oneOf: createEnumTypeChecker,
     oneOfType: createUnionTypeChecker,
-    shape: createShapeTypeChecker
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker,
   };
 
   /**
@@ -3705,7 +3701,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (typeof checker !== 'function') {
         warning(
           false,
-          'Invalid argument supplid to oneOfType. Expected an array of check functions, but ' +
+          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
           'received %s at index %s.',
           getPostfixForTypeWarning(checker),
           i
@@ -3756,6 +3752,36 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       }
       return null;
     }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError(
+            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
+            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
+            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+          );
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+
     return createChainableTypeChecker(validate);
   }
 
@@ -3899,12 +3925,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 if (process.env.NODE_ENV !== 'production') {
@@ -3938,12 +3962,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
@@ -3971,12 +3993,10 @@ module.exports = __webpack_require__("../node_modules/react-dom/lib/ReactDOM.js"
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4051,12 +4071,10 @@ module.exports = ARIADOMPropertyConfig;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4081,12 +4099,10 @@ module.exports = AutoFocusUtils;
 
 "use strict";
 /**
- * Copyright 2013-present Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4471,12 +4487,10 @@ module.exports = BeforeInputEventPlugin;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4495,6 +4509,7 @@ var isUnitlessNumber = {
   boxFlexGroup: true,
   boxOrdinalGroup: true,
   columnCount: true,
+  columns: true,
   flex: true,
   flexGrow: true,
   flexPositive: true,
@@ -4631,12 +4646,10 @@ module.exports = CSSProperty;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -4853,12 +4866,10 @@ module.exports = CSSPropertyOperations;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -4979,12 +4990,10 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5109,7 +5118,7 @@ if (ExecutionEnvironment.canUseDOM) {
   // IE9 claims to support the input event but fails to trigger it when
   // deleting text, so we ignore its input events.
 
-  isInputEventSupported = isEventSupported('input') && (!('documentMode' in document) || document.documentMode > 9);
+  isInputEventSupported = isEventSupported('input') && (!document.documentMode || document.documentMode > 9);
 }
 
 /**
@@ -5297,12 +5306,10 @@ module.exports = ChangeEventPlugin;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5530,12 +5537,10 @@ module.exports = DOMChildrenOperations;
 
 "use strict";
 /**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5654,12 +5659,10 @@ module.exports = DOMLazyTree;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5680,12 +5683,10 @@ module.exports = DOMNamespaces;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -5896,12 +5897,10 @@ module.exports = DOMProperty;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6138,12 +6137,10 @@ module.exports = DOMPropertyOperations;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6191,12 +6188,10 @@ module.exports = Danger;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6223,12 +6218,10 @@ module.exports = DefaultEventPluginOrder;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6327,12 +6320,10 @@ module.exports = EnterLeaveEventPlugin;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -6608,12 +6599,10 @@ module.exports = EventPluginHub;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -6868,12 +6857,10 @@ module.exports = EventPluginRegistry;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7101,12 +7088,10 @@ module.exports = EventPluginUtils;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7242,12 +7227,10 @@ module.exports = EventPropagators;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7343,12 +7326,10 @@ module.exports = FallbackCompositionState;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7397,6 +7378,7 @@ var HTMLDOMPropertyConfig = {
     contentEditable: 0,
     contextMenu: 0,
     controls: HAS_BOOLEAN_VALUE,
+    controlsList: 0,
     coords: 0,
     crossOrigin: 0,
     data: 0, // For `<object />` acts as `src`.
@@ -7585,12 +7567,10 @@ module.exports = HTMLDOMPropertyConfig;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -7650,12 +7630,10 @@ module.exports = KeyEscapeUtils;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -7795,12 +7773,10 @@ module.exports = LinkedValueUtils;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -7914,12 +7890,10 @@ module.exports = PooledClass;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8244,12 +8218,10 @@ module.exports = ReactBrowserEventEmitter;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8404,12 +8376,10 @@ module.exports = ReactChildReconciler;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8438,12 +8408,10 @@ module.exports = ReactComponentBrowserEnvironment;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -8489,12 +8457,10 @@ module.exports = ReactComponentEnvironment;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8763,7 +8729,7 @@ var ReactCompositeComponent = {
   },
 
   _constructComponent: function (doConstruct, publicProps, publicContext, updateQueue) {
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== 'production' && !doConstruct) {
       ReactCurrentOwner.current = this;
       try {
         return this._constructComponentWithoutOwner(doConstruct, publicProps, publicContext, updateQueue);
@@ -9396,12 +9362,10 @@ module.exports = ReactCompositeComponent;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -9514,12 +9478,10 @@ module.exports = ReactDOM;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10280,6 +10242,10 @@ ReactDOMComponent.Mixin = {
         // happen after `_updateDOMProperties`. Otherwise HTML5 input validations
         // raise warnings and prevent the new value from being assigned.
         ReactDOMInput.updateWrapper(this);
+
+        // We also check that we haven't missed a value update, such as a
+        // Radio group shifting the checked value to another named radio input.
+        inputValueTracking.updateValueIfChanged(this);
         break;
       case 'textarea':
         ReactDOMTextarea.updateWrapper(this);
@@ -10531,12 +10497,10 @@ module.exports = ReactDOMComponent;
 
 "use strict";
 /**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10555,12 +10519,10 @@ module.exports = ReactDOMComponentFlags;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10757,12 +10719,10 @@ module.exports = ReactDOMComponentTree;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10797,12 +10757,10 @@ module.exports = ReactDOMContainerInfo;
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10863,12 +10821,10 @@ module.exports = ReactDOMEmptyComponent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10888,12 +10844,10 @@ module.exports = ReactDOMFeatureFlags;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -10927,12 +10881,10 @@ module.exports = ReactDOMIDOperations;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11221,12 +11173,10 @@ module.exports = ReactDOMInput;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11321,12 +11271,10 @@ module.exports = ReactDOMInvalidARIAHook;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11371,12 +11319,10 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11500,12 +11446,10 @@ module.exports = ReactDOMOption;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11707,12 +11651,10 @@ module.exports = ReactDOMSelect;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -11925,12 +11867,10 @@ module.exports = ReactDOMSelection;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12094,12 +12034,10 @@ module.exports = ReactDOMTextComponent;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12261,12 +12199,10 @@ module.exports = ReactDOMTextarea;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12404,12 +12340,10 @@ module.exports = {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12523,12 +12457,10 @@ module.exports = ReactDOMUnknownPropertyHook;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -12891,12 +12823,10 @@ module.exports = ReactDebugTool;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12965,12 +12895,10 @@ module.exports = ReactDefaultBatchingStrategy;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13057,12 +12985,10 @@ module.exports = {
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13083,12 +13009,10 @@ module.exports = REACT_ELEMENT_TYPE;
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13119,12 +13043,10 @@ module.exports = ReactEmptyComponent;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13181,7 +13103,9 @@ if (process.env.NODE_ENV !== 'production') {
   if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function' && typeof document !== 'undefined' && typeof document.createEvent === 'function') {
     var fakeNode = document.createElement('react');
     ReactErrorUtils.invokeGuardedCallback = function (name, func, a) {
-      var boundFunc = func.bind(null, a);
+      var boundFunc = function () {
+        func(a);
+      };
       var evtType = 'react-' + name;
       fakeNode.addEventListener(evtType, boundFunc, false);
       var evt = document.createEvent('Event');
@@ -13202,12 +13126,10 @@ module.exports = ReactErrorUtils;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13240,12 +13162,10 @@ module.exports = ReactEventEmitterMixin;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13401,12 +13321,10 @@ module.exports = ReactEventListener;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13429,12 +13347,10 @@ module.exports = ReactFeatureFlags;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13504,12 +13420,10 @@ module.exports = ReactHostComponent;
 
 "use strict";
 /**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13544,12 +13458,10 @@ module.exports = ReactHostOperationHistoryHook;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13584,12 +13496,10 @@ module.exports = ReactInjection;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13713,12 +13623,10 @@ module.exports = ReactInputSelection;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13765,12 +13673,10 @@ module.exports = ReactInstanceMap;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13796,12 +13702,10 @@ module.exports = { debugTool: debugTool };
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -13840,12 +13744,10 @@ module.exports = ReactInvalidSetStateWarningHook;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -13896,12 +13798,10 @@ module.exports = ReactMarkupChecksum;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -14441,12 +14341,10 @@ module.exports = ReactMount;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -14894,12 +14792,10 @@ module.exports = ReactMultiChild;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -14941,12 +14837,10 @@ module.exports = ReactNodeTypes;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -15041,12 +14935,10 @@ module.exports = ReactOwner;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -15073,12 +14965,10 @@ module.exports = ReactPropTypeLocationNames;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -15096,12 +14986,10 @@ module.exports = ReactPropTypesSecret;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -15281,12 +15169,10 @@ module.exports = ReactReconcileTransaction;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -15454,12 +15340,10 @@ module.exports = ReactReconciler;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -15549,12 +15433,10 @@ module.exports = ReactRef;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -15646,12 +15528,10 @@ module.exports = ReactServerRenderingTransaction;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -15792,12 +15672,10 @@ module.exports = ReactServerUpdateQueue;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16033,12 +15911,10 @@ module.exports = ReactUpdateQueue;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16246,7 +16122,7 @@ function enqueueUpdate(component) {
  * if no updates are currently being performed.
  */
 function asap(callback, context) {
-  !batchingStrategy.isBatchingUpdates ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates.asap: Can\'t enqueue an asap callback in a context whereupdates are not being batched.') : _prodInvariant('125') : void 0;
+  invariant(batchingStrategy.isBatchingUpdates, "ReactUpdates.asap: Can't enqueue an asap callback in a context where" + 'updates are not being batched.');
   asapCallbackQueue.enqueue(callback, context);
   asapEnqueued = true;
 }
@@ -16291,18 +16167,16 @@ module.exports = ReactUpdates;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-module.exports = '15.6.1';
+module.exports = '15.6.2';
 
 /***/ }),
 
@@ -16311,12 +16185,10 @@ module.exports = '15.6.1';
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16619,12 +16491,10 @@ module.exports = SVGDOMPropertyConfig;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -16813,12 +16683,10 @@ module.exports = SelectEventPlugin;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -17046,12 +16914,10 @@ module.exports = SimpleEventPlugin;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17091,12 +16957,10 @@ module.exports = SyntheticAnimationEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17135,12 +16999,10 @@ module.exports = SyntheticClipboardEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17177,12 +17039,10 @@ module.exports = SyntheticCompositionEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17219,12 +17079,10 @@ module.exports = SyntheticDragEvent;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17400,6 +17258,33 @@ _assign(SyntheticEvent.prototype, {
 
 SyntheticEvent.Interface = EventInterface;
 
+/**
+ * Helper to reduce boilerplate when creating subclasses.
+ *
+ * @param {function} Class
+ * @param {?object} Interface
+ */
+SyntheticEvent.augmentClass = function (Class, Interface) {
+  var Super = this;
+
+  var E = function () {};
+  E.prototype = Super.prototype;
+  var prototype = new E();
+
+  _assign(prototype, Class.prototype);
+  Class.prototype = prototype;
+  Class.prototype.constructor = Class;
+
+  Class.Interface = _assign({}, Super.Interface, Interface);
+  Class.augmentClass = Super.augmentClass;
+
+  PooledClass.addPoolingTo(Class, PooledClass.fourArgumentPooler);
+};
+
+/** Proxying after everything set on SyntheticEvent
+  * to resolve Proxy issue on some WebKit browsers
+  * in which some Event properties are set to undefined (GH#10010)
+  */
 if (process.env.NODE_ENV !== 'production') {
   if (isProxySupported) {
     /*eslint-disable no-func-assign */
@@ -17423,28 +17308,6 @@ if (process.env.NODE_ENV !== 'production') {
     /*eslint-enable no-func-assign */
   }
 }
-/**
- * Helper to reduce boilerplate when creating subclasses.
- *
- * @param {function} Class
- * @param {?object} Interface
- */
-SyntheticEvent.augmentClass = function (Class, Interface) {
-  var Super = this;
-
-  var E = function () {};
-  E.prototype = Super.prototype;
-  var prototype = new E();
-
-  _assign(prototype, Class.prototype);
-  Class.prototype = prototype;
-  Class.prototype.constructor = Class;
-
-  Class.Interface = _assign({}, Super.Interface, Interface);
-  Class.augmentClass = Super.augmentClass;
-
-  PooledClass.addPoolingTo(Class, PooledClass.fourArgumentPooler);
-};
 
 PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 
@@ -17492,12 +17355,10 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17534,12 +17395,10 @@ module.exports = SyntheticFocusEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17577,12 +17436,10 @@ module.exports = SyntheticInputEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17667,12 +17524,10 @@ module.exports = SyntheticKeyboardEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17745,12 +17600,10 @@ module.exports = SyntheticMouseEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17796,12 +17649,10 @@ module.exports = SyntheticTouchEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17841,12 +17692,10 @@ module.exports = SyntheticTransitionEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17906,12 +17755,10 @@ module.exports = SyntheticUIEvent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -17963,12 +17810,10 @@ module.exports = SyntheticWheelEvent;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -18198,12 +18043,10 @@ module.exports = TransactionImpl;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18229,12 +18072,10 @@ module.exports = ViewportMetrics;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -18294,12 +18135,10 @@ module.exports = accumulateInto;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -18344,12 +18183,10 @@ module.exports = adler32;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18438,12 +18275,10 @@ module.exports = checkReactTypeSpec;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18476,12 +18311,10 @@ module.exports = createMicrosoftUnsafeLocalFunction;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18562,12 +18395,10 @@ module.exports = dangerousStyleValue;
 
 "use strict";
 /**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * Based on the escape-html library, which is used under the MIT License below:
  *
@@ -18690,12 +18521,10 @@ module.exports = escapeTextContentForBrowser;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18757,12 +18586,10 @@ module.exports = findDOMNode;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -18840,12 +18667,10 @@ module.exports = flattenChildren;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -18877,12 +18702,10 @@ module.exports = forEachAccumulated;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -18933,12 +18756,10 @@ module.exports = getEventCharCode;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19051,12 +18872,10 @@ module.exports = getEventKey;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19100,12 +18919,10 @@ module.exports = getEventModifierState;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19141,12 +18958,10 @@ module.exports = getEventTarget;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19177,12 +18992,10 @@ module.exports = getHostComponentFromComposite;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19224,12 +19037,10 @@ module.exports = getIteratorFn;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19304,12 +19115,10 @@ module.exports = getNodeForCharacterOffset;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19343,12 +19152,10 @@ module.exports = getTextContentAccessor;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19450,12 +19257,10 @@ module.exports = getVendorPrefixedEventName;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19478,7 +19283,7 @@ function attachTracker(inst, tracker) {
 }
 
 function detachTracker(inst) {
-  delete inst._wrapperState.valueTracker;
+  inst._wrapperState.valueTracker = null;
 }
 
 function getValueFromNode(node) {
@@ -19579,12 +19384,10 @@ module.exports = inputValueTracking;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19715,12 +19518,10 @@ module.exports = instantiateReactComponent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19781,12 +19582,10 @@ module.exports = isEventSupported;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19838,12 +19637,10 @@ module.exports = isTextInputElement;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19871,11 +19668,9 @@ module.exports = quoteAttributeValueForBrowser;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -19915,12 +19710,10 @@ module.exports = reactProdInvariant;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -19937,12 +19730,10 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20041,12 +19832,10 @@ module.exports = setInnerHTML;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20099,12 +19888,10 @@ module.exports = setTextContent;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20147,12 +19934,10 @@ module.exports = shouldUpdateReactComponent;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20330,12 +20115,10 @@ module.exports = traverseAllChildren;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -20708,12 +20491,10 @@ module.exports = validateDOMNesting;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -20773,12 +20554,10 @@ module.exports = KeyEscapeUtils;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -20892,12 +20671,10 @@ module.exports = PooledClass;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21031,12 +20808,10 @@ module.exports = React;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21181,12 +20956,10 @@ module.exports = {
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21378,12 +21151,10 @@ module.exports = ReactChildren;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2016-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -21764,12 +21535,10 @@ module.exports = ReactComponentTreeHook;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -21799,12 +21568,10 @@ module.exports = ReactCurrentOwner;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -21975,12 +21742,10 @@ module.exports = ReactDOMFactories;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22323,12 +22088,10 @@ module.exports = ReactElement;
 
 "use strict";
 /**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -22349,12 +22112,10 @@ module.exports = REACT_ELEMENT_TYPE;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22611,12 +22372,10 @@ module.exports = ReactElementValidator;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2015-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2015-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22713,12 +22472,10 @@ module.exports = ReactNoopUpdateQueue;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -22745,12 +22502,10 @@ module.exports = ReactPropTypeLocationNames;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22770,12 +22525,10 @@ module.exports = factory(isValidElement);
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -22793,18 +22546,16 @@ module.exports = ReactPropTypesSecret;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
 
 
-module.exports = '15.6.1';
+module.exports = '15.6.2';
 
 /***/ }),
 
@@ -22813,12 +22564,10 @@ module.exports = '15.6.1';
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -22846,12 +22595,10 @@ module.exports = canDefineProperty;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22940,12 +22687,10 @@ module.exports = checkReactTypeSpec;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -22969,12 +22714,10 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -23016,12 +22759,10 @@ module.exports = getIteratorFn;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -23043,12 +22784,10 @@ module.exports = getNextDebugID;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -23115,12 +22854,10 @@ module.exports = lowPriorityWarning;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -23161,11 +22898,9 @@ module.exports = onlyChild;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -23205,12 +22940,10 @@ module.exports = reactProdInvariant;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -23394,219 +23127,278 @@ module.exports = __webpack_require__("../node_modules/react/lib/React.js");
 
 /***/ }),
 
-/***/ "../node_modules/style-loader/addStyles.js":
+/***/ "../node_modules/style-loader/lib/addStyles.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var stylesInDom = {},
-	memoize = function(fn) {
-		var memo;
-		return function () {
-			if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-			return memo;
-		};
-	},
-	isOldIE = memoize(function() {
-		// Test for IE <= 9 as proposed by Browserhacks
-		// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-		// Tests for existence of standard globals is to allow style-loader 
-		// to operate correctly into non-standard environments
-		// @see https://github.com/webpack-contrib/style-loader/issues/177
-		return window && document && document.all && !window.atob;
-	}),
-	getElement = (function(fn) {
-		var memo = {};
-		return function(selector) {
-			if (typeof memo[selector] === "undefined") {
-				memo[selector] = fn.call(this, selector);
-			}
-			return memo[selector]
-		};
-	})(function (styleTarget) {
-		return document.querySelector(styleTarget)
-	}),
-	singletonElement = null,
-	singletonCounter = 0,
-	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__("../node_modules/style-loader/fixUrls.js");
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(selector) {
+		if (typeof memo[selector] === "undefined") {
+			memo[selector] = fn.call(this, selector);
+		}
+
+		return memo[selector]
+	};
+})(function (target) {
+	return document.querySelector(target)
+});
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__("../node_modules/style-loader/lib/urls.js");
 
 module.exports = function(list, options) {
-	if(typeof DEBUG !== "undefined" && DEBUG) {
-		if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
 	}
 
 	options = options || {};
+
 	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
 
 	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 	// tags it will allow on a page
-	if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	if (!options.singleton) options.singleton = isOldIE();
 
 	// By default, add <style> tags to the <head> element
-	if (typeof options.insertInto === "undefined") options.insertInto = "head";
+	if (!options.insertInto) options.insertInto = "head";
 
 	// By default, add <style> tags to the bottom of the target
-	if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+	if (!options.insertAt) options.insertAt = "bottom";
 
-	var styles = listToStyles(list);
+	var styles = listToStyles(list, options);
+
 	addStylesToDom(styles, options);
 
-	return function update(newList) {
+	return function update (newList) {
 		var mayRemove = [];
-		for(var i = 0; i < styles.length; i++) {
+
+		for (var i = 0; i < styles.length; i++) {
 			var item = styles[i];
 			var domStyle = stylesInDom[item.id];
+
 			domStyle.refs--;
 			mayRemove.push(domStyle);
 		}
+
 		if(newList) {
-			var newStyles = listToStyles(newList);
+			var newStyles = listToStyles(newList, options);
 			addStylesToDom(newStyles, options);
 		}
-		for(var i = 0; i < mayRemove.length; i++) {
+
+		for (var i = 0; i < mayRemove.length; i++) {
 			var domStyle = mayRemove[i];
+
 			if(domStyle.refs === 0) {
-				for(var j = 0; j < domStyle.parts.length; j++)
-					domStyle.parts[j]();
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
 				delete stylesInDom[domStyle.id];
 			}
 		}
 	};
 };
 
-function addStylesToDom(styles, options) {
-	for(var i = 0; i < styles.length; i++) {
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
 		var item = styles[i];
 		var domStyle = stylesInDom[item.id];
+
 		if(domStyle) {
 			domStyle.refs++;
+
 			for(var j = 0; j < domStyle.parts.length; j++) {
 				domStyle.parts[j](item.parts[j]);
 			}
+
 			for(; j < item.parts.length; j++) {
 				domStyle.parts.push(addStyle(item.parts[j], options));
 			}
 		} else {
 			var parts = [];
+
 			for(var j = 0; j < item.parts.length; j++) {
 				parts.push(addStyle(item.parts[j], options));
 			}
+
 			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
 		}
 	}
 }
 
-function listToStyles(list) {
+function listToStyles (list, options) {
 	var styles = [];
 	var newStyles = {};
-	for(var i = 0; i < list.length; i++) {
+
+	for (var i = 0; i < list.length; i++) {
 		var item = list[i];
-		var id = item[0];
+		var id = options.base ? item[0] + options.base : item[0];
 		var css = item[1];
 		var media = item[2];
 		var sourceMap = item[3];
 		var part = {css: css, media: media, sourceMap: sourceMap};
-		if(!newStyles[id])
-			styles.push(newStyles[id] = {id: id, parts: [part]});
-		else
-			newStyles[id].parts.push(part);
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
 	}
+
 	return styles;
 }
 
-function insertStyleElement(options, styleElement) {
-	var styleTarget = getElement(options.insertInto)
-	if (!styleTarget) {
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
 		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
 	}
-	var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
 	if (options.insertAt === "top") {
-		if(!lastStyleElementInsertedAtTop) {
-			styleTarget.insertBefore(styleElement, styleTarget.firstChild);
-		} else if(lastStyleElementInsertedAtTop.nextSibling) {
-			styleTarget.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
 		} else {
-			styleTarget.appendChild(styleElement);
+			target.appendChild(style);
 		}
-		styleElementsInsertedAtTop.push(styleElement);
+		stylesInsertedAtTop.push(style);
 	} else if (options.insertAt === "bottom") {
-		styleTarget.appendChild(styleElement);
+		target.appendChild(style);
 	} else {
 		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
 	}
 }
 
-function removeStyleElement(styleElement) {
-	styleElement.parentNode.removeChild(styleElement);
-	var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
 	if(idx >= 0) {
-		styleElementsInsertedAtTop.splice(idx, 1);
+		stylesInsertedAtTop.splice(idx, 1);
 	}
 }
 
-function createStyleElement(options) {
-	var styleElement = document.createElement("style");
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
 	options.attrs.type = "text/css";
 
-	attachTagAttrs(styleElement, options.attrs);
-	insertStyleElement(options, styleElement);
-	return styleElement;
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
 }
 
-function createLinkElement(options) {
-	var linkElement = document.createElement("link");
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
 	options.attrs.type = "text/css";
 	options.attrs.rel = "stylesheet";
 
-	attachTagAttrs(linkElement, options.attrs);
-	insertStyleElement(options, linkElement);
-	return linkElement;
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
 }
 
-function attachTagAttrs(element, attrs) {
+function addAttrs (el, attrs) {
 	Object.keys(attrs).forEach(function (key) {
-		element.setAttribute(key, attrs[key]);
+		el.setAttribute(key, attrs[key]);
 	});
 }
 
-function addStyle(obj, options) {
-	var styleElement, update, remove;
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = options.transform(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
 
 	if (options.singleton) {
 		var styleIndex = singletonCounter++;
-		styleElement = singletonElement || (singletonElement = createStyleElement(options));
-		update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-	} else if(obj.sourceMap &&
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
 		typeof URL === "function" &&
 		typeof URL.createObjectURL === "function" &&
 		typeof URL.revokeObjectURL === "function" &&
 		typeof Blob === "function" &&
-		typeof btoa === "function") {
-		styleElement = createLinkElement(options);
-		update = updateLink.bind(null, styleElement, options);
-		remove = function() {
-			removeStyleElement(styleElement);
-			if(styleElement.href)
-				URL.revokeObjectURL(styleElement.href);
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
 		};
 	} else {
-		styleElement = createStyleElement(options);
-		update = applyToTag.bind(null, styleElement);
-		remove = function() {
-			removeStyleElement(styleElement);
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
 		};
 	}
 
 	update(obj);
 
-	return function updateStyle(newObj) {
-		if(newObj) {
-			if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
 				return;
+			}
+
 			update(obj = newObj);
 		} else {
 			remove();
@@ -23619,79 +23411,83 @@ var replaceText = (function () {
 
 	return function (index, replacement) {
 		textStore[index] = replacement;
+
 		return textStore.filter(Boolean).join('\n');
 	};
 })();
 
-function applyToSingletonTag(styleElement, index, remove, obj) {
+function applyToSingletonTag (style, index, remove, obj) {
 	var css = remove ? "" : obj.css;
 
-	if (styleElement.styleSheet) {
-		styleElement.styleSheet.cssText = replaceText(index, css);
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
 	} else {
 		var cssNode = document.createTextNode(css);
-		var childNodes = styleElement.childNodes;
-		if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
 		if (childNodes.length) {
-			styleElement.insertBefore(cssNode, childNodes[index]);
+			style.insertBefore(cssNode, childNodes[index]);
 		} else {
-			styleElement.appendChild(cssNode);
+			style.appendChild(cssNode);
 		}
 	}
 }
 
-function applyToTag(styleElement, obj) {
+function applyToTag (style, obj) {
 	var css = obj.css;
 	var media = obj.media;
 
 	if(media) {
-		styleElement.setAttribute("media", media)
+		style.setAttribute("media", media)
 	}
 
-	if(styleElement.styleSheet) {
-		styleElement.styleSheet.cssText = css;
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
 	} else {
-		while(styleElement.firstChild) {
-			styleElement.removeChild(styleElement.firstChild);
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
 		}
-		styleElement.appendChild(document.createTextNode(css));
+
+		style.appendChild(document.createTextNode(css));
 	}
 }
 
-function updateLink(linkElement, options, obj) {
+function updateLink (link, options, obj) {
 	var css = obj.css;
 	var sourceMap = obj.sourceMap;
 
-	/* If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-	and there is no publicPath defined then lets turn convertToAbsoluteUrls
-	on by default.  Otherwise default to the convertToAbsoluteUrls option
-	directly
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
 	*/
 	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
 
-	if (options.convertToAbsoluteUrls || autoFixUrls){
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
 		css = fixUrls(css);
 	}
 
-	if(sourceMap) {
+	if (sourceMap) {
 		// http://stackoverflow.com/a/26603875
 		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
 	}
 
 	var blob = new Blob([css], { type: "text/css" });
 
-	var oldSrc = linkElement.href;
+	var oldSrc = link.href;
 
-	linkElement.href = URL.createObjectURL(blob);
+	link.href = URL.createObjectURL(blob);
 
-	if(oldSrc)
-		URL.revokeObjectURL(oldSrc);
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
 }
 
 
 /***/ }),
 
-/***/ "../node_modules/style-loader/fixUrls.js":
+/***/ "../node_modules/style-loader/lib/urls.js":
 /***/ (function(module, exports) {
 
 
@@ -23795,8 +23591,13 @@ module.exports = function (css) {
 // load the styles
 var content = __webpack_require__("../node_modules/css-loader/index.js!../node_modules/trendmicro-ui/dist/css/trendmicro-ui.css");
 if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__("../node_modules/style-loader/addStyles.js")(content, {});
+var update = __webpack_require__("../node_modules/style-loader/lib/addStyles.js")(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -23891,7 +23692,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class, _temp;
+var _class, _temp2;
 
 var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
 
@@ -23921,117 +23722,54 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Tooltip = (_temp = _class = function (_PureComponent) {
+var Tooltip = (_temp2 = _class = function (_PureComponent) {
     _inherits(Tooltip, _PureComponent);
 
-    function Tooltip(props) {
+    function Tooltip() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Tooltip);
 
-        var _this = _possibleConstructorReturn(this, (Tooltip.__proto__ || Object.getPrototypeOf(Tooltip)).call(this, props));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
 
-        _this.timeoutID = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tooltip.__proto__ || Object.getPrototypeOf(Tooltip)).call.apply(_ref, [this].concat(args))), _this), _this.timeoutID = {
             show: null,
             hide: null
-        };
-        _this.actions = {
-            toggle: function toggle() {
-                var toState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-                _this.setState(function (prevState, props) {
-                    return _extends({}, prevState, {
-                        isShow: toState === null ? !prevState.isShow : !!toState
-                    });
-                });
-            },
+        }, _this.state = _this.getInitialState(), _this.actions = {
             handleOnMouseOver: function handleOnMouseOver(e) {
                 clearTimeout(_this.timeoutID.show);
                 clearTimeout(_this.timeoutID.hide);
 
                 _this.timeoutID.show = setTimeout(function () {
-                    _this.actions.toggle(true);
-                }, _this.props.showDelay);
+                    _this.setState(function (state) {
+                        return _extends({}, state, {
+                            show: true
+                        });
+                    });
+                }, _this.props.enterDelay);
             },
             handleOnMouseOut: function handleOnMouseOut(e) {
                 clearTimeout(_this.timeoutID.show);
                 clearTimeout(_this.timeoutID.hide);
 
                 _this.timeoutID.hide = setTimeout(function () {
-                    _this.actions.toggle(false);
-                }, _this.props.hideDelay);
-            },
-            adjustPlace: function adjustPlace() {
-                var _this$state = _this.state,
-                    place = _this$state.place,
-                    offset = _this$state.offset;
-                var _this$props = _this.props,
-                    newPlace = _this$props.preferPlace,
-                    spacing = _this$props.spacing;
-
-                var target = _this.tooltipTarget;
-                var tooltip = _this.tooltip;
-
-                var newOffset = {
-                    top: 0,
-                    left: 0
-                };
-
-                if (newPlace === 'top') {
-                    newOffset = {
-                        top: Math.floor(target.offsetTop - tooltip.offsetHeight - spacing),
-                        left: Math.floor(target.offsetLeft + target.offsetWidth / 2 - tooltip.offsetWidth / 2)
-                    };
-                }
-
-                if (newPlace === 'right') {
-                    newOffset = {
-                        top: Math.floor(target.offsetTop + target.offsetHeight / 2 - tooltip.offsetHeight / 2),
-                        left: Math.floor(target.offsetLeft + target.offsetWidth + spacing)
-                    };
-                }
-
-                if (newPlace === 'bottom') {
-                    newOffset = {
-                        top: Math.floor(target.offsetTop + target.offsetHeight + spacing),
-                        left: Math.floor(target.offsetLeft + target.offsetWidth / 2 - tooltip.offsetWidth / 2)
-                    };
-                }
-
-                if (newPlace === 'left') {
-                    newOffset = {
-                        top: Math.floor(target.offsetTop + target.offsetHeight / 2 - tooltip.offsetHeight / 2),
-                        left: Math.floor(target.offsetLeft - tooltip.offsetWidth - spacing)
-                    };
-                }
-
-                if (place !== newPlace || offset.top !== newOffset.top || offset.left !== newOffset.left) {
-                    _this.setState(function (prevState, props) {
-                        return _extends({}, prevState, {
-                            place: newPlace,
-                            offset: newOffset
+                    _this.setState(function (state) {
+                        return _extends({}, state, {
+                            show: false
                         });
                     });
-                }
-            },
-            // https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
-            isElementInView: function isElementInView(element, fullyInView) {
-                var pageTop = document.body.scrollTop;
-                var pageBottom = pageTop + document.body.offsetHeight;
-                var elementTop = element.offsetTop;
-                var elementBottom = elementTop + element.offsetHeight;
-
-                if (fullyInView === true) {
-                    return pageTop < elementTop && pageBottom > elementBottom;
-                } else {
-                    return elementTop <= pageBottom && elementBottom >= pageTop;
-                }
+                }, _this.props.leaveDelay);
             }
-        };
-        _this.renders = {
+        }, _this.renders = {
             renderTooltip: function renderTooltip() {
-                var _this$state2 = _this.state,
-                    isShow = _this$state2.isShow,
-                    place = _this$state2.place,
-                    offset = _this$state2.offset;
+                var _this$state = _this.state,
+                    show = _this$state.show,
+                    placement = _this$state.placement,
+                    offset = _this$state.offset;
 
 
                 return _react2.default.createElement(
@@ -24044,7 +23782,7 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
                             top: offset.top,
                             left: offset.left
                         },
-                        className: (0, _classnames2.default)(_index2.default.tooltip, _defineProperty({}, _index2.default.show, isShow), _defineProperty({}, _index2.default.in, isShow), _index2.default[place] || '')
+                        className: (0, _classnames2.default)(_index2.default.tooltip, _defineProperty({}, _index2.default.show, show), _defineProperty({}, _index2.default.in, show), _index2.default[placement])
                     },
                     _this.renders.renderArrow(),
                     _this.renders.renderContent()
@@ -24058,43 +23796,87 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
                     return null;
                 }
 
-                return _react2.default.createElement('div', { className: _index2.default['tooltip-arrow'] });
+                return _react2.default.createElement('div', { className: _index2.default.tooltipArrow });
             },
             renderContent: function renderContent() {
-                var _this$props2 = _this.props,
-                    type = _this$props2.type,
-                    content = _this$props2.content;
+                var _this$props = _this.props,
+                    type = _this$props.type,
+                    content = _this$props.content;
 
                 var isFunction = typeof content === 'function';
 
                 return _react2.default.createElement(
                     'div',
                     {
-                        className: (0, _classnames2.default)(_index2.default['tooltip-inner'], _defineProperty({}, _index2.default['tooltip-inner-light'], type === 'infotip'))
+                        className: (0, _classnames2.default)(_index2.default.tooltipInner, _defineProperty({}, _index2.default.tooltipInnerLight, type === 'infotip'))
                     },
                     isFunction && content(),
                     !isFunction && content
                 );
             }
-        };
+        }, _this.adjustPlacement = function () {
+            var _this$state2 = _this.state,
+                prevPlacement = _this$state2.placement,
+                prevOffset = _this$state2.offset;
+            var _this$props2 = _this.props,
+                nextPlacement = _this$props2.placement,
+                spacing = _this$props2.spacing;
 
+            var target = _this.tooltipTarget;
+            var tooltip = _this.tooltip;
 
-        _this.state = {
-            target: props.children,
-            isShow: false,
-            place: props.preferPlace,
-            offset: {
+            var nextOffset = {
                 top: 0,
                 left: 0
+            };
+
+            if (nextPlacement === 'top') {
+                nextOffset.top = Math.floor(target.offsetTop - tooltip.offsetHeight - spacing);
+                nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
             }
-        };
-        return _this;
+
+            if (nextPlacement === 'right') {
+                nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
+                nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth + spacing);
+            }
+
+            if (nextPlacement === 'bottom') {
+                nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight + spacing);
+                nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
+            }
+
+            if (nextPlacement === 'left') {
+                nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
+                nextOffset.left = Math.floor(target.offsetLeft - tooltip.offsetWidth - spacing);
+            }
+
+            if (prevPlacement !== nextPlacement || prevOffset.top !== nextOffset.top || prevOffset.left !== nextOffset.left) {
+                _this.setState(function (prevState, props) {
+                    return _extends({}, prevState, {
+                        placement: nextPlacement,
+                        offset: nextOffset
+                    });
+                });
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Tooltip, [{
+        key: 'getInitialState',
+        value: function getInitialState() {
+            return {
+                placement: this.props.placement,
+                show: false,
+                offset: {
+                    top: 0,
+                    left: 0
+                }
+            };
+        }
+    }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps, prevState) {
-            this.actions.adjustPlace();
+            this.adjustPlacement();
         }
     }, {
         key: 'render',
@@ -24112,7 +23894,7 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
                     ref: function ref(node) {
                         _this2.tooltipContainer = node;
                     },
-                    className: (0, _classnames2.default)(_index2.default['tooltip-container'], className)
+                    className: (0, _classnames2.default)(_index2.default.tooltipContainer, className)
                 }),
                 this.renders.renderTooltip(),
                 _react2.default.createElement(
@@ -24121,7 +23903,7 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
                         ref: function ref(node) {
                             _this2.tooltipTarget = node;
                         },
-                        className: _index2.default['tooltip-target-container'],
+                        className: _index2.default.tooltipTargetContainer,
                         onMouseOver: this.actions.handleOnMouseOver,
                         onMouseOut: this.actions.handleOnMouseOut
                     },
@@ -24134,19 +23916,19 @@ var Tooltip = (_temp = _class = function (_PureComponent) {
     return Tooltip;
 }(_react.PureComponent), _class.propTypes = {
     type: _propTypes2.default.oneOf(['tooltip', 'infotip']),
-    preferPlace: _propTypes2.default.oneOf(['top', 'right', 'bottom', 'left']),
-    showDelay: _propTypes2.default.number, // The approximate number of milliseconds before popups appear.
-    hideDelay: _propTypes2.default.number, // The approximate number of milliseconds between the mouse leaving the target and tooltip disappearance.
+    placement: _propTypes2.default.oneOf(['top', 'right', 'bottom', 'left']),
+    enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
+    leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
     spacing: _propTypes2.default.number, // The spacing between target and tooltip
     // contents
     content: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.object, _propTypes2.default.string]).isRequired
 }, _class.defaultProps = {
     type: 'tooltip',
-    preferPlace: 'top',
-    showDelay: 0, // milliseconds
-    hideDelay: 100, // milliseconds
+    placement: 'top',
+    enterDelay: 0, // milliseconds
+    leaveDelay: 100, // milliseconds
     spacing: 0 // in px
-}, _temp);
+}, _temp2);
 exports.default = Tooltip;
 
 /***/ }),
@@ -24175,8 +23957,13 @@ module.exports = _Tooltip2.default;
 // load the styles
 var content = __webpack_require__("../node_modules/css-loader/index.js?camelCase&modules&importLoaders=1&localIdentName=[local]---[hash:base64:5]!../node_modules/stylus-loader/index.js!../node_modules/stylint-loader/index.js!../src/index.styl");
 if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__("../node_modules/style-loader/addStyles.js")(content, {});
+var update = __webpack_require__("../node_modules/style-loader/lib/addStyles.js")(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -24343,8 +24130,13 @@ exports.default = _default;
 // load the styles
 var content = __webpack_require__("../node_modules/css-loader/index.js?camelCase&modules&importLoaders=1&localIdentName=[local]---[hash:base64:5]!../node_modules/stylus-loader/index.js!../node_modules/stylint-loader/index.js!./Navbar.styl");
 if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__("../node_modules/style-loader/addStyles.js")(content, {});
+var update = __webpack_require__("../node_modules/style-loader/lib/addStyles.js")(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -24408,8 +24200,13 @@ exports.default = function (props) {
 // load the styles
 var content = __webpack_require__("../node_modules/css-loader/index.js?camelCase&modules&importLoaders=1&localIdentName=[local]---[hash:base64:5]!../node_modules/stylus-loader/index.js!../node_modules/stylint-loader/index.js!./Section.styl");
 if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__("../node_modules/style-loader/addStyles.js")(content, {});
+var update = __webpack_require__("../node_modules/style-loader/lib/addStyles.js")(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -24561,7 +24358,7 @@ var App = function (_React$Component) {
                                             _react2.default.createElement(
                                                 _src2.default,
                                                 {
-                                                    preferPlace: 'top',
+                                                    placement: 'top',
                                                     content: 'Top tooltip'
                                                 },
                                                 'Hover on me (Top tooltip)'
@@ -24575,7 +24372,7 @@ var App = function (_React$Component) {
                                             _react2.default.createElement(
                                                 _src2.default,
                                                 {
-                                                    preferPlace: 'right',
+                                                    placement: 'right',
                                                     content: function content() {
                                                         return _react2.default.createElement(
                                                             'span',
@@ -24595,7 +24392,7 @@ var App = function (_React$Component) {
                                             _react2.default.createElement(
                                                 _src2.default,
                                                 {
-                                                    preferPlace: 'bottom',
+                                                    placement: 'bottom',
                                                     content: 'Bottom tooltip'
                                                 },
                                                 'Hover on me (Bottom tooltip)'
@@ -24609,7 +24406,7 @@ var App = function (_React$Component) {
                                             _react2.default.createElement(
                                                 _src2.default,
                                                 {
-                                                    preferPlace: 'left',
+                                                    placement: 'left',
                                                     content: 'Left tooltip'
                                                 },
                                                 'Hover on me (Left tooltip)'
@@ -24622,7 +24419,7 @@ var App = function (_React$Component) {
                                         _react2.default.createElement(
                                             _src2.default,
                                             {
-                                                preferPlace: 'top',
+                                                placement: 'top',
                                                 content: 'Settings'
                                             },
                                             _react2.default.createElement(
@@ -24707,7 +24504,7 @@ var App = function (_React$Component) {
                                                 _src2.default,
                                                 {
                                                     type: 'infotip',
-                                                    preferPlace: 'right',
+                                                    placement: 'right',
                                                     content: 'Users with this role have read-only access to all management console features.'
                                                 },
                                                 _react2.default.createElement('span', {
@@ -24729,7 +24526,7 @@ var App = function (_React$Component) {
                                             _src2.default,
                                             {
                                                 type: 'infotip',
-                                                preferPlace: 'top',
+                                                placement: 'top',
                                                 content: 'Top tooltip'
                                             },
                                             'Hover on me (Top tooltip)'
@@ -24744,7 +24541,7 @@ var App = function (_React$Component) {
                                             _src2.default,
                                             {
                                                 type: 'infotip',
-                                                preferPlace: 'right',
+                                                placement: 'right',
                                                 content: _react2.default.createElement(
                                                     'span',
                                                     { style: { whiteSpace: 'nowrap' } },
@@ -24763,7 +24560,7 @@ var App = function (_React$Component) {
                                             _src2.default,
                                             {
                                                 type: 'infotip',
-                                                preferPlace: 'bottom',
+                                                placement: 'bottom',
                                                 content: 'Bottom tooltip'
                                             },
                                             'Hover on me (Bottom tooltip)'
@@ -24778,7 +24575,7 @@ var App = function (_React$Component) {
                                             _src2.default,
                                             {
                                                 type: 'infotip',
-                                                preferPlace: 'left',
+                                                placement: 'left',
                                                 content: 'Left tooltip'
                                             },
                                             'Hover on me (Left tooltip)'
@@ -24808,8 +24605,13 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 // load the styles
 var content = __webpack_require__("../node_modules/css-loader/index.js?camelCase&modules&importLoaders=1&localIdentName=[local]---[hash:base64:5]!../node_modules/stylus-loader/index.js!../node_modules/stylint-loader/index.js!./index.styl");
 if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__("../node_modules/style-loader/addStyles.js")(content, {});
+var update = __webpack_require__("../node_modules/style-loader/lib/addStyles.js")(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -24828,4 +24630,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?ffd2e1fe33f70322ffb5
+//# sourceMappingURL=bundle.js.map?83752fd3b1fa21d6bfc9
