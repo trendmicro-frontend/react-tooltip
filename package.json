@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-tooltip",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React Tooltip",
   "main": "lib/index.js",
   "files": [
