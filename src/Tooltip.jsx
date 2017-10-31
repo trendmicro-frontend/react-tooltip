@@ -184,6 +184,13 @@ class Tooltip extends PureComponent {
             ...props
         } = this.props;
 
+        // Remove props do not need to set into div
+        delete props.type;
+        delete props.enterDelay;
+        delete props.leaveDelay;
+        delete props.spacing;
+        delete props.content;
+
         return (
             <div
                 {...props}

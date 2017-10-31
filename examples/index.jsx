@@ -98,7 +98,7 @@ class App extends React.Component {
                                                 type="button"
                                                 className="btn btn-border btn-icon-only"
                                             >
-                                                <span className="fa fa-cog"></span>
+                                                <span className="fa fa-cog" />
                                             </button>
                                         </Tooltip>
                                     </div>
