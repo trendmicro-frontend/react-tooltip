@@ -34,7 +34,15 @@ class Tooltip extends PureComponent {
         hide: null
     };
 
-    state = this.getInitialState();
+    state = {
+        placement: this.props.placement,
+        show: false,
+        offset: {
+            top: 0,
+            left: 0
+        }
+    };
+
     actions = {
         handleOnMouseOver: (e) => {
             clearTimeout(this.timeoutID.show);
@@ -164,16 +172,6 @@ class Tooltip extends PureComponent {
         }
     };
 
-    getInitialState() {
-        return {
-            placement: this.props.placement,
-            show: false,
-            offset: {
-                top: 0,
-                left: 0
-            }
-        };
-    }
     componentDidUpdate(prevProps, prevState) {
         this.adjustPlacement();
     }
@@ -186,6 +184,7 @@ class Tooltip extends PureComponent {
 
         // Remove props do not need to set into div
         delete props.type;
+        delete props.placement;
         delete props.enterDelay;
         delete props.leaveDelay;
         delete props.spacing;
