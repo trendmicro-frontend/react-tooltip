@@ -20318,7 +20318,14 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tooltip.__proto__ || Object.getPrototypeOf(Tooltip)).call.apply(_ref, [this].concat(args))), _this), _this.timeoutID = {
             show: null,
             hide: null
-        }, _this.state = _this.getInitialState(), _this.actions = {
+        }, _this.state = {
+            placement: _this.props.placement,
+            show: false,
+            offset: {
+                top: 0,
+                left: 0
+            }
+        }, _this.actions = {
             handleOnMouseOver: function handleOnMouseOver(e) {
                 clearTimeout(_this.timeoutID.show);
                 clearTimeout(_this.timeoutID.hide);
@@ -20441,18 +20448,6 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
     }
 
     _createClass(Tooltip, [{
-        key: 'getInitialState',
-        value: function getInitialState() {
-            return {
-                placement: this.props.placement,
-                show: false,
-                offset: {
-                    top: 0,
-                    left: 0
-                }
-            };
-        }
-    }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps, prevState) {
             this.adjustPlacement();
@@ -20471,6 +20466,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 
 
             delete props.type;
+            delete props.placement;
             delete props.enterDelay;
             delete props.leaveDelay;
             delete props.spacing;
@@ -21218,4 +21214,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?c801ecc446fe50bd604a
+//# sourceMappingURL=bundle.js.map?fb14a7c327638d2e6bd7
