@@ -148,6 +148,9 @@
 .tooltip---tooltip-container---1rxLf .tooltip---tooltip---3QEFk {
   display: none;
 }
+.tooltip---tooltip-container---1rxLf .tooltip---tooltip---3QEFk.tooltip---screenPosition---2fWXq {
+  position: fixed;
+}
 .tooltip---tooltip-container---1rxLf .tooltip---tooltip---3QEFk.tooltip---show---1vZOn {
   display: inline-block;
 }

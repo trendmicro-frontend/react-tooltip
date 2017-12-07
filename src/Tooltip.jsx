@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import styles from './index.styl';
+import { getPosition } from './utility';
 
 class Tooltip extends PureComponent {
     static propTypes = {
@@ -15,6 +16,7 @@ class Tooltip extends PureComponent {
             'bottom',
             'left'
         ]),
+        relativePosition: PropTypes.bool,
         enterDelay: PropTypes.number, // The delay length (in ms) before popups appear.
         leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
         spacing: PropTypes.number, // The spacing between target and tooltip
@@ -24,6 +26,7 @@ class Tooltip extends PureComponent {
     static defaultProps = {
         type: 'tooltip',
         placement: 'top',
+        relativePosition: false,
         enterDelay: 0, // milliseconds
         leaveDelay: 100, // milliseconds
         spacing: 0 // in px
@@ -70,6 +73,7 @@ class Tooltip extends PureComponent {
 
     renders = {
         renderTooltip: () => {
+            const { relativePosition } = this.props;
             const { show, placement, offset } = this.state;
 
             return (
@@ -83,6 +87,7 @@ class Tooltip extends PureComponent {
                     }}
                     className={classNames(
                         styles.tooltip,
+                        { [styles.screenPosition]: !relativePosition },
                         { [styles.show]: show },
                         { [styles.in]: show },
                         styles[placement]
@@ -131,6 +136,7 @@ class Tooltip extends PureComponent {
         } = this.state;
         const {
             placement: nextPlacement,
+            relativePosition,
             spacing
         } = this.props;
         const target = this.tooltipTarget;
@@ -141,24 +147,34 @@ class Tooltip extends PureComponent {
             left: 0
         };
 
+        let targetPosition;
+        if (relativePosition === false) {
+            targetPosition = getPosition(target); // Get Screen position
+        } else {
+            targetPosition = {
+                x: target.offsetLeft,
+                y: target.offsetTop
+            };
+        }
+
         if (nextPlacement === 'top') {
-            nextOffset.top = Math.floor(target.offsetTop - tooltip.offsetHeight - spacing);
-            nextOffset.left = Math.floor(target.offsetLeft + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
+            nextOffset.top = Math.floor(targetPosition.y - tooltip.offsetHeight - spacing);
+            nextOffset.left = Math.floor(targetPosition.x + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
         }
 
         if (nextPlacement === 'right') {
-            nextOffset.top = Math.floor(target.offsetTop + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
-            nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth + spacing);
+            nextOffset.top = Math.floor(targetPosition.y + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
+            nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth + spacing);
         }
 
         if (nextPlacement === 'bottom') {
-            nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight + spacing);
-            nextOffset.left = Math.floor(target.offsetLeft + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
+            nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight + spacing);
+            nextOffset.left = Math.floor(targetPosition.x + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
         }
 
         if (nextPlacement === 'left') {
-            nextOffset.top = Math.floor(target.offsetTop + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
-            nextOffset.left = Math.floor(target.offsetLeft - tooltip.offsetWidth - spacing);
+            nextOffset.top = Math.floor(targetPosition.y + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
+            nextOffset.left = Math.floor(targetPosition.x - tooltip.offsetWidth - spacing);
         }
 
         if ((prevPlacement !== nextPlacement) || (prevOffset.top !== nextOffset.top) || (prevOffset.left !== nextOffset.left)) {

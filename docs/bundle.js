@@ -594,7 +594,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".tooltip---3ySuX {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---3ySuX.in---3rbq2 {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---3ySuX.top---1UBsa {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.right---3UdvW {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---3ySuX.bottom---3Sb5B {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.left---t59tj {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---20T2m {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---c682C {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---3ySuX.top---1UBsa .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-left---1cdZq .tooltip-arrow---c682C {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-right---1rsH7 .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.right---3UdvW .tooltip-arrow---c682C {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---3ySuX.left---t59tj .tooltip-arrow---c682C {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---3ySuX.bottom---3Sb5B .tooltip-arrow---c682C {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-left---r953G .tooltip-arrow---c682C {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-right---1u7Og .tooltip-arrow---c682C {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---3FQNj {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n.tooltip-container---2QxsV {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n  display: inline-block;\n}\n.tooltip-container---2QxsV *,\n.tooltip-container---2QxsV *:before,\n.tooltip-container---2QxsV *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX {\n  display: none;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX.show---2slU5 {\n  display: inline-block;\n}\n.tooltip-container---2QxsV .tooltip-target-container---1cjuu {\n  display: inline-block;\n}\n", ""]);
+exports.push([module.i, ".tooltip---3ySuX {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---3ySuX.in---3rbq2 {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---3ySuX.top---1UBsa {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.right---3UdvW {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---3ySuX.bottom---3Sb5B {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---3ySuX.left---t59tj {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---20T2m {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---c682C {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---3ySuX.top---1UBsa .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-left---1cdZq .tooltip-arrow---c682C {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.top-right---1rsH7 .tooltip-arrow---c682C {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---3ySuX.right---3UdvW .tooltip-arrow---c682C {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---3ySuX.left---t59tj .tooltip-arrow---c682C {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---3ySuX.bottom---3Sb5B .tooltip-arrow---c682C {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-left---r953G .tooltip-arrow---c682C {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---3ySuX.bottom-right---1u7Og .tooltip-arrow---c682C {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---3FQNj {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n.tooltip-container---2QxsV {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  line-height: 20px;\n  display: inline-block;\n}\n.tooltip-container---2QxsV *,\n.tooltip-container---2QxsV *:before,\n.tooltip-container---2QxsV *:after {\n  -webkit-box-sizing: inherit;\n  -moz-box-sizing: inherit;\n  box-sizing: inherit;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX {\n  display: none;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX.screenPosition---1eTRH {\n  position: fixed;\n}\n.tooltip-container---2QxsV .tooltip---3ySuX.show---2slU5 {\n  display: inline-block;\n}\n.tooltip-container---2QxsV .tooltip-target-container---1cjuu {\n  display: inline-block;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -620,6 +620,7 @@ exports.locals = {
 	"tooltipInnerLight": "tooltip-inner-light---3FQNj",
 	"tooltip-container": "tooltip-container---2QxsV",
 	"tooltipContainer": "tooltip-container---2QxsV",
+	"screenPosition": "screenPosition---1eTRH",
 	"show": "show---2slU5",
 	"tooltip-target-container": "tooltip-target-container---1cjuu",
 	"tooltipTargetContainer": "tooltip-target-container---1cjuu"
@@ -20289,6 +20290,8 @@ var _index = __webpack_require__("../src/index.styl");
 
 var _index2 = _interopRequireDefault(_index);
 
+var _utility = __webpack_require__("../src/utility.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -20352,6 +20355,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             }
         }, _this.renders = {
             renderTooltip: function renderTooltip() {
+                var relativePosition = _this.props.relativePosition;
                 var _this$state = _this.state,
                     show = _this$state.show,
                     placement = _this$state.placement,
@@ -20368,7 +20372,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                             top: offset.top,
                             left: offset.left
                         },
-                        className: (0, _classnames2.default)(_index2.default.tooltip, _defineProperty({}, _index2.default.show, show), _defineProperty({}, _index2.default.in, show), _index2.default[placement])
+                        className: (0, _classnames2.default)(_index2.default.tooltip, _defineProperty({}, _index2.default.screenPosition, !relativePosition), _defineProperty({}, _index2.default.show, show), _defineProperty({}, _index2.default.in, show), _index2.default[placement])
                     },
                     _this.renders.renderArrow(),
                     _this.renders.renderContent()
@@ -20406,6 +20410,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                 prevOffset = _this$state2.offset;
             var _this$props2 = _this.props,
                 nextPlacement = _this$props2.placement,
+                relativePosition = _this$props2.relativePosition,
                 spacing = _this$props2.spacing;
 
             var target = _this.tooltipTarget;
@@ -20416,24 +20421,34 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                 left: 0
             };
 
+            var targetPosition = void 0;
+            if (relativePosition === false) {
+                targetPosition = (0, _utility.getPosition)(target); // Get Screen position
+            } else {
+                targetPosition = {
+                    x: target.offsetLeft,
+                    y: target.offsetTop
+                };
+            }
+
             if (nextPlacement === 'top') {
-                nextOffset.top = Math.floor(target.offsetTop - tooltip.offsetHeight - spacing);
-                nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
+                nextOffset.top = Math.floor(targetPosition.y - tooltip.offsetHeight - spacing);
+                nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
             }
 
             if (nextPlacement === 'right') {
-                nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
-                nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth + spacing);
+                nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
+                nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth + spacing);
             }
 
             if (nextPlacement === 'bottom') {
-                nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight + spacing);
-                nextOffset.left = Math.floor(target.offsetLeft + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
+                nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight + spacing);
+                nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
             }
 
             if (nextPlacement === 'left') {
-                nextOffset.top = Math.floor(target.offsetTop + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
-                nextOffset.left = Math.floor(target.offsetLeft - tooltip.offsetWidth - spacing);
+                nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
+                nextOffset.left = Math.floor(targetPosition.x - tooltip.offsetWidth - spacing);
             }
 
             if (prevPlacement !== nextPlacement || prevOffset.top !== nextOffset.top || prevOffset.left !== nextOffset.left) {
@@ -20501,6 +20516,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 }(_react.PureComponent), _class.propTypes = {
     type: _propTypes2.default.oneOf(['tooltip', 'infotip']),
     placement: _propTypes2.default.oneOf(['top', 'right', 'bottom', 'left']),
+    relativePosition: _propTypes2.default.bool,
     enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
     leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
     spacing: _propTypes2.default.number, // The spacing between target and tooltip
@@ -20509,6 +20525,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 }, _class.defaultProps = {
     type: 'tooltip',
     placement: 'top',
+    relativePosition: false,
     enterDelay: 0, // milliseconds
     leaveDelay: 100, // milliseconds
     spacing: 0 // in px
@@ -20562,6 +20579,46 @@ if(false) {
 	// When the module is disposed, remove the <style> tags
 	module.hot.dispose(function() { update(); });
 }
+
+/***/ }),
+
+/***/ "../src/utility.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// https://www.kirupa.com/html5/get_element_position_using_javascript.htm
+var getPosition = function getPosition(el) {
+    var xPos = 0;
+    var yPos = 0;
+
+    while (el) {
+        if (el.tagName === 'BODY') {
+            // deal with browser quirks with body/window/document and page scroll
+            var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+            var yScroll = el.scrollTop || document.documentElement.scrollTop;
+
+            xPos += el.offsetLeft - xScroll + el.clientLeft;
+            yPos += el.offsetTop - yScroll + el.clientTop;
+        } else {
+            // for all other non-BODY elements
+            xPos += el.offsetLeft - el.scrollLeft + el.clientLeft;
+            yPos += el.offsetTop - el.scrollTop + el.clientTop;
+        }
+
+        el = el.offsetParent;
+    }
+    return {
+        x: xPos,
+        y: yPos
+    };
+};
+
+exports.getPosition = getPosition;
 
 /***/ }),
 
@@ -21214,4 +21271,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?fb14a7c327638d2e6bd7
+//# sourceMappingURL=bundle.js.map?5ab63d36e19eb1c95f71
