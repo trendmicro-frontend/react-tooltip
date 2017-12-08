@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import styles from './index.styl';
-import { getPosition } from './utility';
 
 class Tooltip extends PureComponent {
     static propTypes = {
@@ -149,7 +148,11 @@ class Tooltip extends PureComponent {
 
         let targetPosition;
         if (relativePosition === false) {
-            targetPosition = getPosition(target); // Get Screen position
+            const boundingClientRect = target.getBoundingClientRect(); // position relative to the viewport.
+            targetPosition = {
+                x: boundingClientRect.left,
+                y: boundingClientRect.top
+            };
         } else {
             targetPosition = {
                 x: target.offsetLeft,
@@ -157,24 +160,33 @@ class Tooltip extends PureComponent {
             };
         }
 
+        const targetSize = {
+            width: target.clientWidth,
+            height: target.clientHeight
+        };
+        const tooltipSize = {
+            width: tooltip.clientWidth,
+            height: tooltip.clientHeight
+        };
+
         if (nextPlacement === 'top') {
-            nextOffset.top = Math.floor(targetPosition.y - tooltip.offsetHeight - spacing);
-            nextOffset.left = Math.floor(targetPosition.x + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
+            nextOffset.top = Math.floor(targetPosition.y - tooltipSize.height - spacing);
+            nextOffset.left = Math.floor(targetPosition.x + (targetSize.width / 2) - (tooltipSize.width / 2));
         }
 
         if (nextPlacement === 'right') {
-            nextOffset.top = Math.floor(targetPosition.y + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
-            nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth + spacing);
+            nextOffset.top = Math.floor(targetPosition.y + (targetSize.height / 2) - (tooltipSize.height / 2));
+            nextOffset.left = Math.floor(targetPosition.x + targetSize.width + spacing);
         }
 
         if (nextPlacement === 'bottom') {
-            nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight + spacing);
-            nextOffset.left = Math.floor(targetPosition.x + (target.offsetWidth / 2) - (tooltip.offsetWidth / 2));
+            nextOffset.top = Math.floor(targetPosition.y + targetSize.height + spacing);
+            nextOffset.left = Math.floor(targetPosition.x + (targetSize.width / 2) - (tooltipSize.width / 2));
         }
 
         if (nextPlacement === 'left') {
-            nextOffset.top = Math.floor(targetPosition.y + (target.offsetHeight / 2) - (tooltip.offsetHeight / 2));
-            nextOffset.left = Math.floor(targetPosition.x - tooltip.offsetWidth - spacing);
+            nextOffset.top = Math.floor(targetPosition.y + (targetSize.height / 2) - (tooltipSize.height / 2));
+            nextOffset.left = Math.floor(targetPosition.x - tooltipSize.width - spacing);
         }
 
         if ((prevPlacement !== nextPlacement) || (prevOffset.top !== nextOffset.top) || (prevOffset.left !== nextOffset.left)) {
@@ -201,6 +213,7 @@ class Tooltip extends PureComponent {
         // Remove props do not need to set into div
         delete props.type;
         delete props.placement;
+        delete props.relativePosition;
         delete props.enterDelay;
         delete props.leaveDelay;
         delete props.spacing;
