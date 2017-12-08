@@ -20290,8 +20290,6 @@ var _index = __webpack_require__("../src/index.styl");
 
 var _index2 = _interopRequireDefault(_index);
 
-var _utility = __webpack_require__("../src/utility.js");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -20423,7 +20421,11 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 
             var targetPosition = void 0;
             if (relativePosition === false) {
-                targetPosition = (0, _utility.getPosition)(target); // Get Screen position
+                var boundingClientRect = target.getBoundingClientRect(); // position relative to the viewport.
+                targetPosition = {
+                    x: boundingClientRect.left,
+                    y: boundingClientRect.top
+                };
             } else {
                 targetPosition = {
                     x: target.offsetLeft,
@@ -20431,24 +20433,33 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                 };
             }
 
+            var targetSize = {
+                width: target.clientWidth,
+                height: target.clientHeight
+            };
+            var tooltipSize = {
+                width: tooltip.clientWidth,
+                height: tooltip.clientHeight
+            };
+
             if (nextPlacement === 'top') {
-                nextOffset.top = Math.floor(targetPosition.y - tooltip.offsetHeight - spacing);
-                nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
+                nextOffset.top = Math.floor(targetPosition.y - tooltipSize.height - spacing);
+                nextOffset.left = Math.floor(targetPosition.x + targetSize.width / 2 - tooltipSize.width / 2);
             }
 
             if (nextPlacement === 'right') {
-                nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
-                nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth + spacing);
+                nextOffset.top = Math.floor(targetPosition.y + targetSize.height / 2 - tooltipSize.height / 2);
+                nextOffset.left = Math.floor(targetPosition.x + targetSize.width + spacing);
             }
 
             if (nextPlacement === 'bottom') {
-                nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight + spacing);
-                nextOffset.left = Math.floor(targetPosition.x + target.offsetWidth / 2 - tooltip.offsetWidth / 2);
+                nextOffset.top = Math.floor(targetPosition.y + targetSize.height + spacing);
+                nextOffset.left = Math.floor(targetPosition.x + targetSize.width / 2 - tooltipSize.width / 2);
             }
 
             if (nextPlacement === 'left') {
-                nextOffset.top = Math.floor(targetPosition.y + target.offsetHeight / 2 - tooltip.offsetHeight / 2);
-                nextOffset.left = Math.floor(targetPosition.x - tooltip.offsetWidth - spacing);
+                nextOffset.top = Math.floor(targetPosition.y + targetSize.height / 2 - tooltipSize.height / 2);
+                nextOffset.left = Math.floor(targetPosition.x - tooltipSize.width - spacing);
             }
 
             if (prevPlacement !== nextPlacement || prevOffset.top !== nextOffset.top || prevOffset.left !== nextOffset.left) {
@@ -20482,6 +20493,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 
             delete props.type;
             delete props.placement;
+            delete props.relativePosition;
             delete props.enterDelay;
             delete props.leaveDelay;
             delete props.spacing;
@@ -20579,46 +20591,6 @@ if(false) {
 	// When the module is disposed, remove the <style> tags
 	module.hot.dispose(function() { update(); });
 }
-
-/***/ }),
-
-/***/ "../src/utility.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-// https://www.kirupa.com/html5/get_element_position_using_javascript.htm
-var getPosition = function getPosition(el) {
-    var xPos = 0;
-    var yPos = 0;
-
-    while (el) {
-        if (el.tagName === 'BODY') {
-            // deal with browser quirks with body/window/document and page scroll
-            var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
-            var yScroll = el.scrollTop || document.documentElement.scrollTop;
-
-            xPos += el.offsetLeft - xScroll + el.clientLeft;
-            yPos += el.offsetTop - yScroll + el.clientTop;
-        } else {
-            // for all other non-BODY elements
-            xPos += el.offsetLeft - el.scrollLeft + el.clientLeft;
-            yPos += el.offsetTop - el.scrollTop + el.clientTop;
-        }
-
-        el = el.offsetParent;
-    }
-    return {
-        x: xPos,
-        y: yPos
-    };
-};
-
-exports.getPosition = getPosition;
 
 /***/ }),
 
@@ -21271,4 +21243,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?5ab63d36e19eb1c95f71
+//# sourceMappingURL=bundle.js.map?5889464a5f0d300e2286
