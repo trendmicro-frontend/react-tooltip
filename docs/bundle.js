@@ -20486,9 +20486,9 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             var _props = this.props,
                 className = _props.className,
                 children = _props.children,
-                targetClassName = _props.targetClassName,
-                targetStyle = _props.targetStyle,
-                props = _objectWithoutProperties(_props, ['className', 'children', 'targetClassName', 'targetStyle']);
+                targetWrapClassName = _props.targetWrapClassName,
+                targetWrapStyle = _props.targetWrapStyle,
+                props = _objectWithoutProperties(_props, ['className', 'children', 'targetWrapClassName', 'targetWrapStyle']);
 
             // Remove props do not need to set into div
 
@@ -20516,8 +20516,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                         ref: function ref(node) {
                             _this2.tooltipTarget = node;
                         },
-                        style: targetStyle,
-                        className: (0, _classnames2.default)(_index2.default.tooltipTargetContainer, targetClassName),
+                        style: targetWrapStyle,
+                        className: (0, _classnames2.default)(_index2.default.tooltipTargetContainer, targetWrapClassName),
                         onMouseOver: this.actions.handleOnMouseOver,
                         onMouseOut: this.actions.handleOnMouseOut
                     },
@@ -20536,8 +20536,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
     leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
     spacing: _propTypes2.default.number, // The spacing between target and tooltip
     // contents
-    targetClassName: _propTypes2.default.string, // The className apply to target container
-    targetStyle: _propTypes2.default.object, // The style apply to target container
+    targetWrapClassName: _propTypes2.default.string, // The className apply to target container
+    targetWrapStyle: _propTypes2.default.object, // The style apply to target container
     content: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.object, _propTypes2.default.string]).isRequired
 }, _class.defaultProps = {
     type: 'tooltip',
@@ -20546,8 +20546,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
     enterDelay: 0, // milliseconds
     leaveDelay: 100, // milliseconds
     spacing: 0, // in px
-    targetClassName: '',
-    targetStyle: {}
+    targetWrapClassName: '',
+    targetWrapStyle: {}
 }, _temp2);
 exports.default = Tooltip;
 
@@ -21250,4 +21250,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?48a7fda10a4d3ed369a1
+//# sourceMappingURL=bundle.js.map?4068e8d295b869a8f0b3
