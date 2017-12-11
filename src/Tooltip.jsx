@@ -20,7 +20,13 @@ class Tooltip extends PureComponent {
         leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
         spacing: PropTypes.number, // The spacing between target and tooltip
         // contents
-        content: PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.string]).isRequired
+        targetClassName: PropTypes.string, // The className apply to target container
+        targetStyle: PropTypes.object, // The style apply to target container
+        content: PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.object,
+            PropTypes.string
+        ]).isRequired
     };
     static defaultProps = {
         type: 'tooltip',
@@ -28,7 +34,9 @@ class Tooltip extends PureComponent {
         relativePosition: false,
         enterDelay: 0, // milliseconds
         leaveDelay: 100, // milliseconds
-        spacing: 0 // in px
+        spacing: 0, // in px
+        targetClassName: '',
+        targetStyle: {}
     };
 
     timeoutID = {
@@ -207,6 +215,8 @@ class Tooltip extends PureComponent {
         const {
             className,
             children,
+            targetClassName,
+            targetStyle,
             ...props
         } = this.props;
 
@@ -235,7 +245,11 @@ class Tooltip extends PureComponent {
                     ref={node => {
                         this.tooltipTarget = node;
                     }}
-                    className={styles.tooltipTargetContainer}
+                    style={targetStyle}
+                    className={classNames(
+                        styles.tooltipTargetContainer,
+                        targetClassName
+                    )}
                     onMouseOver={this.actions.handleOnMouseOver}
                     onMouseOut={this.actions.handleOnMouseOut}
                 >

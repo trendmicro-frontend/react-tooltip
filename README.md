@@ -65,6 +65,8 @@ relativePosition | boolean | false | How to location target's position. False: G
 enterDelay | number | 0 | The delay length (in ms) before the tooltip appears.
 leaveDelay | number | 100 | The delay length (in ms) before the tooltip disappears.
 spacing | number | 0 | Specifies the space (in px) between tooltip and element.
+targetClassName | string | '' | The classNames apply to target's container.
+targetStyle | object | {} | The styles apply to target's container.
 content | any | | The tooltip content.
 
 ## License
