@@ -61,7 +61,7 @@ Name | Type | Default | Description
 :--- | :--- | :------ | :----------
 type | string | 'tooltip' | One of: 'tooltip', 'infotip'
 placement | string | 'top' | One of: 'top', 'right', 'bottom', 'left'
-relativePosition | boolean | false | How to locate target's position. False: Get screen offset. True: Use offsetLeft and offsetTop (Will affected by container's position style).
+relativePosition | boolean | false | How to locate target's position. <br />False: Get screen offset. <br />True: Use offsetLeft and offsetTop (Will affected by container's position style). <br />Set to true when use in react-modal.
 enterDelay | number | 0 | The delay length (in ms) before the tooltip appears.
 leaveDelay | number | 100 | The delay length (in ms) before the tooltip disappears.
 spacing | number | 0 | Specifies the space (in px) between tooltip and element.
