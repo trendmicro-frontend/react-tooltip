@@ -20272,7 +20272,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class, _temp2;
+var _class, _temp2; /* eslint jsx-a11y/mouse-events-have-key-events: 0 */
+
 
 var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
 
@@ -20353,12 +20354,19 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             }
         }, _this.renders = {
             renderTooltip: function renderTooltip() {
-                var relativePosition = _this.props.relativePosition;
+                var _this$props = _this.props,
+                    relativePosition = _this$props.relativePosition,
+                    tooltipClassName = _this$props.tooltipClassName,
+                    tooltipStyle = _this$props.tooltipStyle;
                 var _this$state = _this.state,
                     show = _this$state.show,
                     placement = _this$state.placement,
                     offset = _this$state.offset;
 
+                var style = _extends({
+                    top: offset.top,
+                    left: offset.left
+                }, tooltipStyle);
 
                 return _react2.default.createElement(
                     'div',
@@ -20366,11 +20374,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                         ref: function ref(node) {
                             _this.tooltip = node;
                         },
-                        style: {
-                            top: offset.top,
-                            left: offset.left
-                        },
-                        className: (0, _classnames2.default)(_index2.default.tooltip, _defineProperty({}, _index2.default.screenPosition, !relativePosition), _defineProperty({}, _index2.default.show, show), _defineProperty({}, _index2.default.in, show), _index2.default[placement])
+                        style: style,
+                        className: (0, _classnames2.default)(_index2.default.tooltip, tooltipClassName, _defineProperty({}, _index2.default.screenPosition, !relativePosition), _defineProperty({}, _index2.default.show, show), _defineProperty({}, _index2.default.in, show), _index2.default[placement])
                     },
                     _this.renders.renderArrow(),
                     _this.renders.renderContent()
@@ -20387,9 +20392,9 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                 return _react2.default.createElement('div', { className: _index2.default.tooltipArrow });
             },
             renderContent: function renderContent() {
-                var _this$props = _this.props,
-                    type = _this$props.type,
-                    content = _this$props.content;
+                var _this$props2 = _this.props,
+                    type = _this$props2.type,
+                    content = _this$props2.content;
 
                 var isFunction = typeof content === 'function';
 
@@ -20406,10 +20411,10 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             var _this$state2 = _this.state,
                 prevPlacement = _this$state2.placement,
                 prevOffset = _this$state2.offset;
-            var _this$props2 = _this.props,
-                nextPlacement = _this$props2.placement,
-                relativePosition = _this$props2.relativePosition,
-                spacing = _this$props2.spacing;
+            var _this$props3 = _this.props,
+                nextPlacement = _this$props3.placement,
+                relativePosition = _this$props3.relativePosition,
+                spacing = _this$props3.spacing;
 
             var target = _this.tooltipTarget;
             var tooltip = _this.tooltip;
@@ -20499,6 +20504,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             delete props.enterDelay;
             delete props.leaveDelay;
             delete props.spacing;
+            delete props.tooltipClassName;
+            delete props.tooltipStyle;
             delete props.content;
 
             return _react2.default.createElement(
@@ -20538,6 +20545,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
     // contents
     targetWrapClassName: _propTypes2.default.string, // The className apply to target container
     targetWrapStyle: _propTypes2.default.object, // The style apply to target container
+    tooltipClassName: _propTypes2.default.string, // The className apply to tooltip itself. You can use it to override style portal if need
+    tooltipStyle: _propTypes2.default.object, // The style apply to tooltip itself. You can use it to override style portal if need
     content: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.object, _propTypes2.default.string]).isRequired
 }, _class.defaultProps = {
     type: 'tooltip',
@@ -21149,7 +21158,7 @@ var App = function (_React$Component) {
                                                 placement: 'top',
                                                 content: 'Top tooltip'
                                             },
-                                            'Hover on me (Top tooltip)'
+                                            'Hover on me (Top infotip)'
                                         )
                                     ),
                                     _react2.default.createElement(
@@ -21162,13 +21171,15 @@ var App = function (_React$Component) {
                                             {
                                                 type: 'infotip',
                                                 placement: 'right',
-                                                content: _react2.default.createElement(
-                                                    'span',
-                                                    { style: { whiteSpace: 'nowrap' } },
-                                                    'Right tooltip'
-                                                )
+                                                content: function content() {
+                                                    return _react2.default.createElement(
+                                                        'span',
+                                                        { style: { whiteSpace: 'nowrap' } },
+                                                        'Right tooltip'
+                                                    );
+                                                }
                                             },
-                                            'Hover on me (Right tooltip)'
+                                            'Hover on me (Right infotip)'
                                         )
                                     ),
                                     _react2.default.createElement(
@@ -21183,7 +21194,7 @@ var App = function (_React$Component) {
                                                 placement: 'bottom',
                                                 content: 'Bottom tooltip'
                                             },
-                                            'Hover on me (Bottom tooltip)'
+                                            'Hover on me (Bottom infotip)'
                                         )
                                     ),
                                     _react2.default.createElement(
@@ -21198,7 +21209,25 @@ var App = function (_React$Component) {
                                                 placement: 'left',
                                                 content: 'Left tooltip'
                                             },
-                                            'Hover on me (Left tooltip)'
+                                            'Hover on me (Left infotip)'
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        {
+                                            className: (0, _classnames2.default)(_index2.default['tooltip-example'], _index2.default.left)
+                                        },
+                                        _react2.default.createElement(
+                                            _src2.default,
+                                            {
+                                                type: 'infotip',
+                                                placement: 'top',
+                                                tooltipStyle: {
+                                                    wordWrap: 'break-word'
+                                                },
+                                                content: 'Pneumonoultramicroscopicsilicovolcanoconiosis is the longest word. Start01234567890123456789012345678901234567890123456789012345678901234567890123456789End Start0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789End'
+                                            },
+                                            'Hover on me (Top infotip with long article)'
                                         )
                                     )
                                 )
@@ -21250,4 +21279,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?96919078e88dcc0ec980
+//# sourceMappingURL=bundle.js.map?5e8487fd348860736a01

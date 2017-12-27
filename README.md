@@ -67,6 +67,8 @@ leaveDelay | number | 100 | The delay length (in ms) before the tooltip disappea
 spacing | number | 0 | Specifies the space (in px) between tooltip and element.
 targetWrapClassName | string | '' | The classNames apply to tooltip target's container.
 targetWrapStyle | object | {} | The styles apply to tooltip target's container.
+tooltipClassName | string | '' | The className apply to tooltip itself. You can use it to override style if need.
+tooltipStyle | object | {} | The style apply to tooltip itself. You can use it to override style if need.
 content | any | | The tooltip content.
 
 ## License

@@ -1,3 +1,4 @@
+/* eslint jsx-a11y/mouse-events-have-key-events: 0 */
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
@@ -22,6 +23,8 @@ class Tooltip extends PureComponent {
         // contents
         targetWrapClassName: PropTypes.string, // The className apply to target container
         targetWrapStyle: PropTypes.object, // The style apply to target container
+        tooltipClassName: PropTypes.string, // The className apply to tooltip itself. You can use it to override style portal if need
+        tooltipStyle: PropTypes.object, // The style apply to tooltip itself. You can use it to override style portal if need
         content: PropTypes.oneOfType([
             PropTypes.func,
             PropTypes.object,
@@ -80,20 +83,27 @@ class Tooltip extends PureComponent {
 
     renders = {
         renderTooltip: () => {
-            const { relativePosition } = this.props;
+            const {
+                relativePosition,
+                tooltipClassName,
+                tooltipStyle
+            } = this.props;
             const { show, placement, offset } = this.state;
+            const style = {
+                top: offset.top,
+                left: offset.left,
+                ...tooltipStyle
+            };
 
             return (
                 <div
                     ref={node => {
                         this.tooltip = node;
                     }}
-                    style={{
-                        top: offset.top,
-                        left: offset.left
-                    }}
+                    style={style}
                     className={classNames(
                         styles.tooltip,
+                        tooltipClassName,
                         { [styles.screenPosition]: !relativePosition },
                         { [styles.show]: show },
                         { [styles.in]: show },
@@ -227,6 +237,8 @@ class Tooltip extends PureComponent {
         delete props.enterDelay;
         delete props.leaveDelay;
         delete props.spacing;
+        delete props.tooltipClassName;
+        delete props.tooltipStyle;
         delete props.content;
 
         return (

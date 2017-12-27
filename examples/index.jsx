@@ -54,7 +54,11 @@ class App extends React.Component {
                                             <Tooltip
                                                 placement="right"
                                                 content={() => {
-                                                    return (<span style={{ whiteSpace: 'nowrap' }}>{'Right tooltip'}</span>);
+                                                    return (
+                                                        <span style={{ whiteSpace: 'nowrap' }}>
+                                                            { 'Right tooltip' }
+                                                        </span>
+                                                    );
                                                 }}
                                             >
                                                 Hover on me (Right tooltip)
@@ -158,7 +162,7 @@ class App extends React.Component {
                                             placement="top"
                                             content="Top tooltip"
                                         >
-                                            Hover on me (Top tooltip)
+                                            Hover on me (Top infotip)
                                         </Tooltip>
                                     </div>
 
@@ -171,9 +175,15 @@ class App extends React.Component {
                                         <Tooltip
                                             type="infotip"
                                             placement="right"
-                                            content={<span style={{ whiteSpace: 'nowrap' }}>{'Right tooltip'}</span>}
+                                            content={() => {
+                                                return (
+                                                    <span style={{ whiteSpace: 'nowrap' }}>
+                                                        { 'Right tooltip' }
+                                                    </span>
+                                                );
+                                            }}
                                         >
-                                            Hover on me (Right tooltip)
+                                            Hover on me (Right infotip)
                                         </Tooltip>
                                     </div>
 
@@ -188,7 +198,7 @@ class App extends React.Component {
                                             placement="bottom"
                                             content="Bottom tooltip"
                                         >
-                                            Hover on me (Bottom tooltip)
+                                            Hover on me (Bottom infotip)
                                         </Tooltip>
                                     </div>
 
@@ -203,7 +213,25 @@ class App extends React.Component {
                                             placement="left"
                                             content="Left tooltip"
                                         >
-                                            Hover on me (Left tooltip)
+                                            Hover on me (Left infotip)
+                                        </Tooltip>
+                                    </div>
+
+                                    <div
+                                        className={classNames(
+                                            styles['tooltip-example'],
+                                            styles.left
+                                        )}
+                                    >
+                                        <Tooltip
+                                            type="infotip"
+                                            placement="top"
+                                            tooltipStyle={{
+                                                wordWrap: 'break-word'
+                                            }}
+                                            content="Pneumonoultramicroscopicsilicovolcanoconiosis is the longest word. Start01234567890123456789012345678901234567890123456789012345678901234567890123456789End Start0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789End"
+                                        >
+                                            Hover on me (Top infotip with long article)
                                         </Tooltip>
                                     </div>
                                 </div>
