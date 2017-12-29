@@ -20714,7 +20714,7 @@ var _default = (_temp2 = _class = function (_Component) {
                         ),
                         _react2.default.createElement(
                             'a',
-                            { href: '#', className: _Navbar2.default.navbarBrand },
+                            { href: './', className: _Navbar2.default.navbarBrand },
                             name
                         )
                     ),
@@ -21279,4 +21279,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?5e8487fd348860736a01
+//# sourceMappingURL=bundle.js.map?8c8229414e8e44d4a08d
