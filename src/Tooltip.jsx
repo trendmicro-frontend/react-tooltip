@@ -1,4 +1,3 @@
-/* eslint jsx-a11y/mouse-events-have-key-events: 0 */
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
@@ -58,6 +57,15 @@ class Tooltip extends PureComponent {
 
     actions = {
         handleOnMouseOver: (e) => {
+            this.actions.showTooltip();
+        },
+        handleOnMouseOut: (e) => {
+            this.actions.hideTooltip();
+        },
+        handleOnWheel: (e) => {
+            this.actions.hideTooltip();
+        },
+        showTooltip: () => {
             clearTimeout(this.timeoutID.show);
             clearTimeout(this.timeoutID.hide);
 
@@ -68,7 +76,7 @@ class Tooltip extends PureComponent {
                 }));
             }, this.props.enterDelay);
         },
-        handleOnMouseOut: (e) => {
+        hideTooltip: () => {
             clearTimeout(this.timeoutID.show);
             clearTimeout(this.timeoutID.hide);
 
@@ -264,6 +272,7 @@ class Tooltip extends PureComponent {
                     )}
                     onMouseOver={this.actions.handleOnMouseOver}
                     onMouseOut={this.actions.handleOnMouseOut}
+                    onWheel={this.actions.handleOnWheel}
                 >
                     {children}
                 </div>

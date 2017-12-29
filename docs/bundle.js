@@ -20272,8 +20272,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class, _temp2; /* eslint jsx-a11y/mouse-events-have-key-events: 0 */
-
+var _class, _temp2;
 
 var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
 
@@ -20329,6 +20328,15 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             }
         }, _this.actions = {
             handleOnMouseOver: function handleOnMouseOver(e) {
+                _this.actions.showTooltip();
+            },
+            handleOnMouseOut: function handleOnMouseOut(e) {
+                _this.actions.hideTooltip();
+            },
+            handleOnWheel: function handleOnWheel(e) {
+                _this.actions.hideTooltip();
+            },
+            showTooltip: function showTooltip() {
                 clearTimeout(_this.timeoutID.show);
                 clearTimeout(_this.timeoutID.hide);
 
@@ -20340,7 +20348,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                     });
                 }, _this.props.enterDelay);
             },
-            handleOnMouseOut: function handleOnMouseOut(e) {
+            hideTooltip: function hideTooltip() {
                 clearTimeout(_this.timeoutID.show);
                 clearTimeout(_this.timeoutID.hide);
 
@@ -20526,7 +20534,8 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                         style: targetWrapStyle,
                         className: (0, _classnames2.default)(_index2.default.tooltipTargetContainer, targetWrapClassName),
                         onMouseOver: this.actions.handleOnMouseOver,
-                        onMouseOut: this.actions.handleOnMouseOut
+                        onMouseOut: this.actions.handleOnMouseOut,
+                        onWheel: this.actions.handleOnWheel
                     },
                     children
                 )
@@ -21279,4 +21288,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?8c8229414e8e44d4a08d
+//# sourceMappingURL=bundle.js.map?0524e4531c367d7f2953
