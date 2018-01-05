@@ -1,3 +1,2 @@
-import Tooltip from './Tooltip';
-
-module.exports = Tooltip;
+export Tooltip from './Tooltip';
+export Infotip from './Infotip';

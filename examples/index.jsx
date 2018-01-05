@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import Navbar from './Navbar';
 import Section from './Section';
-import Tooltip from '../src';
+import { Tooltip, Infotip } from '../src';
 import styles from './index.styl';
 
 class App extends React.Component {
@@ -40,7 +40,7 @@ class App extends React.Component {
                                                 placement="top"
                                                 content="Top tooltip"
                                             >
-                                                Hover on me (Top tooltip)
+                                                <span>Hover on me (Top tooltip)</span>
                                             </Tooltip>
                                         </div>
 
@@ -61,7 +61,7 @@ class App extends React.Component {
                                                     );
                                                 }}
                                             >
-                                                Hover on me (Right tooltip)
+                                                <span>Hover on me (Right tooltip)</span>
                                             </Tooltip>
                                         </div>
 
@@ -75,7 +75,7 @@ class App extends React.Component {
                                                 placement="bottom"
                                                 content="Bottom tooltip"
                                             >
-                                                Hover on me (Bottom tooltip)
+                                                <span>Hover on me (Bottom tooltip)</span>
                                             </Tooltip>
                                         </div>
 
@@ -87,9 +87,9 @@ class App extends React.Component {
                                         >
                                             <Tooltip
                                                 placement="left"
-                                                content="Left tooltip"
+                                                content="Left tooltipLeft tooltipLeft tooltipLeft tooltipLeft tooltipLeft tooltipLeft tooltipLeft tooltip"
                                             >
-                                                Hover on me (Left tooltip)
+                                                <span>Hover on me (Left tooltip)</span>
                                             </Tooltip>
                                         </div>
                                     </div>
@@ -135,9 +135,7 @@ class App extends React.Component {
                                 <div className={styles.example}>
                                     <div className={styles['tooltip-light-example-container']}>
                                         <form>
-                                            <Tooltip
-                                                type="infotip"
-                                                placement="right"
+                                            <Infotip
                                                 content="Users with this role have read-only access to all management console features."
                                             >
                                                 <span
@@ -146,7 +144,7 @@ class App extends React.Component {
                                                         styles['icon-info-sign']
                                                     )}
                                                 />
-                                            </Tooltip>
+                                            </Infotip>
                                         </form>
                                     </div>
                                 </div>
@@ -157,13 +155,12 @@ class App extends React.Component {
                                             styles.top
                                         )}
                                     >
-                                        <Tooltip
-                                            type="infotip"
-                                            placement="top"
-                                            content="Top tooltip"
+                                        <Infotip
+                                            placement="rightTop"
+                                            content="rightTop tooltip"
                                         >
-                                            Hover on me (Top infotip)
-                                        </Tooltip>
+                                            <span>Hover on me (rightTop infotip)</span>
+                                        </Infotip>
                                     </div>
 
                                     <div
@@ -172,19 +169,18 @@ class App extends React.Component {
                                             styles.right
                                         )}
                                     >
-                                        <Tooltip
-                                            type="infotip"
-                                            placement="right"
+                                        <Infotip
+                                            placement="rightBottom"
                                             content={() => {
                                                 return (
                                                     <span style={{ whiteSpace: 'nowrap' }}>
-                                                        { 'Right tooltip' }
+                                                        { 'rightBottom infotip' }
                                                     </span>
                                                 );
                                             }}
                                         >
-                                            Hover on me (Right infotip)
-                                        </Tooltip>
+                                            <span>Hover on me (rightBottom infotip)</span>
+                                        </Infotip>
                                     </div>
 
                                     <div
@@ -193,13 +189,12 @@ class App extends React.Component {
                                             styles.bottom
                                         )}
                                     >
-                                        <Tooltip
-                                            type="infotip"
-                                            placement="bottom"
-                                            content="Bottom tooltip"
+                                        <Infotip
+                                            placement="leftBottom"
+                                            content="leftBottom tooltip"
                                         >
-                                            Hover on me (Bottom infotip)
-                                        </Tooltip>
+                                            <span>Hover on me (leftBottom infotip)</span>
+                                        </Infotip>
                                     </div>
 
                                     <div
@@ -208,13 +203,12 @@ class App extends React.Component {
                                             styles.left
                                         )}
                                     >
-                                        <Tooltip
-                                            type="infotip"
-                                            placement="left"
-                                            content="Left tooltip"
+                                        <Infotip
+                                            placement="leftTop"
+                                            content="leftTop tooltip"
                                         >
-                                            Hover on me (Left infotip)
-                                        </Tooltip>
+                                            <span>Hover on me (leftTop infotip)</span>
+                                        </Infotip>
                                     </div>
 
                                     <div
@@ -223,16 +217,14 @@ class App extends React.Component {
                                             styles.left
                                         )}
                                     >
-                                        <Tooltip
-                                            type="infotip"
-                                            placement="top"
+                                        <Infotip
                                             tooltipStyle={{
                                                 wordWrap: 'break-word'
                                             }}
                                             content="Pneumonoultramicroscopicsilicovolcanoconiosis is the longest word. Start01234567890123456789012345678901234567890123456789012345678901234567890123456789End Start0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789End"
                                         >
-                                            Hover on me (Top infotip with long article)
-                                        </Tooltip>
+                                            <span>Hover on me (infotip with long article)</span>
+                                        </Infotip>
                                     </div>
                                 </div>
                             </Section>

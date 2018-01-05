@@ -3,15 +3,15 @@ import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import Trigger from 'rc-trigger';
 import { placements } from './placements';
-import styles from './tooltip.styl';
+import styles from './infotip.styl';
 
-class Tooltip extends PureComponent {
+class Infotip extends PureComponent {
     static propTypes = {
         placement: PropTypes.oneOf([
-            'top',
-            'right',
-            'bottom',
-            'left'
+            'rightTop',
+            'rightBottom',
+            'leftTop',
+            'leftBottom'
         ]),
         enterDelay: PropTypes.number, // The delay length (in ms) before popups appear.
         leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
@@ -24,7 +24,7 @@ class Tooltip extends PureComponent {
         ]).isRequired
     };
     static defaultProps = {
-        placement: 'right',
+        placement: 'rightBottom',
         enterDelay: 0, // milliseconds
         leaveDelay: 100 // milliseconds
     };
@@ -37,15 +37,15 @@ class Tooltip extends PureComponent {
         return ([
             <div
                 className={classNames(
-                    `${prefixCls}-arrow`,
-                    styles['tooltip-arrow']
+                    `${prefixCls}-arrow`
                 )}
                 key="arrow"
             />,
             <div
                 className={classNames(
                     `${prefixCls}-inner`,
-                    styles['tooltip-inner']
+                    styles['tooltip-inner'],
+                    styles['tooltip-inner-light']
                 )}
                 key="content"
             >
@@ -77,6 +77,8 @@ class Tooltip extends PureComponent {
         delete props.content;
 
         const triggerActions = ['hover'];
+        // const defaultVisible = false;
+        // const destroyTooltipOnHide = false;
         const mouseEnterDelay = enterDelay / 1000; // To seconds
         const mouseLeaveDelay = leaveDelay / 1000; // To seconds
 
@@ -103,4 +105,4 @@ class Tooltip extends PureComponent {
     }
 }
 
-export default Tooltip;
+export default Infotip;

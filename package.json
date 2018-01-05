@@ -47,7 +47,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "rc-trigger": "~2.3.3"
   },
   "devDependencies": {
     "@trendmicro/react-buttons": "~1.2.0",
