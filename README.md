@@ -69,20 +69,24 @@ Name | Type | Default | Description
 placement | string | 'right' | One of: 'top', 'right', 'bottom' and 'left'. <br />Tooltip will display at placement if possible, otherwise tooltip adjust it's location automatically. 
 enterDelay | number | 0 | The delay length (in ms) before the tooltip appears.
 leaveDelay | number | 100 | The delay length (in ms) before the tooltip disappears.
+targetWrapClassName | string |  | The classNames apply to tooltip target's container. You can use it to override style if need.
+targetWrapStyle | object |  | The styles apply to tooltip target's container. You can use it to override style if need.
 tooltipClassName | string |  | The className apply to tooltip itself. You can use it to override style if need.
 tooltipStyle | object |  | The style apply to tooltip itself. You can use it to override style if need.
-content | node or function |  | The tooltip content.
+content | node or function |  | The tooltip content. Required.
 
 ### Properties for Infotip
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
 placement | string | 'rightBottom' | One of: 'rightTop', 'rightBottom', 'leftTop', and 'leftBottom'. <br />Tooltip will display at placement if possible, otherwise tooltip adjust it's location automatically. 
-enterDelay | number | 0 | The delay length (in ms) before the tooltip appears.
-leaveDelay | number | 100 | The delay length (in ms) before the tooltip disappears.
-tooltipClassName | string |  | The className apply to tooltip itself. You can use it to override style if need.
-tooltipStyle | object |  | The style apply to tooltip itself. You can use it to override style if need.
-content | node or function |  | The tooltip content.
+enterDelay | number | 0 | The delay length (in ms) before the infotip appears.
+leaveDelay | number | 100 | The delay length (in ms) before the infotip disappears.
+targetWrapClassName | string |  | The classNames apply to infotip target's container. You can use it to override style if need.
+targetWrapStyle | object |  | The styles apply to infotip target's container. You can use it to override style if need.
+tooltipClassName | string |  | The className apply to infotip itself. You can use it to override style if need.
+tooltipStyle | object |  | The style apply to infotip itself. You can use it to override style if need.
+content | node or function |  | The infotip content. Required.
 
 ## License
 

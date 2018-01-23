@@ -15,6 +15,9 @@ class Tooltip extends PureComponent {
         ]),
         enterDelay: PropTypes.number, // The delay length (in ms) before popups appear.
         leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
+        // target wrap
+        targetWrapClassName: PropTypes.string, // The classNames apply to tooltip target's container.
+        targetWrapStyle: PropTypes.object, // The styles apply to tooltip target's container.
         // contents
         tooltipClassName: PropTypes.string, // The className apply to tooltip itself. You can use it to override style portal if need
         tooltipStyle: PropTypes.object, // The style apply to tooltip itself. You can use it to override style portal if need
@@ -68,6 +71,8 @@ class Tooltip extends PureComponent {
             placement,
             enterDelay,
             leaveDelay,
+            targetWrapClassName,
+            targetWrapStyle,
             tooltipClassName,
             tooltipStyle,
             ...props
@@ -97,7 +102,15 @@ class Tooltip extends PureComponent {
                 mouseLeaveDelay={mouseLeaveDelay}
                 {...props}
             >
-                {children}
+                <div
+                    className={classNames(
+                        styles.tooltipTargetWraper,
+                        targetWrapClassName
+                    )}
+                    style={targetWrapStyle}
+                >
+                    {children}
+                </div>
             </Trigger>
         );
     }

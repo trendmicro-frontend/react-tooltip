@@ -1,6 +1,15 @@
 @import "reset-context";
 @import "style-portal";
 
+.tooltip-target-wraper {
+    display: inline-block;
+
+    // https://stackoverflow.com/questions/32190967/why-does-overflow-hidden-affect-height-and-how-can-i-fix-it-in-this-example
+    // https://stackoverflow.com/questions/25818199/why-does-overflow-hidden-add-additional-height-to-an-inline-block-element
+    vertical-align: top;
+    max-width: 100%;
+}
+
 /**
  * override style portal for integrated with rc-trigger
  */
