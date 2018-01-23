@@ -1,4 +1,4 @@
-/*! react-tooltip v0.4.0 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-tooltip */
+/*! react-tooltip v0.4.5 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-tooltip */
 .tooltip---tooltip---5g9lH {
   position: absolute;
   z-index: 1070;
@@ -130,6 +130,11 @@
   -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   text-align: left;
+}
+.tooltip---tooltip-target-wraper---YhcJO {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
 }
 /**
  * override style portal for integrated with rc-trigger
@@ -320,6 +325,11 @@
   -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   text-align: left;
+}
+.tooltip---tooltip-target-wraper---3OJku {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
 }
 /**
  * override style portal for integrated with rc-trigger

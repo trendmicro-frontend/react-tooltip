@@ -4187,7 +4187,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".tooltip---2fcW8 {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---2fcW8.in---2L-eu {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---2fcW8.top---3ex8n {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---2fcW8.right---2XtNy {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---2fcW8.bottom---ELhwD {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---2fcW8.left---3om2v {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---3jxSb {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---2ETmq {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---2fcW8.top---3ex8n .tooltip-arrow---2ETmq {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2fcW8.top-left---2KaQU .tooltip-arrow---2ETmq {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2fcW8.top-right---3-WDu .tooltip-arrow---2ETmq {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2fcW8.right---2XtNy .tooltip-arrow---2ETmq {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---2fcW8.left---3om2v .tooltip-arrow---2ETmq {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---2fcW8.bottom---ELhwD .tooltip-arrow---2ETmq {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2fcW8.bottom-left---ZoHu2 .tooltip-arrow---2ETmq {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2fcW8.bottom-right---1xM5g .tooltip-arrow---2ETmq {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---22LP2 {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n/**\n * override style portal for integrated with rc-trigger\n */\n.tooltip---2fcW8 {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tm-tooltip-hidden.tooltip---2fcW8 {\n  display: none;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n", ""]);
+exports.push([module.i, ".tooltip---2fcW8 {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---2fcW8.in---2L-eu {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---2fcW8.top---3ex8n {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---2fcW8.right---2XtNy {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---2fcW8.bottom---ELhwD {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---2fcW8.left---3om2v {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---3jxSb {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---2ETmq {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---2fcW8.top---3ex8n .tooltip-arrow---2ETmq {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2fcW8.top-left---2KaQU .tooltip-arrow---2ETmq {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2fcW8.top-right---3-WDu .tooltip-arrow---2ETmq {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2fcW8.right---2XtNy .tooltip-arrow---2ETmq {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---2fcW8.left---3om2v .tooltip-arrow---2ETmq {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---2fcW8.bottom---ELhwD .tooltip-arrow---2ETmq {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2fcW8.bottom-left---ZoHu2 .tooltip-arrow---2ETmq {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2fcW8.bottom-right---1xM5g .tooltip-arrow---2ETmq {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---22LP2 {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n.tooltip-target-wraper---2kuiw {\n  display: inline-block;\n  vertical-align: top;\n  max-width: 100%;\n}\n/**\n * override style portal for integrated with rc-trigger\n */\n.tooltip---2fcW8 {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tm-tooltip-hidden.tooltip---2fcW8 {\n  display: none;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -4210,7 +4210,9 @@ exports.locals = {
 	"bottom-right": "bottom-right---1xM5g",
 	"bottomRight": "bottom-right---1xM5g",
 	"tooltip-inner-light": "tooltip-inner-light---22LP2",
-	"tooltipInnerLight": "tooltip-inner-light---22LP2"
+	"tooltipInnerLight": "tooltip-inner-light---22LP2",
+	"tooltip-target-wraper": "tooltip-target-wraper---2kuiw",
+	"tooltipTargetWraper": "tooltip-target-wraper---2kuiw"
 };
 
 /***/ }),
@@ -4223,7 +4225,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".tooltip---2z8Fb {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---2z8Fb.in---2XVFJ {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---2z8Fb.top---2Za42 {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---2z8Fb.right---2DmRl {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---2z8Fb.bottom---3ACoi {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---2z8Fb.left---13hqM {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---1JQV0 {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---duYf5 {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---2z8Fb.top---2Za42 .tooltip-arrow---duYf5 {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2z8Fb.top-left---UwmWl .tooltip-arrow---duYf5 {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2z8Fb.top-right---24tCy .tooltip-arrow---duYf5 {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2z8Fb.right---2DmRl .tooltip-arrow---duYf5 {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---2z8Fb.left---13hqM .tooltip-arrow---duYf5 {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---2z8Fb.bottom---3ACoi .tooltip-arrow---duYf5 {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2z8Fb.bottom-left---2zBHH .tooltip-arrow---duYf5 {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2z8Fb.bottom-right---22FQi .tooltip-arrow---duYf5 {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---qh4Us {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n/**\n * override style portal for integrated with rc-trigger\n */\n.tooltip---2z8Fb {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tm-tooltip-hidden.tooltip---2z8Fb {\n  display: none;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tm-tooltip-placement-top.tooltip---2z8Fb {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tm-tooltip-placement-top .tooltip-arrow---duYf5 {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tm-tooltip-placement-right.tooltip---2z8Fb {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tm-tooltip-placement-right .tooltip-arrow---duYf5 {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tm-tooltip-placement-bottom.tooltip---2z8Fb {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tm-tooltip-placement-bottom .tooltip-arrow---duYf5 {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tm-tooltip-placement-left.tooltip---2z8Fb {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tm-tooltip-placement-left .tooltip-arrow---duYf5 {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n", ""]);
+exports.push([module.i, ".tooltip---2z8Fb {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  line-height: 20px;\n  font-size: 13px;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tooltip---2z8Fb.in---2XVFJ {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tooltip---2z8Fb.top---2Za42 {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip---2z8Fb.right---2DmRl {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip---2z8Fb.bottom---3ACoi {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip---2z8Fb.left---13hqM {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner---1JQV0 {\n  max-width: 320px;\n  padding: 4px 16px;\n  color: #fff;\n  text-align: center;\n  background-color: #444;\n  border: 1px solid #444;\n  border-radius: 3px;\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n}\n.tooltip-arrow---duYf5 {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip---2z8Fb.top---2Za42 .tooltip-arrow---duYf5 {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2z8Fb.top-left---UwmWl .tooltip-arrow---duYf5 {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2z8Fb.top-right---24tCy .tooltip-arrow---duYf5 {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tooltip---2z8Fb.right---2DmRl .tooltip-arrow---duYf5 {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tooltip---2z8Fb.left---13hqM .tooltip-arrow---duYf5 {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n.tooltip---2z8Fb.bottom---3ACoi .tooltip-arrow---duYf5 {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2z8Fb.bottom-left---2zBHH .tooltip-arrow---duYf5 {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip---2z8Fb.bottom-right---22FQi .tooltip-arrow---duYf5 {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tooltip-inner-light---qh4Us {\n  max-width: 680px;\n  color: #222;\n  padding: 8px 16px;\n  background-color: #f8f8f8;\n  border: 1px solid #ccc;\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  box-shadow: 0 1px 5px rgba(0,0,0,0.15);\n  text-align: left;\n}\n.tooltip-target-wraper---1t90x {\n  display: inline-block;\n  vertical-align: top;\n  max-width: 100%;\n}\n/**\n * override style portal for integrated with rc-trigger\n */\n.tooltip---2z8Fb {\n  opacity: 1;\n  -ms-filter: none;\n  filter: none;\n}\n.tm-tooltip-hidden.tooltip---2z8Fb {\n  display: none;\n  opacity: 0;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)\";\n  filter: alpha(opacity=0);\n}\n.tm-tooltip-placement-top.tooltip---2z8Fb {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tm-tooltip-placement-top .tooltip-arrow---duYf5 {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #444;\n}\n.tm-tooltip-placement-right.tooltip---2z8Fb {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tm-tooltip-placement-right .tooltip-arrow---duYf5 {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #444;\n}\n.tm-tooltip-placement-bottom.tooltip---2z8Fb {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tm-tooltip-placement-bottom .tooltip-arrow---duYf5 {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #444;\n}\n.tm-tooltip-placement-left.tooltip---2z8Fb {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tm-tooltip-placement-left .tooltip-arrow---duYf5 {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #444;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -4246,7 +4248,9 @@ exports.locals = {
 	"bottom-right": "bottom-right---22FQi",
 	"bottomRight": "bottom-right---22FQi",
 	"tooltip-inner-light": "tooltip-inner-light---qh4Us",
-	"tooltipInnerLight": "tooltip-inner-light---qh4Us"
+	"tooltipInnerLight": "tooltip-inner-light---qh4Us",
+	"tooltip-target-wraper": "tooltip-target-wraper---1t90x",
+	"tooltipTargetWraper": "tooltip-target-wraper---1t90x"
 };
 
 /***/ }),
@@ -27333,9 +27337,11 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
                 placement = _props.placement,
                 enterDelay = _props.enterDelay,
                 leaveDelay = _props.leaveDelay,
+                targetWrapClassName = _props.targetWrapClassName,
+                targetWrapStyle = _props.targetWrapStyle,
                 tooltipClassName = _props.tooltipClassName,
                 tooltipStyle = _props.tooltipStyle,
-                props = _objectWithoutProperties(_props, ['children', 'placement', 'enterDelay', 'leaveDelay', 'tooltipClassName', 'tooltipStyle']);
+                props = _objectWithoutProperties(_props, ['children', 'placement', 'enterDelay', 'leaveDelay', 'targetWrapClassName', 'targetWrapStyle', 'tooltipClassName', 'tooltipStyle']);
 
             // Remove props do not need to set into div
 
@@ -27362,7 +27368,14 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
                     mouseEnterDelay: mouseEnterDelay,
                     mouseLeaveDelay: mouseLeaveDelay
                 }, props),
-                children
+                _react2.default.createElement(
+                    'div',
+                    {
+                        className: (0, _classnames2.default)(_infotip2.default.tooltipTargetWraper, targetWrapClassName),
+                        style: targetWrapStyle
+                    },
+                    children
+                )
             );
         }
     }]);
@@ -27372,6 +27385,9 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
     placement: _propTypes2.default.oneOf(['rightTop', 'rightBottom', 'leftTop', 'leftBottom']),
     enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
     leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
+    // target wrap
+    targetWrapClassName: _propTypes2.default.string, // The classNames apply to tooltip target's container.
+    targetWrapStyle: _propTypes2.default.object, // The styles apply to tooltip target's container.
     // contents
     tooltipClassName: _propTypes2.default.string, // The className apply to tooltip itself. You can use it to override style portal if need
     tooltipStyle: _propTypes2.default.object, // The style apply to tooltip itself. You can use it to override style portal if need
@@ -27480,9 +27496,11 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                 placement = _props.placement,
                 enterDelay = _props.enterDelay,
                 leaveDelay = _props.leaveDelay,
+                targetWrapClassName = _props.targetWrapClassName,
+                targetWrapStyle = _props.targetWrapStyle,
                 tooltipClassName = _props.tooltipClassName,
                 tooltipStyle = _props.tooltipStyle,
-                props = _objectWithoutProperties(_props, ['children', 'placement', 'enterDelay', 'leaveDelay', 'tooltipClassName', 'tooltipStyle']);
+                props = _objectWithoutProperties(_props, ['children', 'placement', 'enterDelay', 'leaveDelay', 'targetWrapClassName', 'targetWrapStyle', 'tooltipClassName', 'tooltipStyle']);
 
             // Remove props do not need to set into div
 
@@ -27507,7 +27525,14 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                     mouseEnterDelay: mouseEnterDelay,
                     mouseLeaveDelay: mouseLeaveDelay
                 }, props),
-                children
+                _react2.default.createElement(
+                    'div',
+                    {
+                        className: (0, _classnames2.default)(_tooltip2.default.tooltipTargetWraper, targetWrapClassName),
+                        style: targetWrapStyle
+                    },
+                    children
+                )
             );
         }
     }]);
@@ -27517,6 +27542,9 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
     placement: _propTypes2.default.oneOf(['top', 'right', 'bottom', 'left']),
     enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
     leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
+    // target wrap
+    targetWrapClassName: _propTypes2.default.string, // The classNames apply to tooltip target's container.
+    targetWrapStyle: _propTypes2.default.object, // The styles apply to tooltip target's container.
     // contents
     tooltipClassName: _propTypes2.default.string, // The className apply to tooltip itself. You can use it to override style portal if need
     tooltipStyle: _propTypes2.default.object, // The style apply to tooltip itself. You can use it to override style portal if need
@@ -28410,4 +28438,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?288d88b00e5dd4c5f206
+//# sourceMappingURL=bundle.js.map?2b2283feebefc043943c
