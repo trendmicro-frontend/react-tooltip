@@ -131,11 +131,6 @@
   box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   text-align: left;
 }
-.tooltip---tooltip-target-wraper---YhcJO {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
-}
 /**
  * override style portal for integrated with rc-trigger
  */
@@ -325,11 +320,6 @@
   -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   text-align: left;
-}
-.tooltip---tooltip-target-wraper---3OJku {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
 }
 /**
  * override style portal for integrated with rc-trigger
