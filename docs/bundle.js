@@ -27785,11 +27785,12 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
                 children = _props.children,
                 placement = _props.placement,
                 disabled = _props.disabled,
+                hideOnClick = _props.hideOnClick,
                 enterDelay = _props.enterDelay,
                 leaveDelay = _props.leaveDelay,
                 tooltipClassName = _props.tooltipClassName,
                 tooltipStyle = _props.tooltipStyle,
-                props = _objectWithoutProperties(_props, ['children', 'placement', 'disabled', 'enterDelay', 'leaveDelay', 'tooltipClassName', 'tooltipStyle']);
+                props = _objectWithoutProperties(_props, ['children', 'placement', 'disabled', 'hideOnClick', 'enterDelay', 'leaveDelay', 'tooltipClassName', 'tooltipStyle']);
 
             // Remove props do not need to set into div
 
@@ -27797,6 +27798,7 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
             delete props.content;
 
             var triggerActions = ['hover'];
+            var hideAction = hideOnClick ? ['click'] : [];
             var mouseEnterDelay = enterDelay / 1000; // To seconds
             var mouseLeaveDelay = leaveDelay / 1000; // To seconds
 
@@ -27810,6 +27812,7 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
                     ref: this.saveTrigger,
                     prefixCls: this.prefixCls,
                     action: triggerActions,
+                    hideAction: hideAction,
                     builtinPlacements: _placements.placements,
                     popupPlacement: placement,
                     popup: this.getPopupElement,
@@ -27826,16 +27829,18 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
     return Infotip;
 }(_react.PureComponent), _class.propTypes = {
     placement: _propTypes2.default.oneOf(['rightTop', 'rightBottom', 'leftTop', 'leftBottom']),
-    disabled: _propTypes2.default.bool, // To disable tooltip.
+    disabled: _propTypes2.default.bool, // To disable infotip.
+    hideOnClick: _propTypes2.default.bool, // Hide infotip when target been clicked.
     enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
-    leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
+    leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and infotip disappearance.
     // contents
-    tooltipClassName: _propTypes2.default.string, // The className apply to tooltip itself. You can use it to override style portal if need
-    tooltipStyle: _propTypes2.default.object, // The style apply to tooltip itself. You can use it to override style portal if need
+    tooltipClassName: _propTypes2.default.string, // The className apply to infotip itself. You can use it to override style portal if need
+    tooltipStyle: _propTypes2.default.object, // The style apply to infotip itself. You can use it to override style portal if need
     content: _propTypes2.default.oneOfType([_propTypes2.default.node, _propTypes2.default.func]).isRequired
 }, _class.defaultProps = {
     placement: 'rightBottom',
     disabled: false,
+    hideOnClick: false,
     enterDelay: 0, // milliseconds
     leaveDelay: 100 // milliseconds
 }, _temp2);
@@ -27937,11 +27942,12 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                 children = _props.children,
                 placement = _props.placement,
                 disabled = _props.disabled,
+                hideOnClick = _props.hideOnClick,
                 enterDelay = _props.enterDelay,
                 leaveDelay = _props.leaveDelay,
                 tooltipClassName = _props.tooltipClassName,
                 tooltipStyle = _props.tooltipStyle,
-                props = _objectWithoutProperties(_props, ['children', 'placement', 'disabled', 'enterDelay', 'leaveDelay', 'tooltipClassName', 'tooltipStyle']);
+                props = _objectWithoutProperties(_props, ['children', 'placement', 'disabled', 'hideOnClick', 'enterDelay', 'leaveDelay', 'tooltipClassName', 'tooltipStyle']);
 
             // Remove props do not need to set into div
 
@@ -27949,6 +27955,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
             delete props.content;
 
             var triggerActions = ['hover'];
+            var hideAction = hideOnClick ? ['click'] : [];
             var mouseEnterDelay = enterDelay / 1000; // To seconds
             var mouseLeaveDelay = leaveDelay / 1000; // To seconds
 
@@ -27962,6 +27969,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
                     ref: this.saveTrigger,
                     prefixCls: this.prefixCls,
                     action: triggerActions,
+                    hideAction: hideAction,
                     builtinPlacements: _placements.placements,
                     popupPlacement: placement,
                     popup: this.getPopupElement,
@@ -27979,6 +27987,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 }(_react.PureComponent), _class.propTypes = {
     placement: _propTypes2.default.oneOf(['top', 'right', 'bottom', 'left']),
     disabled: _propTypes2.default.bool, // To disable tooltip.
+    hideOnClick: _propTypes2.default.bool, // Hide tooltip when target been clicked.
     enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
     leaveDelay: _propTypes2.default.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
     // contents
@@ -27988,6 +27997,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
 }, _class.defaultProps = {
     placement: 'right',
     disabled: false,
+    hideOnClick: false,
     enterDelay: 0, // milliseconds
     leaveDelay: 100 // milliseconds
 }, _temp2);
@@ -28662,7 +28672,8 @@ var App = function (_React$Component) {
                                             {
                                                 placement: 'top',
                                                 content: 'Settings',
-                                                disabled: !this.state.enabled
+                                                disabled: !this.state.enabled,
+                                                hideOnClick: true
                                             },
                                             _react2.default.createElement(
                                                 _reactButtons.Button,
@@ -28908,4 +28919,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?ffd99dfe3912e18068d0
+//# sourceMappingURL=bundle.js.map?5c47ebac0a58fee8ff57
