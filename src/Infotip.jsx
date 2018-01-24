@@ -13,6 +13,7 @@ class Infotip extends PureComponent {
             'leftTop',
             'leftBottom'
         ]),
+        disabled: PropTypes.bool, // To disable tooltip.
         enterDelay: PropTypes.number, // The delay length (in ms) before popups appear.
         leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
         // contents
@@ -25,6 +26,7 @@ class Infotip extends PureComponent {
     };
     static defaultProps = {
         placement: 'rightBottom',
+        disabled: false,
         enterDelay: 0, // milliseconds
         leaveDelay: 100 // milliseconds
     };
@@ -66,6 +68,7 @@ class Infotip extends PureComponent {
         const {
             children,
             placement,
+            disabled,
             enterDelay,
             leaveDelay,
             tooltipClassName,
@@ -79,6 +82,10 @@ class Infotip extends PureComponent {
         const triggerActions = ['hover'];
         const mouseEnterDelay = enterDelay / 1000; // To seconds
         const mouseLeaveDelay = leaveDelay / 1000; // To seconds
+
+        if (disabled) {
+            return children;
+        }
 
         return (
             <Trigger

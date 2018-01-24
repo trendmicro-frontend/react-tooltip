@@ -1,5 +1,8 @@
 import 'trendmicro-ui/dist/css/trendmicro-ui.css';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
+import { Button } from '@trendmicro/react-buttons';
+import '@trendmicro/react-toggle-switch/dist/react-toggle-switch.css';
+import ToggleSwitch from '@trendmicro/react-toggle-switch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
@@ -9,6 +12,21 @@ import { Tooltip, Infotip } from '../src';
 import styles from './index.styl';
 
 class App extends React.Component {
+    state = {
+        enabled: true
+    };
+
+    actions = {
+        toggle: () => {
+            this.setState((prevState, props) => {
+                return {
+                    ...prevState,
+                    enabled: !prevState.enabled
+                };
+            });
+        }
+    };
+
     render() {
         const name = 'React Tooltip';
         const url = 'https://github.com/trendmicro-frontend/react-tooltip';
@@ -97,14 +115,19 @@ class App extends React.Component {
                                         <Tooltip
                                             placement="top"
                                             content="Settings"
+                                            disabled={!this.state.enabled}
                                         >
-                                            <button
-                                                type="button"
+                                            <Button
                                                 className="btn btn-border btn-icon-only"
+                                                disabled={!this.state.enabled}
                                             >
                                                 <span className="fa fa-cog" />
-                                            </button>
+                                            </Button>
                                         </Tooltip>
+                                        <ToggleSwitch
+                                            checked={this.state.enabled}
+                                            onChange={this.actions.toggle}
+                                        />
                                     </div>
                                 </div>
                             </Section>
