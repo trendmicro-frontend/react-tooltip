@@ -116,6 +116,7 @@ class App extends React.Component {
                                             placement="top"
                                             content="Settings"
                                             disabled={!this.state.enabled}
+                                            hideOnClick={true}
                                         >
                                             <Button
                                                 className="btn btn-border btn-icon-only"

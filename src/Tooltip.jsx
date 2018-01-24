@@ -14,6 +14,7 @@ class Tooltip extends PureComponent {
             'left'
         ]),
         disabled: PropTypes.bool, // To disable tooltip.
+        hideOnClick: PropTypes.bool, // Hide tooltip when target been clicked.
         enterDelay: PropTypes.number, // The delay length (in ms) before popups appear.
         leaveDelay: PropTypes.number, // The delay length (in ms) between the mouse leaving the target and tooltip disappearance.
         // contents
@@ -27,6 +28,7 @@ class Tooltip extends PureComponent {
     static defaultProps = {
         placement: 'right',
         disabled: false,
+        hideOnClick: false,
         enterDelay: 0, // milliseconds
         leaveDelay: 100 // milliseconds
     };
@@ -69,6 +71,7 @@ class Tooltip extends PureComponent {
             children,
             placement,
             disabled,
+            hideOnClick,
             enterDelay,
             leaveDelay,
             tooltipClassName,
@@ -80,6 +83,7 @@ class Tooltip extends PureComponent {
         delete props.content;
 
         const triggerActions = ['hover'];
+        const hideAction = hideOnClick ? ['click'] : [];
         const mouseEnterDelay = enterDelay / 1000; // To seconds
         const mouseLeaveDelay = leaveDelay / 1000; // To seconds
 
@@ -92,6 +96,7 @@ class Tooltip extends PureComponent {
                 ref={this.saveTrigger}
                 prefixCls={this.prefixCls}
                 action={triggerActions}
+                hideAction={hideAction}
                 builtinPlacements={placements}
                 popupPlacement={placement}
                 popup={this.getPopupElement}
