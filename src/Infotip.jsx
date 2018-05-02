@@ -11,7 +11,11 @@ class Infotip extends PureComponent {
             'rightTop',
             'rightBottom',
             'leftTop',
-            'leftBottom'
+            'leftBottom',
+            'right',
+            'top',
+            'left',
+            'bottom'
         ]),
         disabled: PropTypes.bool, // To disable infotip.
         hideOnClick: PropTypes.bool, // Hide infotip when target been clicked.
