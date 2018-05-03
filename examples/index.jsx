@@ -181,7 +181,7 @@ class App extends React.Component {
                                     >
                                         <Infotip
                                             placement="rightTop"
-                                            content="rightTop tooltip"
+                                            content="rightTop infotip"
                                         >
                                             <span>Hover on me (rightTop infotip)</span>
                                         </Infotip>
@@ -215,7 +215,7 @@ class App extends React.Component {
                                     >
                                         <Infotip
                                             placement="leftBottom"
-                                            content="leftBottom tooltip"
+                                            content="leftBottom infotip"
                                         >
                                             <span>Hover on me (leftBottom infotip)</span>
                                         </Infotip>
@@ -229,7 +229,7 @@ class App extends React.Component {
                                     >
                                         <Infotip
                                             placement="leftTop"
-                                            content="leftTop tooltip"
+                                            content="leftTop infotip"
                                         >
                                             <span>Hover on me (leftTop infotip)</span>
                                         </Infotip>
