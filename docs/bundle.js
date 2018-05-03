@@ -28271,7 +28271,7 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
 
     return Infotip;
 }(_react.PureComponent), _class.propTypes = {
-    placement: _propTypes2.default.oneOf(['rightTop', 'rightBottom', 'leftTop', 'leftBottom']),
+    placement: _propTypes2.default.oneOf(['rightTop', 'rightBottom', 'leftTop', 'leftBottom', 'right', 'top', 'left', 'bottom']),
     disabled: _propTypes2.default.bool, // To disable infotip.
     hideOnClick: _propTypes2.default.bool, // Hide infotip when target been clicked.
     enterDelay: _propTypes2.default.number, // The delay length (in ms) before popups appear.
@@ -29224,7 +29224,7 @@ var App = function (_React$Component) {
                                             _src.Infotip,
                                             {
                                                 placement: 'rightTop',
-                                                content: 'rightTop tooltip'
+                                                content: 'rightTop infotip'
                                             },
                                             _react2.default.createElement(
                                                 'span',
@@ -29266,7 +29266,7 @@ var App = function (_React$Component) {
                                             _src.Infotip,
                                             {
                                                 placement: 'leftBottom',
-                                                content: 'leftBottom tooltip'
+                                                content: 'leftBottom infotip'
                                             },
                                             _react2.default.createElement(
                                                 'span',
@@ -29284,7 +29284,7 @@ var App = function (_React$Component) {
                                             _src.Infotip,
                                             {
                                                 placement: 'leftTop',
-                                                content: 'leftTop tooltip'
+                                                content: 'leftTop infotip'
                                             },
                                             _react2.default.createElement(
                                                 'span',
@@ -29362,4 +29362,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?d6f7bf9658d3841586a1
+//# sourceMappingURL=bundle.js.map?807438c102f81384c795
