@@ -28285,7 +28285,7 @@ var Infotip = (_temp2 = _class = function (_PureComponent) {
     disabled: false,
     hideOnClick: false,
     enterDelay: 0, // milliseconds
-    leaveDelay: 100 // milliseconds
+    leaveDelay: 0 // milliseconds
 }, _temp2);
 exports.default = Infotip;
 
@@ -28442,7 +28442,7 @@ var Tooltip = (_temp2 = _class = function (_PureComponent) {
     disabled: false,
     hideOnClick: false,
     enterDelay: 0, // milliseconds
-    leaveDelay: 100 // milliseconds
+    leaveDelay: 0 // milliseconds
 }, _temp2);
 exports.default = Tooltip;
 
@@ -29362,4 +29362,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?807438c102f81384c795
+//# sourceMappingURL=bundle.js.map?54412f5aabc0f916443e
