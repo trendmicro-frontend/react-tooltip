@@ -30,7 +30,7 @@ class Tooltip extends PureComponent {
         disabled: false,
         hideOnClick: false,
         enterDelay: 0, // milliseconds
-        leaveDelay: 100 // milliseconds
+        leaveDelay: 0 // milliseconds
     };
 
     prefixCls = 'tm-tooltip'; // Reset prefix class name
