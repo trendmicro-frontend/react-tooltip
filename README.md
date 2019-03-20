@@ -36,11 +36,11 @@ Demo: https://trendmicro-frontend.github.io/react-tooltip
         return (<span style={{ whiteSpace: 'nowrap' }}>{'Right tooltip'}</span>);
     }}
 >
-    <sapn>Hover on me</span>
+    <span>Hover on me</span>
 </Tooltip>
 
 // Top tooltip
-<Tooltip placement="top" content="Top tooltip"><sapn>Hover on me</span></Tooltip>
+<Tooltip placement="top" content="Top tooltip"><span>Hover on me</span></Tooltip>
 ```
 ```js
 // Infotip
