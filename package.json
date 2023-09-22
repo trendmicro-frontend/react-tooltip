@@ -25,14 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-tooltip.git"
   },
-  "author": "Mark Lin <mark_lin@trend.com.tw>",
-  "contributors": [
-    {
-      "name": "Mark Lin",
-      "email": "mark_lin@trend.com.tw",
-      "url": "https://github.com/trendmicro-frontend"
-    }
-  ],
+  "author": "Mark Lin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trendmicro-frontend/react-tooltip/issues"
